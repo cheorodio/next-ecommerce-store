@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,13 @@
 
 body {
   background-color: var(--main-bg-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+main {
+  padding: 24px 150px;
 }
 
 a {
