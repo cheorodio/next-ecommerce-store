@@ -13,7 +13,6 @@ import styles from './page.module.scss';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 const caveat = Caveat({ subsets: ['latin'], weight: '400' });
-// const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: { default: 'Vida | Handmade Jewellery' },
@@ -76,14 +75,6 @@ export default function RootLayout({ children }) {
               <BsPinterest />
             </div>
           </div>
-
-          {/* <div className={styles.footerNavigationLinks}>
-            <h3>Links</h3>
-            <Link href="/">Home</Link>
-            <Link href="/ProductsOverview">Shop</Link>
-            <Link href="/AboutPage">About Us</Link>
-            <Link href="/AboutPage">Blog</Link>
-          </div> */}
 
           <div className={styles.mailingList}>
             <h3>Join our mailing list</h3>
