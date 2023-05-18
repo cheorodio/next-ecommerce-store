@@ -16,7 +16,7 @@ const caveat = Caveat({ subsets: ['latin'], weight: '400' });
 
 export const metadata = {
   title: { default: 'Vida | Handmade Jewellery' },
-  description: 'Handmade Jewellery',
+  description: 'Dedicated for best quality handmade jewellery',
 };
 
 export default function RootLayout({ children }) {
@@ -27,17 +27,25 @@ export default function RootLayout({ children }) {
           <Link
             href="/#"
             className={caveat.className}
-            style={{ fontSize: '50px' }}
+            style={{ fontSize: '70px' }}
           >
             vida.
           </Link>
           <div className={styles.navigationBar}>
             <BsSearch />
             <div className={styles.navigationLinks}>
-              <Link href="/">Home</Link>
-              <Link href="/ProductsOverview">Shop</Link>
-              <Link href="/AboutPage">About Us</Link>
-              <Link href="/AboutPage">Blog</Link>
+              <Link className={styles.navigationLink} href="/">
+                Home
+              </Link>
+              <Link className={styles.navigationLink} href="/ProductsOverview">
+                Shop
+              </Link>
+              <Link className={styles.navigationLink} href="/AboutPage">
+                About Us
+              </Link>
+              <Link className={styles.navigationLink} href="/AboutPage">
+                Blog
+              </Link>
             </div>
             <BsCart3 style={{ fontSize: '1.25rem' }} />
           </div>
@@ -76,11 +84,11 @@ export default function RootLayout({ children }) {
             </div>
           </div>
 
-          <div className={styles.mailingList}>
+          <form className={styles.mailingList}>
             <h3>Join our mailing list</h3>
             <input placeholder="me@email.com" />
             <button>Subscribe</button>
-          </div>
+          </form>
         </footer>
       </body>
     </html>
