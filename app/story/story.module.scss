@@ -1,0 +1,47 @@
+// .storyContainer {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 32px 120px;
+
+//   .storyTitleContainer {
+//     height: 300px;
+//     width: 100%;
+//     background-image: linear-gradient(
+//         rgba(34, 34, 34, 0.1),
+//         rgba(34, 34, 34, 0.1)
+//       ),
+//       url(../../public/images/our-story.jpg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     h1 {
+//       background-color: #ffffff99;
+//       width: 100%;
+//       text-align: center;
+//       color: var(--primary-color);
+//       font-family: var(--title-font);
+//       text-transform: uppercase;
+//       letter-spacing: 2px;
+//     }
+//   }
+
+//   h6 {
+//     font-size: 3rem;
+//     margin-top: 16px;
+//   }
+// }
+
+.storyContainer {
+  height: 52vh;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -6,47 +6,71 @@ import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
 import shipping from '../public/images/freeshipping.png';
 import handmade from '../public/images/handmade.png';
-import heroImage from '../public/images/hero.jpg';
+import heroImage from '../public/images/hero1.jpg';
 import featuredProduct1 from '../public/images/product1.jpg';
 import featuredProduct3 from '../public/images/product10.jpg';
 import featuredProduct2 from '../public/images/product2.jpg';
 import payment from '../public/images/securepayment.png';
 import tracking from '../public/images/tracking.png';
+// import HeroSwiper from '../utils/swiper';
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
     <main>
       <section className={styles.heroSection}>
+        {/* <HeroSwiper className={styles.heroSwiperContainer}/> */}
         <Image
           src={heroImage}
           alt="jewellry on a woman"
           className={styles.heroMainImage}
         />
       </section>
-
       <section className={styles.featuredProductsSection}>
-        <div>
+        <div className={styles.featuredProductsTitle}>
           <h4>Featured Products</h4>
-          <Link className={styles.viewAllButton} href="/ProductsOverview">
+          <Link className={styles.viewAllButton} href="/products">
             View All
           </Link>
         </div>
-        <Image
-          className={styles.featuredProductImage}
-          src={featuredProduct1}
-          alt="earrings on a woman"
-        />
-        <Image
-          className={styles.featuredProductImage}
-          src={featuredProduct2}
-          alt="necklace on a woman"
-        />
-        <Image
-          className={styles.featuredProductImage}
-          src={featuredProduct3}
-          alt="earrings on a woman"
-        />
+        <Link href="/products" className={styles.featuredProduct}>
+          <Image
+            className={styles.featuredProductImage}
+            src={featuredProduct1}
+            alt="earrings on a woman"
+          />
+          <h6>Earrings</h6>
+          <div>
+            <h5>Lily</h5>
+            <p>€35,00</p>
+          </div>
+        </Link>
+
+        <Link href="/products" className={styles.featuredProduct}>
+          <Image
+            className={styles.featuredProductImage}
+            src={featuredProduct2}
+            alt="necklace on a woman"
+          />
+          <h6>Necklace</h6>
+          <div>
+            <h5>Rose</h5>
+            <p>€45,50</p>
+          </div>
+        </Link>
+
+        <Link href="/products" className={styles.featuredProduct}>
+          <Image
+            className={styles.featuredProductImage}
+            src={featuredProduct3}
+            alt="earrings on a woman"
+          />
+          <h6>earrings</h6>
+          <div>
+            <h5>Violet</h5>
+            <p>€39,99</p>
+          </div>
+        </Link>
       </section>
 
       <section className={styles.collectionSection}>
@@ -133,10 +157,18 @@ export default function Home() {
           View all
         </Link>
         <div className={styles.categoryCards}>
-          <div />
-          <div />
-          <div />
-          <div />
+          <div className={styles.categoryRings}>
+            <p>Rings</p>
+          </div>
+          <div className={styles.categoryEarrings}>
+            <p>Earrings</p>
+          </div>
+          <div className={styles.categoryNecklace}>
+            <p>Necklaces</p>
+          </div>
+          <div className={styles.categorySets}>
+            <p>Sets</p>
+          </div>
         </div>
       </section>
 

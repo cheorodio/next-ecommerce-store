@@ -1,5 +1,6 @@
 import './globals.scss';
 import { Caveat, Poppins } from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   AiFillInstagram,
@@ -9,6 +10,7 @@ import {
 } from 'react-icons/ai';
 import { BsCart3, BsFacebook, BsPinterest, BsSearch } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
+import logo from '../public/images/logo.png';
 import styles from './page.module.scss';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
@@ -29,25 +31,31 @@ export default function RootLayout({ children }) {
             className={caveat.className}
             style={{ fontSize: '70px' }}
           >
-            vida.
+            <Image src={logo} alt="logo" height={40} width={70} />
           </Link>
           <div className={styles.navigationBar}>
             <BsSearch />
             <div className={styles.navigationLinks}>
-              <Link className={styles.navigationLink} href="/">
+              <Link className={styles.navigationLink} href="/#">
                 Home
               </Link>
-              <Link className={styles.navigationLink} href="/ProductsOverview">
+              <Link
+                data-test-id="products-link"
+                className={styles.navigationLink}
+                href="/products"
+              >
                 Shop
               </Link>
-              <Link className={styles.navigationLink} href="/AboutPage">
-                About Us
+              <Link className={styles.navigationLink} href="/story">
+                Our Story
               </Link>
-              <Link className={styles.navigationLink} href="/AboutPage">
+              <Link className={styles.navigationLink} href="/blog">
                 Blog
               </Link>
             </div>
-            <BsCart3 style={{ fontSize: '1.25rem' }} />
+            <Link href="/cart" className={styles.cartIcon}>
+              <BsCart3 style={{ fontSize: '1.25rem' }} />
+            </Link>
           </div>
         </nav>
 
@@ -60,19 +68,16 @@ export default function RootLayout({ children }) {
               className={caveat.className}
               style={{ fontSize: '50px' }}
             >
-              vida.
+              <Image src={logo} alt="logo" height={30} width={60} />
             </Link>
             <div className={styles.companyContact}>
               <div>
-                {' '}
                 <GoLocation /> <p> 123 Any Street, Any City</p>
               </div>
               <div>
-                {' '}
                 <AiOutlinePhone /> <p>+43 123456789</p>
               </div>
               <div>
-                {' '}
                 <AiOutlineMail /> <p>hello@email.com</p>
               </div>
             </div>

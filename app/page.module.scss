@@ -1,10 +1,12 @@
 .navigationHeader {
-  height: 130px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 0px 120px;
+  border-bottom: 1px solid var(--secondary-color);
+  margin: 0px 120px;
+  padding-bottom: 24px;
 }
 
 .navigationBar {
@@ -25,9 +27,18 @@
       color: var(--primary-color);
     }
   }
+
+  .cartIcon {
+    cursor: pointer;
+  }
 }
 
 // HERO SECTION //////////////////////////////////
+// .heroSection {
+//   margin-bottom: 94px;
+//   border: 1px solid var(--primary-color);
+//   height: 450px;
+// }
 .heroSection {
   margin-bottom: 94px;
 
@@ -45,7 +56,7 @@
   gap: 24px;
   margin-bottom: 94px;
 
-  div {
+  .featuredProductsTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,6 +83,41 @@
         background-color: var(--secondary-color);
         outline: 1px solid var(--primary-color);
         color: var(--primary-color);
+      }
+    }
+  }
+
+  .featuredProduct {
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 0.5px solid var(--secondary-color);
+    padding-bottom: 8px;
+    cursor: pointer;
+
+    .featuredProductImage {
+      width: 100%;
+      height: 85%;
+      margin-bottom: 8px;
+    }
+
+    h6 {
+      text-transform: uppercase;
+      font-size: 0.5rem;
+      color: var(--primary-color);
+      padding-left: 8px;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 8px;
+
+      p {
+        font-size: 0.9rem;
       }
     }
   }
@@ -174,7 +220,38 @@
     div {
       height: 400px;
       width: 280px;
-      background-color: #fff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        background-color: #ffffffaa;
+        width: 100%;
+        text-align: center;
+        padding: 16px 0px;
+        text-transform: uppercase;
+        font-family: var(--title-font);
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .categoryRings {
+      background-image: url(../public/images/rings.jpg);
+    }
+
+    .categoryEarrings {
+      background-image: url(../public/images/earrings.jpg);
+    }
+
+    .categoryNecklace {
+      background-image: url(../public/images/necklace.jpg);
+    }
+
+    .categorySets {
+      background-image: url(../public/images/sets.jpg);
     }
   }
 }
@@ -324,5 +401,12 @@
     border-radius: 5px;
     font-size: 1.15rem;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--main-bg-color);
+      outline: 1px solid var(--primary-color);
+      color: var(--primary-color);
+    }
   }
 }
