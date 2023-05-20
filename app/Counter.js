@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import styles from './styles.module.scss';
+import styles from './Counter.module.scss';
 
 export default function QuantityCounter() {
   const [counter, setCounter] = useState(1);
@@ -10,7 +10,7 @@ export default function QuantityCounter() {
   };
 
   const decrease = () => {
-    if (counter > 0) {
+    if (counter > 1) {
       setCounter((count) => count - 1);
     }
   };

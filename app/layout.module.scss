@@ -1,0 +1,106 @@
+.navigationHeader {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--secondary-color);
+  margin: 0px 120px;
+  padding-bottom: 24px;
+}
+
+.navigationBar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navigationLinks {
+  display: flex;
+  gap: 20px;
+  // cursor: pointer;
+
+  .navigationLink {
+    pointer-events: all;
+    &:hover {
+      // cursor: pointer;
+      color: var(--primary-color);
+    }
+  }
+
+  .cartIcon {
+    cursor: pointer;
+  }
+}
+
+// FOOTER SECTION //////////////////////////////////
+
+.footerSection {
+  padding: 24px 150px;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.companyInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 30%;
+
+  .companyContact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    div {
+      font-size: 0.75rem;
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  .companySocialLinks {
+    display: flex;
+    gap: 20px;
+    color: var(--primary-color);
+  }
+}
+
+.mailingList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  input {
+    height: 40px;
+    border: none;
+    margin-bottom: 16px;
+    outline: none;
+    padding-left: 12px;
+  }
+
+  button {
+    width: 200px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--main-bg-color);
+      outline: 1px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+  }
+}

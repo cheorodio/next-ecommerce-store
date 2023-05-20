@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProductById } from '../../../database/products';
-import QuantityCounter from '../../../utils/counter';
+import { getProductById, products } from '../../../database/products';
+import QuantityCounter from '../../Counter.js';
 import styles from './page.module.scss';
 
 export const dynamic = 'force-dynamic';
@@ -22,27 +23,14 @@ export default function ProductsPage({ params }) {
             src={`/images/${singleProduct.name}.jpg`}
             width={500}
             height={500}
+            className={styles.productImage}
           />
         </div>
 
         <div className={styles.productInfoContainer}>
           <h1>{singleProduct.name}</h1>
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </li>
-            <li>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </li>
-            <li>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </li>
-          </ul>
-          <h6 data-test-id="product-price"> 00,00</h6>
-
+          <h5>{singleProduct.description}</h5>
+          <h6 data-test-id="product-price"> {singleProduct.price} EUR</h6>
           <p className={styles.quantityTitle}>Quantity</p>
           <div>
             <QuantityCounter />
@@ -53,6 +41,46 @@ export default function ProductsPage({ params }) {
               Add to cart
             </button>
           </div>
+        </div>
+      </section>
+      <section className={styles.youMayAlsoLikeContainer}>
+        <h2>You may also like</h2>
+        <div className={styles.productCardsContainer}>
+          {products.map((product) => {
+            return (
+              <div
+                key={`product-div-${product.id}`}
+                className={styles.productCard}
+              >
+                <Image
+                  src={`/images/${product.name}.jpg`}
+                  width={200}
+                  height={200}
+                />
+                <div>
+                  <Link
+                    data-test-id="product-<product id>"
+                    href={`/products/${product.id}`}
+                    className={styles.categoryTitle}
+                  >
+                    {product.category}
+                  </Link>
+                  <div>
+                    <Link
+                      href={`/products/${product.id}`}
+                    >
+                      {product.name}
+                    </Link>
+                    <Link
+                      href={`/products/${product.id}`}
+                    >
+                      <p>{product.price} EUR</p>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </main>

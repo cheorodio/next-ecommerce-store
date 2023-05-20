@@ -1,8 +1,13 @@
 .productContainer {
   display: flex;
+  align-items: center;
   padding: 56px 0px;
   border-top: 0.5px solid var(--secondary-color);
   gap: 32px;
+
+  .productImage {
+    border-radius: 5px;
+  }
 
   .productInfoContainer {
     h1 {
@@ -10,15 +15,13 @@
       font-size: 2rem;
     }
 
-    ul {
+    h5 {
       border-top: 1px solid var(--primary-color);
       border-bottom: 1px solid var(--primary-color);
-
+      font-size: 1rem;
       padding: 32px;
 
-      li {
-        line-height: 1.75;
-      }
+      line-height: 1.75;
     }
 
     h6 {
@@ -54,6 +57,47 @@
           background-color: var(--main-bg-color);
           outline: 1px solid var(--primary-color);
           color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+.youMayAlsoLikeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+  }
+
+  .productCardsContainer {
+    overflow: scroll;
+    display: flex;
+    gap: 24px;
+
+    .productCard {
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+
+      div {
+        .categoryTitle {
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          padding-left: 8px;
+          color: var(--primary-color);
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding: 0px 8px;
         }
       }
     }

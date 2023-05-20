@@ -12,20 +12,27 @@ import featuredProduct3 from '../public/images/product10.jpg';
 import featuredProduct2 from '../public/images/product2.jpg';
 import payment from '../public/images/securepayment.png';
 import tracking from '../public/images/tracking.png';
-// import HeroSwiper from '../utils/swiper';
 import styles from './page.module.scss';
+
+// import HeroSwiper from './swiper';
+
+export const metadata = {
+  title: { default: 'Vida | Handmade Jewellery' },
+  description: 'Dedicated for best quality handmade jewellery',
+};
 
 export default function Home() {
   return (
     <main>
       <section className={styles.heroSection}>
-        {/* <HeroSwiper className={styles.heroSwiperContainer}/> */}
+        {/* <HeroSwiper className={styles.heroSwiperContainer} /> */}
         <Image
           src={heroImage}
           alt="jewellry on a woman"
           className={styles.heroMainImage}
         />
       </section>
+
       <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
           <h4>Featured Products</h4>
@@ -91,11 +98,11 @@ export default function Home() {
           <h2>The Collection</h2>
           <hr />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Natoque
-            penatibus et magnis dis parturient montes nascetur ridiculus mus.
-            Nulla malesuada pellentesque elit eget gravida cum. Netus et
-            malesuada fames ac.
+            Each piece in our collection tells a unique story, making it not
+            just a beautiful accessory, but a cherished symbol of love,
+            friendship, or personal achievement. Whether you're treating
+            yourself or searching for the perfect gift, our jewelry is sure to
+            leave a lasting impression.
           </p>
           <Link className={styles.learnMoreLink} href="/#">
             Learn more <FaLongArrowAltRight />
@@ -112,8 +119,8 @@ export default function Home() {
           />
           <h6>Handmade</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            doeiusmod tempor.
+            Our handmade jewelleries are crafted using a variety of techniques
+            and materials.
           </p>
         </div>
         <div className={styles.highlight}>
@@ -124,8 +131,8 @@ export default function Home() {
           />
           <h6>Secure payment</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            doeiusmod tempor.
+            At vida, we are committed to providing a safe and secure shopping
+            experience.
           </p>
         </div>
         <div className={styles.highlight}>
@@ -136,8 +143,8 @@ export default function Home() {
           />
           <h6>Free Shipping</h6>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            doeiusmod.
+            Free shipping is available for both domestic and international
+            orders.
           </p>
         </div>
         <div className={styles.highlight}>
@@ -147,7 +154,10 @@ export default function Home() {
             className={styles.highlightIcon}
           />
           <h6>Order Tracking</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
+          <p>
+            Stay informed and track your order every step of the way with our
+            convenient order tracking system.
+          </p>
         </div>
       </section>
 
@@ -177,8 +187,10 @@ export default function Home() {
         <div className={styles.testimonials}>
           <div className={styles.testimonialCard}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              "I absolutely love the earrings I purchased from vida. The design
+              is exquisite, and the quality is outstanding. I receive
+              compliments every time I wear them. I highly recommend their
+              jewelry to anyone looking for elegance and style."
             </p>
             <h6>Monica Geller</h6>
             <div>
@@ -191,8 +203,10 @@ export default function Home() {
           </div>
           <div className={styles.testimonialCard}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              "These earrings are absolutely stunning! The craftsmanship and
+              attention to detail are exceptional, and they add a touch of
+              elegance to any look. I'm thrilled with my purchase and can't wait
+              to wear them again and again."
             </p>
             <h6>Rachel Green</h6>
             <div>
@@ -205,8 +219,10 @@ export default function Home() {
           </div>
           <div className={styles.testimonialCard}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              "I am in love with the necklace I received from vida. The design
+              is unique and eye-catching, and the quality is superb. It's become
+              my go-to accessory for adding a touch of sophistication to my
+              outfits."
             </p>
             <h6>Phoebe Buffay</h6>
             <div>

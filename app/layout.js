@@ -11,7 +11,7 @@ import {
 import { BsCart3, BsFacebook, BsPinterest, BsSearch } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import logo from '../public/images/logo.png';
-import styles from './page.module.scss';
+import styles from './layout.module.scss';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 const caveat = Caveat({ subsets: ['latin'], weight: '400' });
