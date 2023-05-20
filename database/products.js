@@ -3,81 +3,121 @@ export const products = [
     id: 1,
     name: 'Lucy',
     category: 'earrings',
-    price: '€49,99',
+    price: '49,99',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Crafted with meticulous attention to detail, the "Lucy" Earrings showcase a harmonious blend of sophistication and grace. The delicate silhouette gracefully enhances your natural beauty, adding a touch of refined charm to any outfit.',
   },
   {
     id: 2,
     name: 'Yumi',
     category: 'ring',
-    price: '€46,99',
+    price: '46,99',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Indulge in the allure of contemporary elegance with our mesmerizing "Yumi" Ring. This stunning piece is meticulously crafted to capture the essence of modern glamour and leave a lasting impression.',
   },
   {
     id: 3,
     name: 'Fay',
     category: 'ring',
-    price: '€39,00',
+    price: '39,00',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Experience the epitome of luxury with our mesmerizing "Fay" Ring. This exquisite piece is a true celebration of glamour and sophistication, designed to make a statement and leave a lasting impression.',
   },
   {
     id: 4,
     name: 'Karina',
     category: 'earrings',
-    price: '€29,00',
+    price: '29,00',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Unleash your inner style icon with our stunning "Karina" Earrings. These earrings are a perfect blend of effortless chic and striking elegance, designed to make a bold statement wherever you go.',
   },
   {
     id: 5,
     name: 'Kate',
     category: 'earrings',
-    price: '€35,00',
+    price: '35,00',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'The "Kate" Earrings feature a classic design with a modern twist, striking the perfect balance between sophistication and versatility. Crafted with meticulous attention to detail, they showcase a harmonious combination of grace and charm.',
   },
   {
     id: 6,
     name: 'Lily',
     category: 'earrings',
-    price: '€31,50',
+    price: '25,50',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Embrace the essence of grace and femininity with our enchanting "Lily" Earrings. These delicate blooms of elegance are designed to captivate and adorn your ears with timeless beauty.',
   },
   {
     id: 7,
     name: 'Kat',
     category: 'earrings',
-    price: '€31,50',
+    price: '20,50',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'From casual outings to special occasions, the "Kat" Earrings are the perfect accessory to elevate any ensemble. Embrace your inner fashionista and let these earrings be the centerpiece of your look, showcasing your distinctive style with confidence and flair.',
   },
   {
     id: 8,
     name: 'Lisa',
     category: 'earrings',
-    price: '€31,50',
+    price: '29,00',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Perfect for both formal occasions and everyday wear, the "Lisa" Earrings are a versatile addition to your jewelry collection. Embrace the classic beauty and let these earrings be a reflection of your refined taste and timeless style.',
   },
   {
     id: 9,
     name: 'Georgia',
     category: 'earrings',
-    price: '€31,50',
+    price: '25,50',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Crafted with meticulous attention to detail, these earrings are made from high-quality materials to ensure both durability and comfort. The lightweight construction allows for easy and comfortable wear, while the secure fastening ensures a confident fit.',
   },
   {
     id: 10,
     name: 'Jessie',
     category: 'necklace',
-    price: '€31,50',
+    price: '35,00',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Elevate your style with the exquisite "Jessie" Necklace, a true embodiment of timeless elegance and grace. This necklace is designed to capture attention and add a touch of sophistication to any ensemble.',
+  },
+  {
+    id: 11,
+    name: 'Jeanna',
+    category: 'necklace',
+    price: '40,00',
+    description:
+      'Indulge in the beauty and sophistication of the Jeanna Necklace, and let it become a cherished piece in your jewelry collection. Order now and experience the perfect fusion of exquisite sophistication and modern glamour.',
+  },
+  {
+    id: 12,
+    name: 'Sara',
+    category: 'necklace',
+    price: '33,99',
+    description:
+      "This necklace is the perfect accessory for expressing your individuality and personal style. Whether you're attending a social gathering, a romantic dinner, or simply adding a touch of elegance to your everyday look, the Sara Necklace effortlessly elevates your ensemble.",
+  },
+  {
+    id: 13,
+    name: 'Lana',
+    category: 'ring',
+    price: '28,00',
+    description:
+      "Our Lana ring is versatile, making it suitable for both formal occasions and everyday wear. Whether you're attending a glamorous event or adding a touch of elegance to your daily attire, the Lana Ring effortlessly enhances your style.",
+  },
+  {
+    id: 14,
+    name: 'Mina',
+    category: 'necklace',
+    price: '27,50',
+    description:
+      'The Mina Necklace is made from high-quality materials that ensure both durability and style. Its lustrous finish adds a touch of luxury, making it a timeless piece that can be treasured for years to come.',
+  },
+  {
+    id: 15,
+    name: 'Lilibeth',
+    category: 'necklace',
+    price: '34,50',
+    description:
+      'The Lilibeth Necklace features a delicate chain adorned with intricately designed elements, creating a captivating focal point. Each element is expertly embellished with shimmering crystals that reflect light with every movement, adding a touch of sparkle to any ensemble.',
   },
 ];
 
