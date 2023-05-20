@@ -304,3 +304,27 @@
     }
   }
 }
+
+// NOT FOUND STYLING //////////////////
+.notFoundContainer {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  .returnToHomeButton {
+    color: var(--primary-color);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}
+
+// LOADING STYLING ///////////
+.loadingContainer {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
