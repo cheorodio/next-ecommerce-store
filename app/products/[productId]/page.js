@@ -2,8 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductById, products } from '../../../database/products';
-import QuantityCounter from '../../Counter.js';
+import { getCookie } from '../../../util/cookies';
+import { parseJson } from '../../../util/json';
+// import QuantityCounter from '../../Counter.js';
 import styles from './page.module.scss';
+import ProductQuantityForm from './ProductQuantityForm';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,6 +17,14 @@ export default function ProductsPage({ params }) {
   if (!singleProduct) {
     notFound();
   }
+  const productQuantityCookie = getCookie('productQuantities');
+  const productQuantities = !productQuantityCookie
+    ? []
+    : parseJson(productQuantityCookie);
+
+  const productToUpdate = productQuantities.find((productQuantity) => {
+    return productQuantity.id === singleProduct.id;
+  });
   return (
     <main>
       <section className={styles.productContainer}>
@@ -33,16 +44,12 @@ export default function ProductsPage({ params }) {
           <h6 data-test-id="product-price"> {singleProduct.price} EUR</h6>
           <p className={styles.quantityTitle}>Quantity</p>
           <div>
-            <QuantityCounter />
-            <button
-              data-test-id="product-add-to-cart"
-              className={styles.addToCartButton}
-            >
-              Add to cart
-            </button>
+            {productToUpdate?.quantity}
+            <ProductQuantityForm productId={singleProduct.id} />
           </div>
         </div>
       </section>
+
       <section className={styles.youMayAlsoLikeContainer}>
         <h2>You may also like</h2>
         <div className={styles.productCardsContainer}>
@@ -66,14 +73,8 @@ export default function ProductsPage({ params }) {
                     {product.category}
                   </Link>
                   <div>
-                    <Link
-                      href={`/products/${product.id}`}
-                    >
-                      {product.name}
-                    </Link>
-                    <Link
-                      href={`/products/${product.id}`}
-                    >
+                    <Link href={`/products/${product.id}`}>{product.name}</Link>
+                    <Link href={`/products/${product.id}`}>
                       <p>{product.price} EUR</p>
                     </Link>
                   </div>

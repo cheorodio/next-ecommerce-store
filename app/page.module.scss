@@ -1,3 +1,9 @@
+$small: 390px;
+$medium: 768px;
+$large: 1024px;
+$x: 1280px;
+$xxl: 1536px;
+
 // HERO SECTION //////////////////////////////////
 // .heroSection {
 //   margin-bottom: 94px;
@@ -5,7 +11,7 @@
 //   height: 450px;
 // }
 .heroSection {
-  margin-bottom: 94px;
+  margin: 0px 120px 94px;
 
   .heroMainImage {
     width: 100%;
@@ -13,15 +19,25 @@
   }
 }
 
+@media screen and (max-width: $small) {
+  .heroSection {
+    margin: 0px 24px 24px;
+
+    .heroMainImage {
+      height: 200px;
+    }
+  }
+}
+
 // ////////////////
 
 .featuredProductsSection {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  display: flex;
   gap: 24px;
-  margin-bottom: 94px;
+  margin: 0px 120px 94px;
 
   .featuredProductsTitle {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,16 +109,34 @@
   }
 }
 
+@media screen and (max-width: $small) {
+  .featuredProductsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0px 24px;
+
+    .featuredProductsTitle {
+      background-color: antiquewhite;
+
+      h4 {
+        font-size: 1rem;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
 // /////////////////
 
 .collectionSection {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   gap: 40px;
-  margin-bottom: 94px;
+  margin: 0px 120px 94px;
 
   .collectionImageBox {
     position: relative;
+    flex: 1;
 
     .collectionImage1 {
       height: 300px;
@@ -124,6 +158,7 @@
 
   .collectionTextBox {
     display: flex;
+    flex: 2;
     flex-direction: column;
     justify-content: center;
 
@@ -162,7 +197,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 96px;
+  margin: 0px 120px 94px;
 
   h2 {
     font-size: 2rem;
@@ -225,7 +260,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 64px;
-  margin-bottom: 64px;
+  margin: 0px 120px 94px;
 
   .highlight {
     display: flex;
@@ -255,7 +290,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // margin-bottom: 94px;
+  margin: 0px 120px 94px;
 
   h4 {
     font-size: 1rem;
