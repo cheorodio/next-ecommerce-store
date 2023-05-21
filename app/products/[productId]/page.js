@@ -4,18 +4,13 @@ import { notFound } from 'next/navigation';
 import { getProductById, products } from '../../../database/products';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
-// import QuantityCounter from '../../Counter.js';
 import styles from './page.module.scss';
 import ProductQuantityForm from './ProductQuantityForm';
 
-type Props = {
-  params: { productId: string };
-};
-
 export const dynamic = 'force-dynamic';
 
-export default function ProductsPage(props: Props) {
-  const singleProduct = getProductById(Number(props.params.productId));
+export default function ProductsPage({ params }) {
+  const singleProduct = getProductById(Number(params.productId));
   console.log(singleProduct);
 
   if (!singleProduct) {
@@ -26,11 +21,9 @@ export default function ProductsPage(props: Props) {
     ? []
     : parseJson(productQuantityCookie);
 
-  const productToUpdate = productQuantities.find(
-    (productQuantity: { id: number }) => {
-      return productQuantity.id === singleProduct.id;
-    },
-  );
+  const productToUpdate = productQuantities.find((productQuantity) => {
+    return productQuantity.id === singleProduct.id;
+  });
   return (
     <main>
       <section className={styles.productContainer}>
@@ -41,7 +34,6 @@ export default function ProductsPage(props: Props) {
             width={500}
             height={500}
             className={styles.productImage}
-            alt="product image"
           />
         </div>
 
@@ -70,7 +62,6 @@ export default function ProductsPage(props: Props) {
                   src={`/images/${product.name}.jpg`}
                   width={200}
                   height={200}
-                  alt="product image"
                 />
                 <div>
                   <Link

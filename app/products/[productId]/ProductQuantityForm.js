@@ -10,8 +10,6 @@ export default function ProductQuantityForm(props) {
   const router = useRouter();
 
   return (
-    // WARNING: in order to use Server Action you need to update the next.js config with serverActions: true,
-    // when using Server Actions we don't need prevent the default of the form
     <form className={styles.quantityForm}>
       <input
         type="number"
@@ -22,7 +20,6 @@ export default function ProductQuantityForm(props) {
           setQuantity(event.currentTarget.value);
         }}
       />
-      {/* Instead of using onClick we use formAction */}
       <br />
       <button
         className={styles.button}
