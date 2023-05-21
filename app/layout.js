@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <nav className={styles.navigationHeader}>
+        <header className={styles.navigationHeader}>
           <Link
             href="/#"
             className={caveat.className}
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
               <BsCart3 style={{ fontSize: '1.25rem' }} />
             </Link>
           </div>
-        </nav>
+        </header>
 
         {children}
 

@@ -1,3 +1,9 @@
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
 .navigationHeader {
   height: 140px;
   display: flex;
@@ -7,6 +13,10 @@
   border-bottom: 1px solid var(--secondary-color);
   margin: 0px 120px;
   padding-bottom: 24px;
+
+  @media screen and (max-width: $small) {
+    margin: 0px 24px;
+  }
 }
 
 .navigationBar {
@@ -18,13 +28,32 @@
 .navigationLinks {
   display: flex;
   gap: 20px;
-  // cursor: pointer;
 
   .navigationLink {
     pointer-events: all;
+    position: relative;
+
     &:hover {
-      // cursor: pointer;
       color: var(--primary-color);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: var(--primary-color);
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
     }
   }
 
@@ -40,7 +69,10 @@
   background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  // width: 100%;
+  @media screen and (max-width: $xl) {
+    margin: 0px 60px;
+  }
 }
 
 .companyInformation {
