@@ -42,8 +42,8 @@ export default function ProductsPage({ params }) {
           <h5>{singleProduct.description}</h5>
           <h6 data-test-id="product-price"> {singleProduct.price} EUR</h6>
           <p className={styles.quantityTitle}>Quantity</p>
+          <p>{productToUpdate?.quantity}</p>
           <div>
-            {productToUpdate?.quantity}
             <ProductQuantityForm productId={singleProduct.id} />
           </div>
         </div>

@@ -2,6 +2,7 @@ import './globals.scss';
 import { Caveat, Poppins } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+// import { notFound } from 'next/navigation';
 import {
   AiFillInstagram,
   AiFillTwitterCircle,
@@ -11,6 +12,9 @@ import {
 import { BsCart3, BsFacebook, BsPinterest, BsSearch } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import logo from '../public/images/logo.png';
+// import { getProductById } from '../database/products';
+// import { getCookie } from '../util/cookies';
+// import { parseJson } from '../util/json';
 import styles from './layout.module.scss';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
@@ -22,6 +26,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // const singleProduct = getProductById(Number(params.productId));
+  // console.log(singleProduct);
+
+  // if (!singleProduct) {
+  //   notFound();
+  // }
+  // const productQuantityCookie = getCookie('productQuantities');
+  // const productQuantities = !productQuantityCookie
+  //   ? []
+  //   : parseJson(productQuantityCookie);
+
+  // const productToUpdate = productQuantities.find((productQuantity) => {
+  //   return productQuantity.id === singleProduct.id;
+  // });
   return (
     <html lang="en">
       <body className={poppins.className}>
@@ -54,6 +72,7 @@ export default function RootLayout({ children }) {
               </Link>
             </div>
             <Link href="/cart" className={styles.cartIcon}>
+              {/* <div>{productToUpdate?.quantity}</div> */}
               <BsCart3 style={{ fontSize: '1.25rem' }} />
             </Link>
           </div>

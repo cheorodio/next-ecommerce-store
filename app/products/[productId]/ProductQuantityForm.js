@@ -14,7 +14,7 @@ export default function ProductQuantityForm(props) {
       <input
         type="number"
         min="0"
-        className={styles.textArea}
+        className={styles.inputArea}
         value={quantity}
         onChange={(event) => {
           setQuantity(event.currentTarget.value);
