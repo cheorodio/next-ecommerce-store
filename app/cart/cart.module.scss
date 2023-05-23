@@ -1,11 +1,18 @@
 .cartContainer {
   margin: 60px 0px;
   display: flex;
-  padding: 0px 120px 32px;
+  padding: 100px 120px 32px;
   gap: 32px;
 
   .cartOverviewContainer {
     width: 80%;
+
+    .cartTableHead {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 32px 16px 16px;
+      border-bottom: 1px solid var(--primary-color);
+    }
   }
 
   .cartTotalContainer {
