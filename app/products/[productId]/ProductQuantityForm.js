@@ -12,8 +12,9 @@ export default function ProductQuantityForm(props) {
   return (
     <form className={styles.quantityForm}>
       <input
+        data-test-id="product-quantity"
         type="number"
-        min="0"
+        min="1"
         className={styles.inputArea}
         value={quantity}
         onChange={(event) => {
@@ -22,6 +23,7 @@ export default function ProductQuantityForm(props) {
       />
       <br />
       <button
+        data-test-id="product-add-to-cart"
         className={styles.button}
         formAction={async () => {
           router.refresh();

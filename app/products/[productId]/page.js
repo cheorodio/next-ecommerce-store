@@ -2,28 +2,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductById, products } from '../../../database/products';
-import { getCookie } from '../../../util/cookies';
-import { parseJson } from '../../../util/json';
 import styles from './page.module.scss';
 import ProductQuantityForm from './ProductQuantityForm';
 
 export const dynamic = 'force-dynamic';
 
-export default function ProductsPage({ params }) {
+export default function SingleProductPage({ params }) {
   const singleProduct = getProductById(Number(params.productId));
   console.log(singleProduct);
 
   if (!singleProduct) {
     notFound();
   }
-  const productQuantityCookie = getCookie('productQuantities');
-  const productQuantities = !productQuantityCookie
-    ? []
-    : parseJson(productQuantityCookie);
-
-  const productToUpdate = productQuantities.find((productQuantity) => {
-    return productQuantity.id === singleProduct.id;
-  });
   return (
     <main>
       <section className={styles.productContainer}>
@@ -42,7 +32,6 @@ export default function ProductsPage({ params }) {
           <h5>{singleProduct.description}</h5>
           <h6 data-test-id="product-price"> {singleProduct.price} EUR</h6>
           <p className={styles.quantityTitle}>Quantity</p>
-          <p>{productToUpdate?.quantity}</p>
           <div>
             <ProductQuantityForm productId={singleProduct.id} />
           </div>
