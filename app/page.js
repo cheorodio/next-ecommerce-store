@@ -2,19 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { TbArrowMoveRight } from 'react-icons/tb';
 import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
 import shipping from '../public/images/freeshipping.png';
 import handmade from '../public/images/handmade.png';
-import heroImage from '../public/images/hero1.jpg';
+// import heroImage from '../public/images/heroImage.jpg';
+import hero from '../public/images/heroImage.png';
 import featuredProduct1 from '../public/images/product1.jpg';
 import featuredProduct3 from '../public/images/product10.jpg';
 import featuredProduct2 from '../public/images/product2.jpg';
 import payment from '../public/images/securepayment.png';
 import tracking from '../public/images/tracking.png';
 import styles from './page.module.scss';
-
-// import HeroSwiper from './swiper';
 
 export const metadata = {
   title: { default: 'Vida | Handmade Jewellery' },
@@ -25,12 +25,31 @@ export default function Home() {
   return (
     <main>
       <section className={styles.heroSection}>
-        {/* <HeroSwiper className={styles.heroSwiperContainer} /> */}
-        <Image
-          src={heroImage}
-          alt="jewellry on a woman"
-          className={styles.heroMainImage}
-        />
+        <div className={styles.heroImageContainer}>
+          <Image
+            src={hero}
+            alt="woman wearring earrings"
+            className={styles.heroImage}
+          />
+          {/* <div /> */}
+        </div>
+        <div className={styles.heroTextContainer}>
+          <h1>
+            Crafted with <span>love</span> <br /> Worn with <span>styles</span>
+          </h1>
+          <p>
+            Explore our diverse range of handcrafted jewelry, meticulously
+            designed to reflect individuality and celebrate personal style. From
+            delicate necklaces that grace your collarbones to statement rings
+            that demand attention, our collection offers something for every
+            occasion and personality.
+          </p>
+
+          <Link className={styles.heroLink} href="/products">
+            <h6>View products</h6>
+            <TbArrowMoveRight className={styles.icon} />
+          </Link>
+        </div>
       </section>
 
       <section className={styles.featuredProductsSection}>
