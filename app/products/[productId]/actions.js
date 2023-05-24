@@ -22,7 +22,7 @@ export async function updateQuantity(productId, quantity) {
   } else {
     productQuantities.push({
       id: productId,
-      quantity,
+      quantity: Number(quantity),
     });
   }
   await cookies().set('cart', JSON.stringify(productQuantities));
