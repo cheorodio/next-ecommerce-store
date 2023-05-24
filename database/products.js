@@ -79,46 +79,46 @@ export const products = [
     description:
       'Elevate your style with the exquisite "Jessie" Necklace, a true embodiment of timeless elegance and grace. This necklace is designed to capture attention and add a touch of sophistication to any ensemble.',
   },
-  {
-    id: 11,
-    name: 'Jeanna',
-    category: 'necklace',
-    price: '40,00',
-    description:
-      'Indulge in the beauty and sophistication of the Jeanna Necklace, and let it become a cherished piece in your jewelry collection. Order now and experience the perfect fusion of exquisite sophistication and modern glamour.',
-  },
-  {
-    id: 12,
-    name: 'Sara',
-    category: 'necklace',
-    price: '33,99',
-    description:
-      "This necklace is the perfect accessory for expressing your individuality and personal style. Whether you're attending a social gathering, a romantic dinner, or simply adding a touch of elegance to your everyday look, the Sara Necklace effortlessly elevates your ensemble.",
-  },
-  {
-    id: 13,
-    name: 'Lana',
-    category: 'ring',
-    price: '28,00',
-    description:
-      "Our Lana ring is versatile, making it suitable for both formal occasions and everyday wear. Whether you're attending a glamorous event or adding a touch of elegance to your daily attire, the Lana Ring effortlessly enhances your style.",
-  },
-  {
-    id: 14,
-    name: 'Mina',
-    category: 'necklace',
-    price: '27,50',
-    description:
-      'The Mina Necklace is made from high-quality materials that ensure both durability and style. Its lustrous finish adds a touch of luxury, making it a timeless piece that can be treasured for years to come.',
-  },
-  {
-    id: 15,
-    name: 'Lilibeth',
-    category: 'necklace',
-    price: '34,50',
-    description:
-      'The Lilibeth Necklace features a delicate chain adorned with intricately designed elements, creating a captivating focal point. Each element is expertly embellished with shimmering crystals that reflect light with every movement, adding a touch of sparkle to any ensemble.',
-  },
+  // {
+  //   id: 11,
+  //   name: 'Jeanna',
+  //   category: 'necklace',
+  //   price: '40,00',
+  //   description:
+  //     'Indulge in the beauty and sophistication of the Jeanna Necklace, and let it become a cherished piece in your jewelry collection. Order now and experience the perfect fusion of exquisite sophistication and modern glamour.',
+  // },
+  // {
+  //   id: 12,
+  //   name: 'Sara',
+  //   category: 'necklace',
+  //   price: '33,99',
+  //   description:
+  //     "This necklace is the perfect accessory for expressing your individuality and personal style. Whether you're attending a social gathering, a romantic dinner, or simply adding a touch of elegance to your everyday look, the Sara Necklace effortlessly elevates your ensemble.",
+  // },
+  // {
+  //   id: 13,
+  //   name: 'Lana',
+  //   category: 'ring',
+  //   price: '28,00',
+  //   description:
+  //     "Our Lana ring is versatile, making it suitable for both formal occasions and everyday wear. Whether you're attending a glamorous event or adding a touch of elegance to your daily attire, the Lana Ring effortlessly enhances your style.",
+  // },
+  // {
+  //   id: 14,
+  //   name: 'Mina',
+  //   category: 'necklace',
+  //   price: '27,50',
+  //   description:
+  //     'The Mina Necklace is made from high-quality materials that ensure both durability and style. Its lustrous finish adds a touch of luxury, making it a timeless piece that can be treasured for years to come.',
+  // },
+  // {
+  //   id: 15,
+  //   name: 'Lilibeth',
+  //   category: 'necklace',
+  //   price: '34,50',
+  //   description:
+  //     'The Lilibeth Necklace features a delicate chain adorned with intricately designed elements, creating a captivating focal point. Each element is expertly embellished with shimmering crystals that reflect light with every movement, adding a touch of sparkle to any ensemble.',
+  // },
 ];
 
 export function getProductById(id) {
