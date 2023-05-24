@@ -1,0 +1,60 @@
+.checkoutContainer {
+  display: flex;
+  padding: 85px 0px;
+
+  .infoSection {
+    flex: 2;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 150px;
+
+      p {
+        margin-top: 32px;
+      }
+
+      input {
+        height: 40px;
+        width: 500px;
+        margin-top: 20px;
+      }
+
+      .nameContainer {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+
+        .name {
+          height: 40px;
+          width: 240px;
+        }
+      }
+      .addressContainer {
+        display: flex;
+        gap: 20px;
+        .city {
+          width: 240px;
+        }
+      }
+      .paymentInfo {
+        display: flex;
+        gap: 20px;
+
+        .card {
+          width: 240px;
+        }
+      }
+
+      button {
+        width: 500px;
+        height: 40px;
+        margin-top: 32px;
+      }
+    }
+  }
+
+  .totalSection {
+    flex: 1;
+  }
+}
