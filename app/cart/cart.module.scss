@@ -13,6 +13,19 @@
       padding: 0px 32px 16px 16px;
       border-bottom: 1px solid var(--primary-color);
     }
+
+    .itemsInCart {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .productCard {
+        border-bottom: 0.5px solid var(--primary-color);
+        display: flex;
+        align-items: center;
+        gap: 80px;
+      }
+    }
   }
 
   .cartTotalContainer {
