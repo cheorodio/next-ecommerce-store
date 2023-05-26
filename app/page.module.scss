@@ -11,18 +11,18 @@ $xxl: 1536px;
 //   height: 450px;
 // }
 .heroSection {
-  height: 100vh;
-  background: linear-gradient(#a88755, #faf8f4);
-  // margin: 0px 120px 94px;
+  // height: 100vh;
+  // background: linear-gradient(#a88755, #faf8f4);
+  margin: 0px 120px;
 
-  // .heroMainImage {
-  //   width: 100%;
-  //   height: 450px;
-  // }
+  .heroMainImage {
+    width: 100%;
+    height: 450px;
+  }
 
   display: flex;
   align-items: center;
-  padding-top: 180px;
+  // padding-top: 180px;
   // justify-content: center;
 
   .heroImageContainer {

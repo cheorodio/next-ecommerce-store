@@ -2,13 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import { TbArrowMoveRight } from 'react-icons/tb';
 import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
 import shipping from '../public/images/freeshipping.png';
 import handmade from '../public/images/handmade.png';
-// import heroImage from '../public/images/heroImage.jpg';
-import hero from '../public/images/heroImage.png';
+import heroImage from '../public/images/hero1.jpg';
 import featuredProduct1 from '../public/images/product1.jpg';
 import featuredProduct3 from '../public/images/product10.jpg';
 import featuredProduct2 from '../public/images/product2.jpg';
@@ -26,12 +24,14 @@ export default function Home() {
     <main>
       <section className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
+          <Image src={heroImage} alt="" className={styles.heroMainImage} />
+        </div>
+        {/* <div className={styles.heroImageContainer}>
           <Image
             src={hero}
             alt="woman wearring earrings"
             className={styles.heroImage}
           />
-          {/* <div /> */}
         </div>
         <div className={styles.heroTextContainer}>
           <h1>
@@ -49,9 +49,9 @@ export default function Home() {
             <h6>View products</h6>
             <TbArrowMoveRight className={styles.icon} />
           </Link>
-        </div>
+        </div> */}
       </section>
-
+      {/* ========================= FEATURED SECTION ========================= */}
       <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
           <h4>Featured Products</h4>
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </Link>
       </section>
-
+      {/* ========================= THE COLLECTION SECTION ========================= */}
       <section className={styles.collectionSection}>
         <div className={styles.collectionImageBox}>
           <Image
@@ -128,7 +128,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
+      {/* ========================= ICONS SECTION ========================= */}
       <section className={styles.highlightSection}>
         <div className={styles.highlight}>
           <Image
@@ -179,7 +179,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-
+      {/* ========================= CATEGORY SECTION ========================= */}
       <section className={styles.categorySection}>
         <h2>Shop by Category</h2>
         <Link className={styles.viewallLink} href="/ProductsOverview">
@@ -200,7 +200,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/* ========================= TESTIMONIALS SECTION ========================= */}
       <section className={styles.testimonialsSection}>
         <h4>Happy Customers</h4>
         <div className={styles.testimonials}>
