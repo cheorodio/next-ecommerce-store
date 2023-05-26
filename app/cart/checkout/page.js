@@ -40,12 +40,12 @@ export default function CheckoutPage() {
             <input
               type="email"
               data-test-id="checkout-email"
-              className={styles.emailInput}
+              // className={styles.emailInput}
               placeholder="me@email.com"
             />
           </label>
 
-          <div className={styles.shippingInfo}>
+          <div>
             <p>Shipping Information</p>
 
             <label>
