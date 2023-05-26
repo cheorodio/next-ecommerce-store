@@ -2,10 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductById, products } from '../../../database/products';
+import AddToCartForm from './AddToCartForm';
 import styles from './page.module.scss';
-import ProductQuantityForm from './ProductQuantityForm';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata = {
+  title: { default: 'Vida | Handmade Jewellery' },
+  description: 'Dedicated for best quality handmade jewellery',
+};
 
 export default function SingleProductPage({ params }) {
   const singleProduct = getProductById(Number(params.productId));
@@ -30,10 +35,10 @@ export default function SingleProductPage({ params }) {
         <div className={styles.productInfoContainer}>
           <h1>{singleProduct.name}</h1>
           <h5>{singleProduct.description}</h5>
-          <h6 data-test-id="product-price"> {singleProduct.price} EUR</h6>
+          <h6 data-test-id="product-price">€ {singleProduct.price}</h6>
           <p className={styles.quantityTitle}>Quantity</p>
           <div>
-            <ProductQuantityForm productId={singleProduct.id} />
+            <AddToCartForm productId={singleProduct.id} />
           </div>
         </div>
       </section>
@@ -47,11 +52,18 @@ export default function SingleProductPage({ params }) {
                 key={`product-div-${product.id}`}
                 className={styles.productCard}
               >
-                <Image
-                  src={`/images/${product.name}.jpg`}
-                  width={200}
-                  height={200}
-                />
+                <Link
+                  data-test-id="product-<product id>"
+                  href={`/products/${product.id}`}
+                  className={styles.categoryTitle}
+                >
+                  <Image
+                    src={`/images/${product.name}.jpg`}
+                    width={200}
+                    height={200}
+                    alt=""
+                  />
+                </Link>
                 <div>
                   <Link
                     data-test-id="product-<product id>"
@@ -63,7 +75,7 @@ export default function SingleProductPage({ params }) {
                   <div>
                     <Link href={`/products/${product.id}`}>{product.name}</Link>
                     <Link href={`/products/${product.id}`}>
-                      <p>{product.price} EUR</p>
+                      <p>€ {product.price}</p>
                     </Link>
                   </div>
                 </div>

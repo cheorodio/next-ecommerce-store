@@ -2,11 +2,11 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { updateQuantity } from './actions';
-import styles from './ProductQuantityForm.module.scss';
+import { addToCart } from './actions';
+import styles from './AddToCartForm.module.scss';
 
-export default function ProductQuantityForm(props) {
-  const [quantity, setQuantity] = useState('');
+export default function AddToCartForm(props) {
+  const [quantity, setQuantity] = useState(1);
   const router = useRouter();
 
   return (
@@ -15,19 +15,16 @@ export default function ProductQuantityForm(props) {
         data-test-id="product-quantity"
         type="number"
         min="1"
-        className={styles.inputArea}
         value={quantity}
         onChange={(event) => {
           setQuantity(event.currentTarget.value);
         }}
       />
-      <br />
       <button
         data-test-id="product-add-to-cart"
-        className={styles.button}
         formAction={async () => {
           router.refresh();
-          await updateQuantity(props.productId, quantity);
+          await addToCart(props.productId, quantity);
         }}
       >
         Add to cart
