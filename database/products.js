@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: 'Lucy',
     category: 'earrings',
-    price: '49,99',
+    price: 49.99,
     description:
       'Crafted with meticulous attention to detail, the "Lucy" Earrings showcase a harmonious blend of sophistication and grace. The delicate silhouette gracefully enhances your natural beauty, adding a touch of refined charm to any outfit.',
   },
@@ -11,7 +11,7 @@ export const products = [
     id: 2,
     name: 'Yumi',
     category: 'ring',
-    price: '46,99',
+    price: 46.5,
     description:
       'Indulge in the allure of contemporary elegance with our mesmerizing "Yumi" Ring. This stunning piece is meticulously crafted to capture the essence of modern glamour and leave a lasting impression.',
   },
@@ -19,7 +19,7 @@ export const products = [
     id: 3,
     name: 'Fay',
     category: 'ring',
-    price: '39,00',
+    price: 39,
     description:
       'Experience the epitome of luxury with our mesmerizing "Fay" Ring. This exquisite piece is a true celebration of glamour and sophistication, designed to make a statement and leave a lasting impression.',
   },
@@ -27,7 +27,7 @@ export const products = [
     id: 4,
     name: 'Karina',
     category: 'earrings',
-    price: '29,00',
+    price: 29.5,
     description:
       'Unleash your inner style icon with our stunning "Karina" Earrings. These earrings are a perfect blend of effortless chic and striking elegance, designed to make a bold statement wherever you go.',
   },
@@ -35,7 +35,7 @@ export const products = [
     id: 5,
     name: 'Kate',
     category: 'earrings',
-    price: '35,00',
+    price: 35.99,
     description:
       'The "Kate" Earrings feature a classic design with a modern twist, striking the perfect balance between sophistication and versatility. Crafted with meticulous attention to detail, they showcase a harmonious combination of grace and charm.',
   },
@@ -43,7 +43,7 @@ export const products = [
     id: 6,
     name: 'Lily',
     category: 'earrings',
-    price: '25,50',
+    price: 25,
     description:
       'Embrace the essence of grace and femininity with our enchanting "Lily" Earrings. These delicate blooms of elegance are designed to captivate and adorn your ears with timeless beauty.',
   },
@@ -51,7 +51,7 @@ export const products = [
     id: 7,
     name: 'Kat',
     category: 'earrings',
-    price: '20,50',
+    price: 20.9,
     description:
       'From casual outings to special occasions, the "Kat" Earrings are the perfect accessory to elevate any ensemble. Embrace your inner fashionista and let these earrings be the centerpiece of your look, showcasing your distinctive style with confidence and flair.',
   },
@@ -59,7 +59,7 @@ export const products = [
     id: 8,
     name: 'Lisa',
     category: 'earrings',
-    price: '29,00',
+    price: 29,
     description:
       'Perfect for both formal occasions and everyday wear, the "Lisa" Earrings are a versatile addition to your jewelry collection. Embrace the classic beauty and let these earrings be a reflection of your refined taste and timeless style.',
   },
@@ -67,7 +67,7 @@ export const products = [
     id: 9,
     name: 'Georgia',
     category: 'earrings',
-    price: '25,50',
+    price: 25.25,
     description:
       'Crafted with meticulous attention to detail, these earrings are made from high-quality materials to ensure both durability and comfort. The lightweight construction allows for easy and comfortable wear, while the secure fastening ensures a confident fit.',
   },
@@ -75,7 +75,7 @@ export const products = [
     id: 10,
     name: 'Jessie',
     category: 'necklace',
-    price: '35,00',
+    price: 35,
     description:
       'Elevate your style with the exquisite "Jessie" Necklace, a true embodiment of timeless elegance and grace. This necklace is designed to capture attention and add a touch of sophistication to any ensemble.',
   },
