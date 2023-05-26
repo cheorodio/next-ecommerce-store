@@ -1,35 +1,48 @@
 .cartContainer {
-  margin: 60px 0px;
   display: flex;
-  padding: 100px 120px 32px;
+  padding: 32px 120px 100px;
   gap: 32px;
 
   .cartOverviewContainer {
     width: 80%;
 
     .cartTableHead {
-      display: flex;
-      justify-content: space-between;
-      padding: 0px 32px 16px 16px;
-      border-bottom: 1px solid var(--primary-color);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--primary-color);
+      text-align: center;
     }
 
     .itemsInCart {
       display: flex;
       flex-direction: column;
-      gap: 20px;
 
       .productCard {
         border-bottom: 0.5px solid var(--primary-color);
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         align-items: center;
-        gap: 80px;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 0px;
+        form {
+          padding: 0px 24px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .productImage {
+            border-radius: 5px;
+          }
+        }
       }
     }
   }
 
   .cartTotalContainer {
-    background-color: antiquewhite;
     display: flex;
     justify-content: flex-end;
 
@@ -37,6 +50,7 @@
       background-color: var(--primary-color);
       padding: 32px;
       width: 350px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -49,9 +63,8 @@
         text-transform: uppercase;
       }
 
-      h2 {
-        font-size: 2.5rem;
-        margin-bottom: 16px;
+      .grandTotalAmount {
+        font-size: 2rem;
       }
 
       div {
@@ -90,4 +103,48 @@
       }
     }
   }
+}
+
+// REMOVE ACTION ///////
+.removeButton {
+  // background-color: pink;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .removeIcon {
+      font-size: 1.25rem;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// COUNTER ACTION ////////
+.changeCounter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  // width: 80px;
+  border: 1px solid var(--secondary-color);
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+}
+
+// EMPTY CART ////
+.emptyCart {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
