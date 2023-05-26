@@ -14,32 +14,40 @@ export default function NavBar() {
         </Link>
       </div>
 
-      <div className={styles.navigationBar}>
-        <div className={styles.navigationLinks}>
-          <Link className={styles.navigationLink} href="/#">
-            Home
-          </Link>
+      <div className={styles.navbar}>
+        <div className={styles.leftSide} />
+
+        <div className={styles.navigationBar}>
+          <div className={styles.navigationLinks}>
+            <Link className={styles.navigationLink} href="/#">
+              Home
+            </Link>
+            <Link
+              data-test-id="products-link"
+              className={styles.navigationLink}
+              href="/products"
+            >
+              Shop
+            </Link>
+            <Link className={styles.navigationLink} href="/story">
+              Our Story
+            </Link>
+            <Link className={styles.navigationLink} href="/blog">
+              Blog
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.cartContainer}>
           <Link
-            data-test-id="products-link"
-            className={styles.navigationLink}
-            href="/products"
+            href="/cart"
+            className={styles.cartIcon}
+            data-test-id="cart-link"
           >
-            Shop
-          </Link>
-          <Link className={styles.navigationLink} href="/story">
-            Our Story
-          </Link>
-          <Link className={styles.navigationLink} href="/blog">
-            Blog
+            <BsCart3 style={{ fontSize: '1.25rem' }} />
+            <CartBadge data-test-id="cart-count" />
           </Link>
         </div>
-      </div>
-
-      <div className={styles.cartContainer}>
-        <Link href="/cart" className={styles.cartIcon}>
-          <BsCart3 style={{ fontSize: '1.25rem' }} />
-        </Link>
-        <CartBadge />
       </div>
     </header>
   );

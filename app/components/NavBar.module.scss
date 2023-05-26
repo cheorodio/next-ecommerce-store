@@ -6,72 +6,77 @@ $xxl: 1536px;
 
 .navigationHeader {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
-  padding: 16px 60px;
-  position: absolute;
-
-  z-index: 2;
-
-  @media screen and (max-width: $small) {
-    margin: 0px 24px;
-  }
+  padding: 32px 120px;
 
   .logo {
-    height: 70px;
-    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .navigationBar {
+  .navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
 
-    .navigationLinks {
+    .leftSide {
+      width: 25%;
+    }
+
+    .navigationBar {
       display: flex;
-      gap: 40px;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
 
-      .navigationLink {
-        pointer-events: all;
-        position: relative;
-        text-transform: uppercase;
+      .navigationLinks {
+        display: flex;
+        gap: 30px;
 
-        &:hover {
-          color: white;
-          -webkit-text-stroke: 0.5px var(--primary-color);
-        }
+        .navigationLink {
+          pointer-events: all;
+          position: relative;
+          text-transform: uppercase;
 
-        &::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          border-radius: 4px;
-          background-color: white;
-          bottom: 0;
-          left: 0;
-          transform-origin: right;
-          transform: scaleX(0);
-          transition: transform 0.3s ease-in-out;
-        }
+          &:hover {
+            color: var(--primary-color);
+            // -webkit-text-stroke: 0.5px var(--primary-color);
+          }
 
-        &:hover::before {
-          transform-origin: left;
-          transform: scaleX(1);
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 4px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+          }
+
+          &:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
         }
       }
-    }
-  }
 
-  .cartContainer {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    width: 25%;
+      .cartContainer {
+        position: relative;
+        width: 25%;
 
-    .cartIcon {
-      cursor: pointer;
+        .cartIcon {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
