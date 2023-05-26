@@ -97,7 +97,9 @@ export default function CheckoutPage() {
               </label>
             </div>
           </div>
-          <button data-test-id="checkout-confirm-order">Confirm Order</button>
+          <button data-test-id="checkout-confirm-order" href="/thankYou">
+            Confirm Order
+          </button>
         </form>
       </div>
 
