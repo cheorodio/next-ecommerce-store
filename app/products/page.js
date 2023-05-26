@@ -14,7 +14,7 @@ export default function ProductsPage() {
       <section className={styles.productOverviewContainer}>
         <h1>shop our collection</h1>
 
-        {/* <div className={styles.productOverviewHeader}>
+        <div className={styles.productOverviewHeader}>
           <div className={styles.catergoryLinks}>
             <h2>Category</h2>
             <div>
@@ -24,7 +24,7 @@ export default function ProductsPage() {
             </div>
           </div>
           <div className={styles.categoryImageHeader} />
-        </div> */}
+        </div>
 
         <div className={styles.productCardsContainer}>
           {products.map((product) => {
@@ -37,6 +37,7 @@ export default function ProductsPage() {
                   src={`/images/${product.name}.jpg`}
                   width={200}
                   height={200}
+                  alt=""
                 />
                 <div>
                   <Link
@@ -57,7 +58,7 @@ export default function ProductsPage() {
                       href={`/products/${product.id}`}
                       className={styles.productPrice}
                     >
-                      {product.price}
+                      € {product.price}
                     </Link>
                   </div>
                 </div>
