@@ -436,4 +436,14 @@ $xxl: 1536px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+}
+
+// ERROR STYLING ////
+.errorMessage {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
