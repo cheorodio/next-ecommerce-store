@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '../../database/products';
+import { getProducts } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import styles from './cart.module.scss';
@@ -14,7 +14,9 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-export default function CartPage() {
+export default async function CartPage() {
+  const products = await getProducts();
+
   const productQuantityCookie = getCookie('cart');
 
   const productQuantities = !productQuantityCookie
@@ -37,7 +39,7 @@ export default function CartPage() {
   // console.log({ filteredProducts });
 
   let subTotal = 0;
-  let totalPrice = productsInCart.reduce(
+  const totalPrice = productsInCart.reduce(
     (accumulator, item) => accumulator + item.price * item.quantity,
     0,
   );
