@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProductById, products } from '../../../database/products';
+import { getProductById, getProducts } from '../../../database/products';
 import AddToCartForm from './AddToCartForm';
 import styles from './page.module.scss';
 
@@ -12,13 +12,15 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-export default function SingleProductPage({ params }) {
-  const singleProduct = getProductById(Number(params.productId));
-  console.log(singleProduct);
+export default async function SingleProductPage({ params }) {
+  const singleProduct = await getProductById(Number(params.productId));
+  const products = await getProducts();
+  console.log({ singleProduct });
 
   if (!singleProduct) {
     notFound();
   }
+
   return (
     <main>
       <section className={styles.productContainer}>

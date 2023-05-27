@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '../../database/products.js';
+import { getProducts } from '../../database/products';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -8,7 +8,8 @@ export const metadata = {
   description: 'Products',
 };
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getProducts();
   return (
     <main>
       <section className={styles.productOverviewContainer}>
@@ -33,12 +34,14 @@ export default function ProductsPage() {
                 key={`product-div-${product.id}`}
                 className={styles.productCard}
               >
-                <Image
-                  src={`/images/${product.name}.jpg`}
-                  width={200}
-                  height={200}
-                  alt=""
-                />
+                <Link href={`/products/${product.id}`}>
+                  <Image
+                    src={`/images/${product.name}.jpg`}
+                    width={200}
+                    height={200}
+                    alt=""
+                  />
+                </Link>
                 <div>
                   <Link
                     data-test-id="product-<product id>"

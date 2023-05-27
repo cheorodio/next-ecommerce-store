@@ -108,8 +108,6 @@
 
 // REMOVE ACTION ///////
 .removeButton {
-  // background-color: pink;
-
   button {
     background-color: transparent;
     border: none;
@@ -131,7 +129,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  // width: 80px;
   border: 1px solid var(--secondary-color);
 
   button {
