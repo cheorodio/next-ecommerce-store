@@ -12,8 +12,12 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-export default async function SingleProductPage({ params }) {
-  const singleProduct = await getProductById(Number(params.productId));
+type Props = {
+  params: { productId: string };
+};
+
+export default async function SingleProductPage(props: Props) {
+  const singleProduct = await getProductById(Number(props.params.productId));
   const products = await getProducts();
   console.log({ singleProduct });
 
@@ -31,6 +35,7 @@ export default async function SingleProductPage({ params }) {
             width={500}
             height={500}
             className={styles.productImage}
+            alt=""
           />
         </div>
 
