@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { FaLongArrowAltRight } from 'react-icons/fa';
 import styles from './page.module.scss';
 
 export const rootNotFoundMetadata = {
@@ -14,10 +12,6 @@ export default function RootNotFound() {
         ⛔️ Sorry this page was not found make sure you visit a page that exists
         ⛔️
       </p>
-
-      <Link href="/#" className={styles.returnToHomeButton}>
-        Return to home <FaLongArrowAltRight />
-      </Link>
     </div>
   );
 }
