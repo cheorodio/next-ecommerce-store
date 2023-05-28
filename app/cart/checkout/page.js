@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import logo from '../../../public/images/logo.png';
+// import Image from 'next/image';
+// import Link from 'next/link';
+// import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+// import logo from '../../../public/images/logo.png';
 import styles from './checkout.module.scss';
 
 export default function CheckoutPage() {
