@@ -77,6 +77,7 @@ export default async function CartPage() {
                         width={80}
                         height={80}
                         className={styles.productImage}
+                        alt=""
                       />
                     </div>
 
