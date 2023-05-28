@@ -103,7 +103,7 @@ export default function CheckoutPage() {
         </form>
       </div>
 
-      <div className={styles.totalSection}></div>
+      <div className={styles.totalSection} />
     </div>
   );
 }
