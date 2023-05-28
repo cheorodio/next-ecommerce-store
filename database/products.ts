@@ -1,13 +1,14 @@
 import { cache } from 'react';
+import { Product } from '../migrations/1685200803-createTableProducts';
 import { sql } from './connect';
 
-type Product = {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  description: string;
-};
+// type Product = {
+//   id: number;
+//   name: string;
+//   category: string;
+//   price: number;
+//   description: string;
+// };
 
 // run sql query in JS
 export const getProducts = cache(async () => {
