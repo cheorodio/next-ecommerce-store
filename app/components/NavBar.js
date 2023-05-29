@@ -25,9 +25,6 @@ export default function NavBar() {
           <Link className={styles.navigationLink} href="/story">
             Our Story
           </Link>
-          <Link className={styles.navigationLink} href="/blog">
-            Blog
-          </Link>
         </div>
         <div className={styles.logoContainer}>
           <Link href="/#">
