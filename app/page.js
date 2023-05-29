@@ -6,12 +6,12 @@ import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
 import shipping from '../public/images/freeshipping.png';
 import handmade from '../public/images/handmade.png';
-import heroImage from '../public/images/hero1.jpg';
 import featuredProduct1 from '../public/images/product1.jpg';
 import featuredProduct3 from '../public/images/product10.jpg';
 import featuredProduct2 from '../public/images/product2.jpg';
 import payment from '../public/images/securepayment.png';
 import tracking from '../public/images/tracking.png';
+import HeroSwiper from './components/HeroSwiper';
 import styles from './page.module.scss';
 
 export const metadata = {
@@ -23,34 +23,9 @@ export default function Home() {
   return (
     <main>
       <section className={styles.heroSection}>
-        <div className={styles.heroImageContainer}>
-          <Image src={heroImage} alt="" className={styles.heroMainImage} />
-        </div>
-        {/* <div className={styles.heroImageContainer}>
-          <Image
-            src={hero}
-            alt="woman wearring earrings"
-            className={styles.heroImage}
-          />
-        </div>
-        <div className={styles.heroTextContainer}>
-          <h1>
-            Crafted with <span>love</span> <br /> Worn with <span>styles</span>
-          </h1>
-          <p>
-            Explore our diverse range of handcrafted jewelry, meticulously
-            designed to reflect individuality and celebrate personal style. From
-            delicate necklaces that grace your collarbones to statement rings
-            that demand attention, our collection offers something for every
-            occasion and personality.
-          </p>
-
-          <Link className={styles.heroLink} href="/products">
-            <h6>View products</h6>
-            <TbArrowMoveRight className={styles.icon} />
-          </Link>
-        </div> */}
+        <HeroSwiper />
       </section>
+
       {/* ========================= FEATURED SECTION ========================= */}
       <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
