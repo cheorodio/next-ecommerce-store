@@ -1,47 +1,89 @@
-// .storyContainer {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 32px 120px;
-
-//   .storyTitleContainer {
-//     height: 300px;
-//     width: 100%;
-//     background-image: linear-gradient(
-//         rgba(34, 34, 34, 0.1),
-//         rgba(34, 34, 34, 0.1)
-//       ),
-//       url(../../public/images/our-story.jpg);
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-
-//     h1 {
-//       background-color: #ffffff99;
-//       width: 100%;
-//       text-align: center;
-//       color: var(--primary-color);
-//       font-family: var(--title-font);
-//       text-transform: uppercase;
-//       letter-spacing: 2px;
-//     }
-//   }
-
-//   h6 {
-//     font-size: 3rem;
-//     margin-top: 16px;
-//   }
-// }
-
 .storyContainer {
-  height: 52vh;
-  margin-top: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: -2;
+
+  .header {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(34, 34, 34, 0.3),
+        rgba(34, 34, 34, 0.3)
+      ),
+      url('../../public/images/aboutUs.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      font-family: var(--title-font);
+      color: #fff;
+      letter-spacing: 2.5px;
+    }
+  }
+
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    padding: 0px 120px 60px;
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.75;
+    }
+  }
+
+  .iconsSection {
+    padding: 0px 120px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+
+    h2 {
+      font-size: 2rem;
+      font-family: var(--title-font);
+    }
+
+    div {
+      display: flex;
+      gap: 30px;
+      text-align: center;
+
+      .icon {
+        height: 80px;
+        width: 80px;
+      }
+
+      div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        h3 {
+          font-family: var(--title-font);
+          letter-spacing: 2px;
+        }
+        p {
+          line-height: 1.75;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 }
