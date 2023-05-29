@@ -1,82 +1,101 @@
-$small: 640px;
+$mobile: 375px;
 $medium: 768px;
 $large: 1024px;
 $xl: 1280px;
 $xxl: 1536px;
 
-.navigationHeader {
+.topBanner {
+  background-color: var(--primary-color);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  padding: 32px 120px;
+  font-size: 0.85rem;
+  padding: 3px 0px;
+  color: #fff;
+  margin: 0px;
 
-  .logo {
+  @media screen and (max-width: $mobile) {
+    max-width: 375px;
+  }
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 120px;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to bottom, #fff, #ffffff00);
+  margin: 0px;
+
+  .navigationLinks {
+    flex: 1;
     display: flex;
-    align-items: center;
+    gap: 24px;
+
+    .navigationLink {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-family: var(--title-font);
+      pointer-events: all;
+      position: relative;
+      letter-spacing: 1.5px;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: var(--primary-color);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .logoContainer {
+    flex: 1;
+    display: flex;
     justify-content: center;
   }
 
-  .navbar {
+  .cartContainer {
+    flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-end;
+    position: relative;
 
-    .leftSide {
-      width: 25%;
+    .cartIcon {
+      cursor: pointer;
+      font-size: 1.6rem;
     }
 
-    .navigationBar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 50%;
-
-      .navigationLinks {
-        display: flex;
-        gap: 30px;
-
-        .navigationLink {
-          pointer-events: all;
-          position: relative;
-          text-transform: uppercase;
-
-          &:hover {
-            color: var(--primary-color);
-            // -webkit-text-stroke: 0.5px var(--primary-color);
-          }
-
-          &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            border-radius: 4px;
-            background-color: var(--primary-color);
-            bottom: 0;
-            left: 0;
-            transform-origin: right;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-          }
-
-          &:hover::before {
-            transform-origin: left;
-            transform: scaleX(1);
-          }
-        }
-      }
-
-      .cartContainer {
-        position: relative;
-        width: 25%;
-
-        .cartIcon {
-          cursor: pointer;
-        }
-      }
+    .badge {
+      background-color: var(--primary-color);
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      top: 20%;
+      right: -5%;
+      transform: translate(-50%, -50%);
+      font-size: 1rem;
     }
   }
 }
