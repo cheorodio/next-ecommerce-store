@@ -1,6 +1,5 @@
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
-import styles from './CartBadge.module.scss';
 
 export default function CartBadge() {
   const productQuantityCookie = getCookie('cart');
@@ -9,10 +8,10 @@ export default function CartBadge() {
     : parseJson(productQuantityCookie);
 
   const quantity = productQuantities.map((item) => item.quantity);
-  console.log(quantity);
+  // console.log(quantity);
   const total = quantity.reduce(
     (accumulator, currentNumber) => accumulator + currentNumber,
     0,
   );
-  return <div className={styles.badge}>{total}</div>;
+  return <h5>{total}</h5>;
 }
