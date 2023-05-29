@@ -1,14 +1,6 @@
 // Create products table using this migration
 import { Sql } from 'postgres'; // Sql type from postgres: written in capital S
 
-export type Product = {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  description: string;
-};
-
 // OPERATION TO CREATE OUR TABLE
 // function takes the parameter of our sql from connect, set it to the imported Sql
 export async function up(sql: Sql) {

@@ -83,6 +83,14 @@ export const products = [
   },
 ];
 
+export type Product = {
+  id: number;
+  name: string;
+  category: string;
+  price: number;
+  description: string;
+};
+
 export async function up(sql: Sql) {
   // use for of to loop through the products array from above, to get each object from the array into the table
   for (const product of products) {
