@@ -42,12 +42,48 @@
 
     p {
       font-size: 1.25rem;
-      line-height: 1.75;
+      line-height: 1.7;
+    }
+  }
+
+  .fromTheFounder {
+    height: 600px;
+    background: linear-gradient(#faf8f4, #a8875562, #faf8f4);
+    display: flex;
+    padding: 0px 120px 60px;
+    gap: 48px;
+
+    .imageContainer {
+      width: 50%;
+      background-image: url(../../public/images/founder.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .textContainer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      gap: 32px;
+
+      h4 {
+        font-family: var(--title-font);
+        font-size: 2rem;
+        font-style: italic;
+      }
+
+      p {
+        // font-size: 1.25rem;
+        line-height: 1.7;
+      }
     }
   }
 
   .iconsSection {
-    padding: 0px 120px;
+    padding: 0px 120px 60px;
     display: flex;
     flex-direction: column;
     text-align: center;

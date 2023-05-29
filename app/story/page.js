@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import aboutIcon from '../../public/images/aboutIcon.png';
+import founder from '../../public/images/founder.jpg';
 import iconGiveBack from '../../public/images/iconGiveBack.png';
 import iconHandmade from '../../public/images/iconHand.png';
 import iconSustainable from '../../public/images/iconSustainable.png';
@@ -33,6 +34,28 @@ export default function OurStoryPage() {
           create wearable art that not only enhances your personal style but
           also connects you to the beauty and significance of the natural world.
         </p>
+      </div>
+
+      <div className={styles.fromTheFounder}>
+        <div className={styles.imageContainer} />
+        <div className={styles.textContainer}>
+          <h4>From the Founder</h4>
+          <p>
+            As a lifelong lover of jewelry, I always found myself captivated by
+            the transformative power of beautifully crafted pieces. The way
+            jewelry can accentuate one's style, evoke emotions, and become a
+            cherished symbol of personal stories fascinated me.
+          </p>
+          <p>
+            Driven by my passion for jewelry and a desire to create a platform
+            that could connect people with exceptional pieces from the comfort
+            of their own homes, I embarked on the journey of founding our
+            e-commerce business. I recognized the immense potential of the
+            digital landscape to reach a wider audience, break down geographical
+            barriers, and offer a convenient and personalized shopping
+            experience.
+          </p>
+        </div>
       </div>
 
       <div className={styles.iconsSection}>
