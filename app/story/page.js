@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import aboutIcon from '../../public/images/aboutIcon.png';
-import founder from '../../public/images/founder.jpg';
 import iconGiveBack from '../../public/images/iconGiveBack.png';
 import iconHandmade from '../../public/images/iconHand.png';
 import iconSustainable from '../../public/images/iconSustainable.png';
