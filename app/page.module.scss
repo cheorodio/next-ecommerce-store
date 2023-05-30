@@ -9,10 +9,11 @@ $xxl: 1536px;
   height: 100vh;
   display: flex;
   position: relative;
-  z-index: -2;
+  // z-index: -2;
   width: 100%;
 
   .mySlider {
+    z-index: 1;
     .slider {
       position: relative;
 
@@ -27,7 +28,7 @@ $xxl: 1536px;
         left: 25%;
         transform: translate(-50%, -50%);
         width: 600px;
-        border: 1px solid #fff;
+        // border: 1px solid #fff;
         padding: 50px;
 
         h1 {
@@ -42,8 +43,16 @@ $xxl: 1536px;
         }
 
         .productLink {
-          z-index: 99;
+          // z-index: 99;
           cursor: pointer;
+          padding: 4px 8px;
+          border: 1px solid var(--primary-color);
+          border-radius: 5px;
+
+          &:hover {
+            background-color: var(--primary-color);
+            color: var(--main-bg-color);
+          }
         }
       }
     }
