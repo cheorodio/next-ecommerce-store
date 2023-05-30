@@ -1,13 +1,21 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { addToCart } from './actions';
 import styles from './AddToCartForm.module.scss';
 
-export default function AddToCartForm(props) {
+type Props = {
+  productId: number;
+};
+
+export default function AddToCartForm(props: Props) {
   const [quantity, setQuantity] = useState(1);
   const router = useRouter();
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    setQuantity(Number(event.currentTarget.value));
+  }
 
   return (
     <form className={styles.quantityForm}>
@@ -16,9 +24,7 @@ export default function AddToCartForm(props) {
         type="number"
         min="1"
         value={quantity}
-        onChange={(event) => {
-          setQuantity(event.currentTarget.value);
-        }}
+        onChange={handleChange}
       />
       <button
         data-test-id="product-add-to-cart"

@@ -4,7 +4,7 @@ import { cookies } from 'next/headers';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
 
-export async function addToCart(productId, quantity) {
+export async function addToCart(productId: number, quantity: number) {
   // Get the current cookies from the Request Headers
   const productQuantityCookie = getCookie('cart');
   // Parse the cookie
@@ -13,7 +13,7 @@ export async function addToCart(productId, quantity) {
     : parseJson(productQuantityCookie);
 
   // Edit the object: get the object for the product in cookies
-  const productToUpdate = productQuantities.find((productQuantity) => {
+  const productToUpdate = productQuantities?.find((productQuantity) => {
     return productQuantity.id === productId;
   });
 
@@ -24,7 +24,7 @@ export async function addToCart(productId, quantity) {
       Number(productToUpdate.quantity) + Number(quantity);
   } else {
     // add the new value to current value in the cart badge
-    productQuantities.push({
+    productQuantities!.push({
       id: productId,
       quantity: Number(quantity),
     });

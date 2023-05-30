@@ -13,7 +13,12 @@ export const metadata = {
 };
 
 type Props = {
-  params: { productId: string };
+  params: { productId: string }; // this is a string because the productId is in the url
+};
+
+export type CookieQuantityItem = {
+  id: number;
+  quantity?: number;
 };
 
 export default async function SingleProductPage(props: Props) {
