@@ -1,8 +1,7 @@
 $mobile: 375px;
-$medium: 768px;
-$large: 1024px;
-$xl: 1280px;
-$xxl: 1536px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
 
 .topBanner {
   background-color: var(--primary-color);
@@ -15,7 +14,7 @@ $xxl: 1536px;
   margin: 0px;
 
   @media screen and (max-width: $mobile) {
-    max-width: 375px;
+    width: auto;
   }
 }
 
@@ -29,6 +28,11 @@ $xxl: 1536px;
   background: linear-gradient(to bottom, #fff, #ffffff00);
   margin: 0px;
   z-index: 2;
+
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    padding: 16px;
+  }
 
   .navigationLinks {
     flex: 1;
@@ -65,6 +69,12 @@ $xxl: 1536px;
         transform-origin: left;
         transform: scaleX(1);
       }
+
+      @media screen and (max-width: $mobile) {
+        width: auto;
+        font-size: 0.2rem;
+        gap: 8px;
+      }
     }
   }
 
@@ -72,6 +82,16 @@ $xxl: 1536px;
     flex: 1;
     display: flex;
     justify-content: center;
+
+    .logo {
+      height: 50px;
+      width: 80px;
+
+      @media screen and (max-width: $mobile) {
+        height: 30px;
+        width: 60px;
+      }
+    }
   }
 
   .cartContainer {
@@ -97,6 +117,13 @@ $xxl: 1536px;
       right: -5%;
       transform: translate(-50%, -50%);
       font-size: 1rem;
+
+      @media screen and (max-width: $mobile) {
+        height: 17px;
+        width: 17px;
+        font-size: 0.8rem;
+        right: -13%;
+      }
     }
   }
 }
