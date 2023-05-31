@@ -3,23 +3,28 @@ import { useRouter } from 'next/navigation';
 import { addQuantity, subtractQuantity } from './actions';
 import styles from './cart.module.scss';
 
-export default function ChangeItemQuantity({ product }) {
+type Props = {
+  product: number;
+  quantity: number;
+};
+
+export default function ChangeItemQuantity(props: Props) {
   const router = useRouter();
   return (
     <div className={styles.changeCounter}>
       <button
         formAction={async () => {
           router.refresh();
-          await subtractQuantity(product);
+          await subtractQuantity(props.product);
         }}
       >
         -
       </button>
-      {product.quantity}
+      {props.product.quantity}
       <button
         formAction={async () => {
           router.refresh();
-          await addQuantity(product);
+          await addQuantity(props.product);
         }}
       >
         +

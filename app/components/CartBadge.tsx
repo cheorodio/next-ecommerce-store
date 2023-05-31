@@ -7,9 +7,9 @@ export default function CartBadge() {
     ? []
     : parseJson(productQuantityCookie);
 
-  const quantity = productQuantities.map((item) => item.quantity);
+  const quantity = productQuantities?.map((item) => item.quantity);
   // console.log(quantity);
-  const total = quantity.reduce(
+  const total = quantity?.reduce(
     (accumulator, currentNumber) => accumulator + currentNumber,
     0,
   );

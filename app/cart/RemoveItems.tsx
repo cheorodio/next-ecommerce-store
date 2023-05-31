@@ -4,7 +4,11 @@ import { TfiTrash } from 'react-icons/tfi';
 import { removeItem } from './actions';
 import styles from './cart.module.scss';
 
-export default function RemoveItems({ product }) {
+type Props = {
+  product: number;
+};
+
+export default function RemoveItems(props: Props) {
   const router = useRouter();
 
   return (
@@ -12,7 +16,7 @@ export default function RemoveItems({ product }) {
       <button
         formAction={async () => {
           router.refresh();
-          await removeItem(product);
+          await removeItem(props.product);
         }}
       >
         <TfiTrash className={styles.removeIcon} />
