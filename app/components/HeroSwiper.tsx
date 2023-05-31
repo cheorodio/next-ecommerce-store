@@ -18,6 +18,10 @@ import hero5 from '../../public/images/hero5.jpg';
 import hero7 from '../../public/images/hero7.jpg';
 import styles from '../page.module.scss';
 
+type Props = {
+  id: number;
+};
+
 const sliderImages = [
   { id: 1, image: hero1 },
   // { id: 2, image: hero2 },
@@ -28,12 +32,12 @@ const sliderImages = [
   { id: 7, image: hero7 },
 ];
 
-export default function HeroSwiper() {
+export default function HeroSwiper(props: Props) {
   return (
     <Swiper
       modules={[Autoplay, Pagination, Navigation, EffectFade]}
       className={styles.mySlider}
-      loopFillGroupWithBlank={true}
+      // loopFillGroupWithBlank={true}
       navigation={true}
       effect="fade"
       autoplay={{
@@ -50,10 +54,7 @@ export default function HeroSwiper() {
       loop={true}
     >
       {sliderImages.map((slide) => (
-        <SwiperSlide
-          className={styles.slider}
-          key={`slider-div-${sliderImages.id}`}
-        >
+        <SwiperSlide className={styles.slider} key={`slider-div-${props.id}`}>
           <Image className={styles.sliderImage} src={slide.image} alt="" />
 
           <div className={styles.textBox}>
