@@ -2,7 +2,7 @@
   display: flex;
   padding: 150px 120px;
   gap: 32px;
-  min-height: 55vh;
+  min-height: 60vh;
 
   .cartOverviewContainer {
     width: 80%;
@@ -27,9 +27,11 @@
         justify-content: center;
         text-align: center;
         padding: 12px 0px;
+
         form {
           padding: 0px 24px;
         }
+
         div {
           display: flex;
           align-items: center;
@@ -95,6 +97,7 @@
 
         .checkoutButton {
           background-color: #1f1f1f;
+          color: white;
 
           &:hover {
             background-color: var(--primary-color);
