@@ -40,13 +40,13 @@ export default function OurStoryPage() {
         <div className={styles.textContainer}>
           <h4>From the Founder</h4>
           <p>
-            As a lifelong lover of jewelry, I always found myself captivated by
-            the transformative power of beautifully crafted pieces. The way
-            jewelry can accentuate one's style, evoke emotions, and become a
+            As a lifelong lover of jewellery, I always found myself captivated
+            by the transformative power of beautifully crafted pieces. The way
+            jewellery can accentuate one's style, evoke emotions, and become a
             cherished symbol of personal stories fascinated me.
           </p>
           <p>
-            Driven by my passion for jewelry and a desire to create a platform
+            Driven by my passion for jewellery and a desire to create a platform
             that could connect people with exceptional pieces from the comfort
             of their own homes, I embarked on the journey of founding our
             e-commerce business. I recognized the immense potential of the
