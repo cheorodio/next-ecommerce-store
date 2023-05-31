@@ -13,18 +13,23 @@ export default async function ProductsPage() {
   return (
     <main>
       <section className={styles.productOverviewContainer}>
-        <h1>shop our collection</h1>
+        <div className={styles.productPageHeader}>
+          <h1>shop our collection</h1>
+        </div>
 
-        <div className={styles.productOverviewHeader}>
-          <div className={styles.catergoryLinks}>
-            <h2>Category</h2>
-            <div>
-              <Link href="/#">Earrings</Link>
-              <Link href="/#">Necklace</Link>
-              <Link href="/#">Rings</Link>
-            </div>
+        <div className={styles.categoryContainer}>
+          <div className={styles.category}>
+            <Link href="/products">All products</Link>
           </div>
-          <div className={styles.categoryImageHeader} />
+          <div className={styles.category}>
+            <Link href="/products">Rings</Link>
+          </div>
+          <div className={styles.category}>
+            <Link href="/products">Earrings</Link>
+          </div>
+          <div className={styles.category}>
+            <Link href="/products">Necklace</Link>
+          </div>
         </div>
 
         <div className={styles.productCardsContainer}>
