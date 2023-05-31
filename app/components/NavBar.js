@@ -28,7 +28,7 @@ export default function NavBar() {
         </div>
         <div className={styles.logoContainer}>
           <Link href="/#">
-            <Image src={logo} alt="logo" height={50} width={80} />
+            <Image src={logo} alt="logo" className={styles.logo} />
           </Link>
         </div>
         <div className={styles.cartContainer}>
