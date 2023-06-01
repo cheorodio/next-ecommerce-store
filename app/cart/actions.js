@@ -40,6 +40,7 @@ export async function subtractQuantity(item) {
   const decrease = productQuantities.find((product) => {
     return product.id === item.id;
   });
-  decrease.quantity -= 1;
+  // decrease.quantity -= 1;
+  decrease.quantity > 1 ? (decrease.quantity -= 1) : (decrease.quantity = 1);
   await cookies().set('cart', JSON.stringify(productQuantities));
 }
