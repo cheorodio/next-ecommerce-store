@@ -174,24 +174,6 @@ $desktop: 1280px;
   }
 }
 
-// @media screen and (max-width: $mobile) {
-//   .featuredProductsSection {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 16px;
-//     margin: 0px 24px;
-
-//     .featuredProductsTitle {
-//       background-color: antiquewhite;
-
-//       h4 {
-//         font-size: 1rem;
-//         margin-bottom: 24px;
-//       }
-//     }
-//   }
-// }
-
 // /////////////////
 
 .collectionSection {
@@ -422,7 +404,7 @@ $desktop: 1280px;
 
 // NOT FOUND STYLING //////////////////
 .notFoundContainer {
-  height: 55vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -438,7 +420,7 @@ $desktop: 1280px;
 
 // LOADING STYLING ///////////
 .loadingContainer {
-  height: 55vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,7 +429,7 @@ $desktop: 1280px;
 
 // ERROR STYLING ////
 .errorMessage {
-  height: 55vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
