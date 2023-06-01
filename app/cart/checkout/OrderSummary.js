@@ -45,7 +45,7 @@ export default async function OrderSummary() {
         return (
           <div key={`product-div-${product.id}`} className={styles.summaryCard}>
             <div className={styles.leftSide}>
-              <div className={styles.imageContainer}>
+              <div>
                 <Image
                   src={`/images/${product.name}.jpg`}
                   width={60}
