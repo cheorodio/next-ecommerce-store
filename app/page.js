@@ -69,7 +69,7 @@ export default function Home() {
           <h6>earrings</h6>
           <div>
             <h5>Violet</h5>
-            <p>€39,99</p>
+            <p>€39</p>
           </div>
         </Link>
       </section>
