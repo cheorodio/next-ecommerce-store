@@ -1,8 +1,7 @@
-$small: 640px;
-$medium: 768px;
-$large: 1024px;
-$xl: 1280px;
-$xxl: 1536px;
+$mobile: 375px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
 
 .footerSection {
   padding: 24px 150px;
@@ -10,8 +9,8 @@ $xxl: 1536px;
   display: flex;
   justify-content: space-between;
   // width: 100%;
-  @media screen and (max-width: $xl) {
-    margin: 0px 60px;
+  @media screen and (max-width: $laptop) {
+    padding: 30px 60px;
   }
 }
 

@@ -1,15 +1,21 @@
+@import './../../../globalMediaQueries';
+
 .thankyouContainer {
-  height: 73vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 32px;
-  padding: 34px;
+  padding: 50px 34px 0px;
 
   h1 {
     font-family: var(--accent-font);
     font-size: 4rem;
+
+    @media screen and (max-width: $laptop) {
+      font-size: 3rem;
+    }
   }
 
   div {
@@ -17,5 +23,8 @@
     align-items: center;
     gap: 32px;
     padding: 0px 400px;
+    @media screen and (max-width: $laptop) {
+      padding: 0px 200px;
+    }
   }
 }

@@ -1,12 +1,16 @@
+@import '../globalMediaQueries';
+
 .cartContainer {
   display: flex;
   padding: 150px 120px;
   gap: 32px;
   min-height: 72vh;
 
-  .cartOverviewContainer {
-    width: 80%;
+  @media screen and (max-width: $laptop) {
+    padding: 125px 60px 50px;
+  }
 
+  .cartOverviewContainer {
     .cartTableHead {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -60,6 +64,11 @@
       gap: 16px;
       color: var(--main-bg-color);
       border-radius: 10px;
+
+      @media screen and (max-width: $laptop) {
+        width: 280px;
+        height: 280px;
+      }
 
       h3 {
         font-size: 0.9rem;

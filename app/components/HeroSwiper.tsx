@@ -1,4 +1,3 @@
-// Import Swiper styles
 'use client';
 
 import 'swiper/css/effect-fade';
@@ -34,7 +33,7 @@ export default function HeroSwiper(props: Props) {
       modules={[Autoplay, Pagination, Navigation, EffectFade]}
       className={styles.mySlider}
       // loopFillGroupWithBlank={true}
-      navigation={true}
+      // navigation={true}
       effect="fade"
       autoplay={{
         delay: 5000,
@@ -43,7 +42,7 @@ export default function HeroSwiper(props: Props) {
       pagination={{
         clickable: true,
       }}
-      speed={2000}
+      speed={1000}
       slidesPerView={1}
       spaceBetween={0}
       slidesPerGroup={1}
@@ -56,7 +55,7 @@ export default function HeroSwiper(props: Props) {
           <div className={styles.textBox}>
             <h1>Crafted with love, worn with styles</h1>
             <p>
-              Explore our diverse range of handcrafted jewelry, meticulously
+              Explore our diverse range of handcrafted jewellery, meticulously
               designed to reflect individuality and celebrate personal style.
             </p>
 

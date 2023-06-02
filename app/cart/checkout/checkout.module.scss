@@ -1,3 +1,5 @@
+@import './../../globalMediaQueries';
+
 .form {
   height: 100vh;
   display: flex;
@@ -117,6 +119,11 @@
   width: 100%;
   display: flex;
   gap: 200px;
+
+  @media screen and (max-width: $laptop) {
+    padding: 100px 60px 50px;
+    gap: 50px;
+  }
 }
 
 .summaryContainer {

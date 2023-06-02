@@ -1,3 +1,5 @@
+@import '../../globalMediaQueries';
+
 .productContainer {
   display: flex;
   align-items: center;
@@ -5,11 +7,26 @@
   gap: 32px;
   margin: 80px 120px 0px;
 
-  .productImage {
-    border-radius: 5px;
+  @media screen and (max-width: $laptop) {
+    margin: 32px 60px;
+    padding: 90px 0px 50px;
+  }
+
+  div {
+    width: 40%;
+
+    .productImage {
+      border-radius: 5px;
+
+      @media screen and (max-width: $laptop) {
+        height: 350px;
+        width: 350px;
+      }
+    }
   }
 
   .productInfoContainer {
+    width: 60%;
     h1 {
       text-transform: uppercase;
       font-size: 2rem;
@@ -50,6 +67,10 @@
   flex-direction: column;
   gap: 16px;
   margin: 0px 120px 60px;
+
+  @media screen and (max-width: $laptop) {
+    margin: 0px 60px 32px;
+  }
 
   h2 {
     text-align: center;

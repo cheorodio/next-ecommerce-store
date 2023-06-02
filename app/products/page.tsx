@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getProducts } from '../../database/products';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Jewellery Collections | vida. ',
   description: 'Products',

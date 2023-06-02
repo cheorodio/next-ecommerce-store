@@ -1,7 +1,4 @@
-$mobile: 375px;
-$tablet: 768px;
-$laptop: 1024px;
-$desktop: 1280px;
+@import './globalMediaQueries';
 
 // HERO SECTION //////////////////////////////////
 .heroSection {
@@ -10,14 +7,23 @@ $desktop: 1280px;
   position: relative;
   width: 100%;
 
-  @media screen and (max-width: $mobile) {
-    height: 250px;
+  @media screen and (max-width: $laptop) {
+    height: 640px;
   }
 
   .mySlider {
     z-index: 1;
+
+    @media screen and (max-width: $laptop) {
+      height: 640px;
+    }
+
     .slider {
       position: relative;
+
+      @media screen and (max-width: $laptop) {
+        height: 640px;
+      }
 
       .sliderImage {
         width: 100%;
@@ -30,7 +36,13 @@ $desktop: 1280px;
         left: 25%;
         transform: translate(-50%, -50%);
         width: 600px;
-        // padding: 50px;
+
+        @media screen and (max-width: $laptop) {
+          top: 55%;
+          left: 25%;
+          transform: translate(-50%, -50%);
+          width: 400px;
+        }
 
         @media screen and (max-width: $mobile) {
           top: 50%;
@@ -44,8 +56,8 @@ $desktop: 1280px;
           font-size: 3rem;
           margin-bottom: 24px;
 
-          @media screen and (max-width: $mobile) {
-            font-size: 1.5rem;
+          @media screen and (max-width: $laptop) {
+            font-size: 2.5rem;
           }
         }
 
@@ -53,6 +65,9 @@ $desktop: 1280px;
           line-height: 1.5;
           margin-bottom: 32px;
 
+          @media screen and (max-width: $laptop) {
+            font-size: 1rem;
+          }
           @media screen and (max-width: $mobile) {
             display: none;
           }
@@ -90,12 +105,30 @@ $desktop: 1280px;
   margin: 0px 120px 94px;
   padding-top: 96px;
 
-  @media screen and (max-width: $mobile) {
-    flex-direction: column;
-    margin: 0px 20px;
-    padding: 32px;
-    align-items: center;
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+    margin: 0px;
+    // padding: 16px 80px;
   }
+  @media screen and (max-width: $laptop) {
+    width: 100%;
+    padding: 60px;
+  }
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    padding: 16px 40px;
+  }
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    padding: 16px;
+  }
+
+  // @media screen and (max-width: $mobile) {
+  //   flex-direction: column;
+  //   margin: 0px 20px;
+  //   padding: 32px;
+  //   align-items: center;
+  // }
 
   .featuredProductsTitle {
     flex: 1;
@@ -109,6 +142,10 @@ $desktop: 1280px;
       border-bottom: 2px solid var(--secondary-color);
       margin-bottom: 32px;
       font-family: var(--title-font);
+
+      @media screen and (max-width: $laptop) {
+        font-size: 1.5rem;
+      }
     }
 
     .viewAllButton {
@@ -181,6 +218,11 @@ $desktop: 1280px;
   gap: 40px;
   margin: 0px 120px 94px;
 
+  @media screen and (max-width: $laptop) {
+    margin: 0px;
+    padding: 60px;
+  }
+
   .collectionImageBox {
     position: relative;
     flex: 1;
@@ -190,6 +232,10 @@ $desktop: 1280px;
       width: 80%;
       border: 10px solid #fff;
       border-radius: 5px;
+
+      @media screen and (max-width: $laptop) {
+        height: 250px;
+      }
     }
 
     .collectionImage2 {
@@ -250,6 +296,27 @@ $desktop: 1280px;
   justify-content: center;
   margin: 0px 120px 94px;
 
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+    padding: 16px 80px;
+    margin: 0px;
+  }
+  @media screen and (max-width: $laptop) {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 0px;
+  }
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    padding: 16px 40px;
+    margin: 0px;
+  }
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    padding: 16px;
+    margin: 0px;
+  }
+
   h2 {
     font-size: 2rem;
     font-family: var(--title-font);
@@ -268,6 +335,27 @@ $desktop: 1280px;
     display: flex;
     gap: 24px;
 
+    @media screen and (max-width: $desktop) {
+      width: 100%;
+      padding: 16px 80px;
+      // flex-direction: column;
+    }
+    @media screen and (max-width: $laptop) {
+      width: 100%;
+      padding: 16px 60px;
+      // flex-direction: column;
+    }
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      padding: 16px 40px;
+      flex-direction: column;
+    }
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+      padding: 16px;
+      flex-direction: column;
+    }
+
     div {
       height: 400px;
       width: 280px;
@@ -277,6 +365,24 @@ $desktop: 1280px;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media screen and (max-width: $desktop) {
+        // height: ;
+      }
+      @media screen and (max-width: $laptop) {
+        height: 250px;
+        width: 280px;
+      }
+      @media screen and (max-width: $tablet) {
+        width: 100%;
+        padding: 16px 40px;
+        margin: 0px;
+      }
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+        padding: 16px;
+        margin: 0px;
+      }
 
       p {
         background-color: #ffffffaa;
@@ -317,6 +423,11 @@ $desktop: 1280px;
   gap: 64px;
   margin: 0px 120px 94px;
 
+  @media screen and (max-width: $laptop) {
+    margin: 0px;
+    padding: 60px;
+  }
+
   .highlight {
     display: flex;
     flex-direction: column;
@@ -350,6 +461,11 @@ $desktop: 1280px;
   align-items: center;
   margin: 0px 120px 94px;
 
+  @media screen and (max-width: $laptop) {
+    margin: 0px;
+    padding: 60px;
+  }
+
   h4 {
     font-size: 1rem;
     font-family: var(--title-font);
@@ -364,7 +480,10 @@ $desktop: 1280px;
       top: 50%;
       width: 508px;
       height: 2px;
-      background-color: var(--primary-color);
+
+      @media screen and (max-width: $laptop) {
+        width: 400px;
+      }
     }
 
     &::before {
@@ -385,14 +504,29 @@ $desktop: 1280px;
     gap: 32px;
     text-align: center;
 
+    @media screen and (max-width: $laptop) {
+      padding: 0px;
+      gap: 20px;
+    }
+
     .testimonialCard {
       display: flex;
       flex-direction: column;
       padding: 0px 32px;
 
+      @media screen and (max-width: $laptop) {
+        font-size: 0.8rem;
+        padding: 0px;
+      }
+
       h6 {
         margin-top: 16px;
         margin-bottom: 8px;
+
+        @media screen and (max-width: $laptop) {
+          padding: 0px;
+          gap: 20px;
+        }
       }
     }
   }

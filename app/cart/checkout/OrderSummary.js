@@ -3,8 +3,6 @@ import Image from 'next/image';
 import { getProducts } from '../../../database/products';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
-// import ChangeItemQuantity from '../ChangeItemQuantity';
-// import RemoveItems from '../RemoveItems';
 import styles from './checkout.module.scss';
 
 export const dynamic = 'force-dynamic';
@@ -16,9 +14,7 @@ export const metadata = {
 
 export default async function OrderSummary() {
   const products = await getProducts();
-
   const productQuantityCookie = getCookie('cart');
-
   const productQuantities = !productQuantityCookie
     ? []
     : parseJson(productQuantityCookie);
