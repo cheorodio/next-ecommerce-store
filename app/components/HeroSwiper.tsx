@@ -53,7 +53,7 @@ export default function HeroSwiper(props: Props) {
           <Image className={styles.sliderImage} src={slide.image} alt="" />
 
           <div className={styles.textBox}>
-            <h1>Crafted with love, worn with styles</h1>
+            <h1>Crafted with love, Worn with styles</h1>
             <p>
               Explore our diverse range of handcrafted jewellery, meticulously
               designed to reflect individuality and celebrate personal style.
