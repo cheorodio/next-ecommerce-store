@@ -11,6 +11,7 @@
   }
 
   .cartOverviewContainer {
+    width: 70%;
     .cartTableHead {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
