@@ -13,5 +13,5 @@ export default function CartBadge() {
     (accumulator, currentNumber) => accumulator + currentNumber,
     0,
   );
-  return <h5>{total}</h5>;
+  return <h5 data-test-id="cart-quantity">{total}</h5>;
 }
