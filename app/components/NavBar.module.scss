@@ -1,7 +1,4 @@
-$mobile: 375px;
-$tablet: 768px;
-$laptop: 1024px;
-$desktop: 1280px;
+@import './../globalMediaQueries';
 
 .topBanner {
   background-color: var(--primary-color);
@@ -12,25 +9,13 @@ $desktop: 1280px;
   padding: 3px 0px;
   color: #fff;
   margin: 0px;
-
-  @media screen and (max-width: $mobile) {
-    width: auto;
-  }
-
-  @media screen and (max-width: $tablet) {
-    width: auto;
-  }
-
-  @media screen and (max-width: $laptop) {
-    width: auto;
-  }
 }
 
 .navContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 120px;
+  padding: 8px 120px;
   position: absolute;
   width: 100%;
   background: linear-gradient(to bottom, #fff, #ffffff00);
@@ -38,20 +23,16 @@ $desktop: 1280px;
   z-index: 2;
 
   @media screen and (max-width: $desktop) {
-    width: 100%;
     padding: 16px 80px;
   }
+
   @media screen and (max-width: $laptop) {
-    width: 100%;
     padding: 16px 60px;
   }
+
   @media screen and (max-width: $tablet) {
     width: 100%;
     padding: 16px 40px;
-  }
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-    padding: 16px;
   }
 
   .navigationLinks {
@@ -104,8 +85,8 @@ $desktop: 1280px;
     justify-content: center;
 
     .logo {
-      height: 50px;
-      width: 80px;
+      font-family: 'Caveat', sans-serif;
+      font-size: 4rem;
 
       @media screen and (max-width: $mobile) {
         height: 30px;

@@ -1,8 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { BsHandbag } from 'react-icons/bs';
-// import { GiHamburgerMenu } from 'react-icons/gi';
-import logo from '../../public/images/logo.png';
 import CartBadge from './CartBadge';
 import styles from './NavBar.module.scss';
 
@@ -28,7 +25,7 @@ export default function NavBar() {
         </div>
         <div className={styles.logoContainer}>
           <Link href="/#">
-            <Image src={logo} alt="logo" className={styles.logo} />
+            <p className={styles.logo}>vida.</p>
           </Link>
         </div>
         <div className={styles.cartContainer}>

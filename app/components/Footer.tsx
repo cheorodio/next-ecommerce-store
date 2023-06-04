@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   AiFillInstagram,
@@ -8,7 +7,6 @@ import {
 } from 'react-icons/ai';
 import { BsFacebook, BsPinterest } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
-import logo from '../../public/images/logo.png';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -16,7 +14,7 @@ export default function Footer() {
     <footer className={styles.footerSection}>
       <div className={styles.companyInformation}>
         <Link href="/#">
-          <Image src={logo} alt="logo" height={30} width={60} />
+          <p className={styles.logo}>vida.</p>
         </Link>
         <div className={styles.companyContact}>
           <div>

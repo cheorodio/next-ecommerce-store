@@ -20,6 +20,11 @@ $desktop: 1280px;
   gap: 16px;
   width: 30%;
 
+  .logo {
+    font-family: 'Caveat', sans-serif;
+    font-size: 2rem;
+  }
+
   .companyContact {
     display: flex;
     flex-direction: column;
