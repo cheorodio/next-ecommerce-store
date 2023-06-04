@@ -13,6 +13,7 @@ export default function ChangeItemQuantity(props: Props) {
   return (
     <div className={styles.changeCounter}>
       <button
+        name="subtract-quantity"
         formAction={async () => {
           router.refresh();
           await subtractQuantity(props.product);
