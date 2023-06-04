@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductById, getProducts } from '../../../database/products';
-import AddToCartForm from './AddToCartForm';
+import AddToCart from './AddToCart';
 import styles from './page.module.scss';
 
 export const dynamic = 'force-dynamic';
@@ -40,17 +40,16 @@ export default async function SingleProductPage(props: Props) {
             width={500}
             height={500}
             className={styles.productImage}
-            alt=""
+            alt={singleProduct.name}
           />
         </div>
-
         <div className={styles.productInfoContainer}>
           <h1>{singleProduct.name}</h1>
           <h5>{singleProduct.description}</h5>
           <h6 data-test-id="product-price">€ {singleProduct.price}</h6>
           <p className={styles.quantityTitle}>Quantity</p>
           <div>
-            <AddToCartForm productId={singleProduct.id} />
+            <AddToCart productId={singleProduct.id} />
           </div>
         </div>
       </section>
