@@ -43,7 +43,7 @@ export default function Home() {
           <h6>Earrings</h6>
           <div>
             <h5>Lily</h5>
-            <p>€35,00</p>
+            <p>€35</p>
           </div>
         </Link>
 
@@ -56,7 +56,7 @@ export default function Home() {
           <h6>Necklace</h6>
           <div>
             <h5>Rose</h5>
-            <p>€45,50</p>
+            <p>€45</p>
           </div>
         </Link>
 

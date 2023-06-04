@@ -7,22 +7,45 @@
   position: relative;
   width: 100%;
 
+  @media screen and (max-width: $desktop) {
+    height: 720px;
+  }
+
   @media screen and (max-width: $laptop) {
-    height: 640px;
+    height: 495px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 495px;
   }
 
   .mySlider {
     z-index: 1;
 
+    @media screen and (max-width: $desktop) {
+      height: 720px;
+    }
+
     @media screen and (max-width: $laptop) {
-      height: 640px;
+      height: 495px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      height: 495px;
     }
 
     .slider {
       position: relative;
+      @media screen and (max-width: $desktop) {
+        height: 720px;
+      }
 
       @media screen and (max-width: $laptop) {
-        height: 640px;
+        height: 495px;
+      }
+
+      @media screen and (max-width: $tablet) {
+        height: 495px;
       }
 
       .sliderImage {
@@ -37,11 +60,25 @@
         transform: translate(-50%, -50%);
         width: 600px;
 
+        @media screen and (max-width: $desktop) {
+          top: 55%;
+          left: 25%;
+          width: 500px;
+          transform: translate(-50%, -50%);
+        }
+
         @media screen and (max-width: $laptop) {
           top: 55%;
           left: 25%;
           transform: translate(-50%, -50%);
           width: 400px;
+        }
+
+        @media screen and (max-width: $tablet) {
+          top: 55%;
+          left: 25%;
+          transform: translate(-50%, -50%);
+          width: 350px;
         }
 
         @media screen and (max-width: $mobile) {
@@ -53,7 +90,7 @@
 
         h1 {
           font-family: var(--title-font);
-          font-size: 3rem;
+          font-size: 4rem;
           margin-bottom: 24px;
 
           @media screen and (max-width: $laptop) {
@@ -91,36 +128,25 @@
       }
     }
   }
-
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-  }
 }
 
-// ////////////////
+// FEATURED PRODUCTS SECTION ////////////////
 
 .featuredProductsSection {
   display: flex;
   gap: 24px;
-  margin: 0px 120px 94px;
-  padding-top: 96px;
+  padding: 96px 120px;
 
   @media screen and (max-width: $desktop) {
-    width: 100%;
-    margin: 0px;
-    // padding: 16px 80px;
+    padding: 40px 80px;
   }
+
   @media screen and (max-width: $laptop) {
-    width: 100%;
-    padding: 60px;
+    padding: 16px 60px;
   }
+
   @media screen and (max-width: $tablet) {
-    width: 100%;
-    padding: 16px 40px;
-  }
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-    padding: 16px;
+    padding: 40px;
   }
 
   // @media screen and (max-width: $mobile) {
@@ -211,16 +237,19 @@
   }
 }
 
-// /////////////////
+// COLLECTION SECTION /////////////////
 
 .collectionSection {
   display: flex;
   gap: 40px;
-  margin: 0px 120px 94px;
+  padding: 0px 120px 94px;
+
+  @media screen and (max-width: $desktop) {
+    padding: 20px 80px;
+  }
 
   @media screen and (max-width: $laptop) {
-    margin: 0px;
-    padding: 60px;
+    padding: 16px 60px;
   }
 
   .collectionImageBox {
@@ -287,34 +316,63 @@
     width: auto;
   }
 }
-// ////////////////
+
+// HIGHLIGHT ICONS SECTION ////////////////
+.highlightSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 64px;
+  padding: 0px 120px 94px;
+
+  @media screen and (max-width: $desktop) {
+    padding: 80px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    padding: 60px;
+  }
+
+  .highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h6 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .highlightIcon {
+      height: 50px;
+      width: 50px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    width: auto;
+  }
+}
+
+// CATEGORY SECTION ////////////////
 
 .categorySection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 120px 94px;
+  padding: 0px 120px 94px;
 
   @media screen and (max-width: $desktop) {
-    width: 100%;
-    padding: 16px 80px;
-    margin: 0px;
+    padding: 20px 80px;
   }
+
   @media screen and (max-width: $laptop) {
-    width: 100%;
-    padding: 16px 0px;
-    margin: 0px;
-  }
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-    padding: 16px 40px;
-    margin: 0px;
-  }
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-    padding: 16px;
-    margin: 0px;
+    padding: 16px 60px;
   }
 
   h2 {
@@ -332,29 +390,9 @@
   }
 
   .categoryCards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-
-    @media screen and (max-width: $desktop) {
-      width: 100%;
-      padding: 16px 80px;
-      // flex-direction: column;
-    }
-    @media screen and (max-width: $laptop) {
-      width: 100%;
-      padding: 16px 60px;
-      // flex-direction: column;
-    }
-    @media screen and (max-width: $tablet) {
-      width: 100%;
-      padding: 16px 40px;
-      flex-direction: column;
-    }
-    @media screen and (max-width: $mobile) {
-      width: 100%;
-      padding: 16px;
-      flex-direction: column;
-    }
 
     div {
       height: 400px;
@@ -367,21 +405,13 @@
       justify-content: center;
 
       @media screen and (max-width: $desktop) {
-        // height: ;
+        height: 360px;
+        width: 250px;
       }
-      @media screen and (max-width: $laptop) {
-        height: 250px;
-        width: 280px;
-      }
-      @media screen and (max-width: $tablet) {
-        width: 100%;
-        padding: 16px 40px;
-        margin: 0px;
-      }
-      @media screen and (max-width: $mobile) {
-        width: 100%;
-        padding: 16px;
-        margin: 0px;
+
+      @media screen and (max-width: $desktop) {
+        height: 320px;
+        width: 210px;
       }
 
       p {
@@ -416,53 +446,19 @@
     width: auto;
   }
 }
-// ////////////////
-.highlightSection {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 64px;
-  margin: 0px 120px 94px;
 
-  @media screen and (max-width: $laptop) {
-    margin: 0px;
-    padding: 60px;
-  }
-
-  .highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    h6 {
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-
-    .highlightIcon {
-      height: 50px;
-      width: 50px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-size: 0.8rem;
-    }
-  }
-  @media screen and (max-width: $mobile) {
-    width: auto;
-  }
-}
-
-// ////////////////////
+// TESTIMONIALS SECTION ////////////////////
 .testimonialsSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 120px 94px;
+  padding: 0px 120px 94px;
+
+  @media screen and (max-width: $desktop) {
+    padding: 20px 80px;
+  }
 
   @media screen and (max-width: $laptop) {
-    margin: 0px;
     padding: 60px;
   }
 
