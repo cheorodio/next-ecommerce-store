@@ -27,11 +27,4 @@ test('cart test', async ({ page }) => {
   // go to cart page
   await page.getByTestId('cart-link').click();
   await expect(page).toHaveURL('http://localhost:3000/cart');
-
-  // // check for the remove button
-  // await expect(
-  //   page.locator('[data-test-id^="cart-product-remove-"]'),
-  // ).toHaveCount(1);
-  // await page.getByTestId('cart-product-remove-1').click();
-  // await expect(page.getByTestId('cart-product-quantity-5')).not.toBeVisible;
 });
