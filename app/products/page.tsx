@@ -6,8 +6,8 @@ import styles from './page.module.scss';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Jewellery Collections | vida. ',
-  description: 'Products',
+  title: { default: 'Vida | Handmade Jewellery' },
+  description: 'Dedicated for best quality handmade jewellery',
 };
 
 export default async function ProductsPage() {
@@ -40,6 +40,7 @@ export default async function ProductsPage() {
               <div
                 key={`product-div-${product.id}`}
                 className={styles.productCard}
+                data-test-id={`product-${product.id}`}
               >
                 <Link href={`/products/${product.id}`}>
                   <Image
