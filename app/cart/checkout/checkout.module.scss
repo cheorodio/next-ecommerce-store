@@ -1,119 +1,5 @@
 @import './../../globalMediaQueries';
 
-.form {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-  p {
-    margin-top: 32px;
-  }
-
-  input {
-    height: 40px;
-    width: 500px;
-    margin-top: 20px;
-    outline: none;
-    padding-left: 8px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-  }
-
-  .nameContainer {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-
-    .name {
-      height: 40px;
-      width: 240px;
-    }
-  }
-  .addressContainer {
-    display: flex;
-    gap: 20px;
-
-    .city {
-      width: 240px;
-    }
-  }
-  .paymentInfo {
-    display: flex;
-    gap: 20px;
-
-    .threeDigit {
-      width: 360px;
-      &::-webkit-outer-spin-button,
-      &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-      }
-    }
-
-    div {
-      position: relative;
-
-      span {
-        font-size: 0.8rem;
-        position: absolute;
-        top: 67%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        color: var(--primary-color);
-      }
-      .expiry {
-        width: 60px;
-        outline: none;
-        text-align: center;
-
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-        }
-      }
-
-      .expiryMonth {
-        border-radius: 5px 0px 0px 5px;
-        border-right: none;
-      }
-      .expiryYear {
-        border-radius: 0px 5px 5px 0px;
-        border-left: none;
-      }
-    }
-  }
-
-  button {
-    width: 500px;
-    height: 40px;
-    margin-top: 32px;
-    background-color: var(--primary-color);
-    border: none;
-    outline: none;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--main-bg-color);
-      outline: 1px solid var(--primary-color);
-      color: var(--primary-color);
-    }
-  }
-}
-
-.totalSection {
-  flex: 1;
-}
-
-// ORDE SUMMARY ///
 .checkoutContainer {
   padding: 100px 120px 0px;
   width: 100%;
@@ -124,74 +10,192 @@
     padding: 100px 60px 50px;
     gap: 50px;
   }
-}
 
-.summaryContainer {
-  width: 100%;
-  padding: 40px 0px;
-
-  h1 {
-    font-size: 1.5rem;
-    color: #fff;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    padding-left: 8px;
-  }
-
-  .summaryCard {
-    border-bottom: 1px solid var(--primary-color);
+  // left side-- form /////////////////
+  .form {
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 0px 12px;
+    flex-direction: column;
 
-    .leftSide {
+    p {
+      margin-top: 32px;
+    }
+
+    input {
+      height: 40px;
+      width: 500px;
+      margin-top: 20px;
+      outline: none;
+      padding-left: 8px;
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .nameContainer {
       display: flex;
-      align-items: center;
-      gap: 30px;
+      gap: 20px;
+      width: 100%;
 
-      .infoContainer {
-        .productTitle {
-          font-weight: 800;
-          font-size: 1.25rem;
-          span {
-            font-size: 0.5rem;
-            padding-left: 8px;
-            text-transform: uppercase;
-            color: var(--primary-color);
+      .name {
+        height: 40px;
+        width: 240px;
+      }
+    }
+
+    .addressContainer {
+      display: flex;
+      gap: 20px;
+
+      .city {
+        width: 240px;
+      }
+    }
+
+    .paymentInfo {
+      display: flex;
+      gap: 20px;
+
+      .threeDigit {
+        width: 360px;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+
+      div {
+        position: relative;
+
+        span {
+          font-size: 0.8rem;
+          position: absolute;
+          top: 67%;
+          left: 54%;
+          transform: translate(-50%, -50%);
+          color: var(--primary-color);
+        }
+        .expiry {
+          width: 60px;
+          outline: none;
+          text-align: center;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
           }
         }
 
-        div {
-          display: flex;
-          gap: 16px;
-          font-size: 0.8rem;
+        .expiryMonth {
+          border-radius: 5px 0px 0px 5px;
+          border-right: none;
+        }
+        .expiryYear {
+          border-radius: 0px 5px 5px 0px;
+          border-left: none;
         }
       }
     }
 
-    .subTotal {
-      font-size: 1.25rem;
+    button {
+      width: 500px;
+      height: 40px;
+      margin-top: 32px;
+      background-color: var(--primary-color);
+      border: none;
+      outline: none;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--main-bg-color);
+        outline: 1px solid var(--primary-color);
+        color: var(--primary-color);
+      }
     }
   }
 
-  .grandTotal {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    margin-top: 20px;
+  // .totalSection {
+  //   flex: 1;
+  // }
 
-    div {
+  // ORDER SUMMARY ///
+
+  .summaryContainer {
+    width: 100%;
+    padding: 40px 0px;
+
+    h1 {
+      font-size: 1.5rem;
+      color: #fff;
+      background-color: var(--primary-color);
+      border-radius: 5px;
+      padding-left: 8px;
+    }
+
+    .summaryCard {
+      border-bottom: 1px solid var(--primary-color);
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0px 12px;
 
-      p {
-        font-size: 0.8rem;
+      .leftSide {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .infoContainer {
+          .productTitle {
+            font-weight: 800;
+            font-size: 1.25rem;
+            span {
+              font-size: 0.5rem;
+              padding-left: 8px;
+              text-transform: uppercase;
+              color: var(--primary-color);
+            }
+          }
+
+          div {
+            display: flex;
+            gap: 16px;
+            font-size: 0.8rem;
+          }
+        }
       }
 
-      h3 {
-        margin-top: 8px;
+      .subTotal {
+        font-size: 1.25rem;
+      }
+    }
+
+    .grandTotal {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      margin-top: 20px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        h3 {
+          margin-top: 8px;
+        }
       }
     }
   }
