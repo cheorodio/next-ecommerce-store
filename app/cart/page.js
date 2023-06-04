@@ -4,6 +4,7 @@ import { getProducts } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import styles from './cart.module.scss';
+import CartSum from './CartSum';
 import ChangeItemQuantity from './ChangeItemQuantity';
 import RemoveItems from './RemoveItems';
 
@@ -16,33 +17,17 @@ export const metadata = {
 
 export default async function CartPage() {
   const products = await getProducts();
-
   const productQuantityCookie = getCookie('cart');
-
   const productQuantities = !productQuantityCookie
     ? []
     : parseJson(productQuantityCookie);
-
-  // console.log({ productQuantityCookie });
-
   const productWithQuantities = products.map((product) => {
     const matchingValueFromCookie = productQuantities.find(
       (productObject) => product.id === productObject.id,
     );
-
     return { ...product, quantity: matchingValueFromCookie?.quantity };
-
-    // console.log({ matchingValueFromCookie });
   });
-
   const productsInCart = productWithQuantities.filter((item) => item.quantity);
-  // console.log({ filteredProducts });
-
-  let subTotal = 0;
-  const totalPrice = productsInCart.reduce(
-    (accumulator, item) => accumulator + item.price * item.quantity,
-    0,
-  );
 
   return (
     <main>
@@ -65,6 +50,7 @@ export default async function CartPage() {
               data-test-id="cart-product-<product id>"
             >
               {productsInCart.map((product) => {
+                let subTotal = 0;
                 subTotal = product.quantity * product.price;
                 return (
                   <div
@@ -77,7 +63,7 @@ export default async function CartPage() {
                         width={80}
                         height={80}
                         className={styles.productImage}
-                        alt=""
+                        alt={product.name}
                       />
                     </div>
 
@@ -99,33 +85,7 @@ export default async function CartPage() {
               })}
             </div>
           </div>
-
-          <div className={styles.cartTotalContainer}>
-            <div className={styles.cartTotalCard}>
-              <h3>Cart Total</h3>
-              <div
-                data-test-id="cart-total"
-                className={styles.grandTotalAmount}
-              >
-                €{totalPrice}
-              </div>
-              <div>
-                <Link
-                  className={`${styles.continueShoppingButton} ${styles.cartButton}`}
-                  href="/products"
-                >
-                  Continue Shopping
-                </Link>
-                <Link
-                  className={`${styles.checkoutButton} ${styles.cartButton}`}
-                  href="/cart/checkout/"
-                  data-test-id="cart-checkout"
-                >
-                  Checkout
-                </Link>
-              </div>
-            </div>
-          </div>
+          <CartSum />
         </div>
       )}
     </main>
