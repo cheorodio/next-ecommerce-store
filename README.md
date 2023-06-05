@@ -12,11 +12,12 @@ This is an [upleveled](https://github.com/upleveled) project where I'm challenge
 <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="next js logo"/> <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react logo"/> <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="typescript logo"/> <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="sass logo"/> <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="postgres logo"/> <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" alt="jest logo"/> 
 
 ## Screenshots 📷
-#### Landing page
+### Landing page
 <img width="400" alt="Screenshot 2023-06-05 at 19 53 16" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/bd13e29d-bd29-4272-9044-e5c8366f7d39">
 
-#### Products page, single product page, cart page, checkout page
-<img width="600" alt="Screenshot 2023-06-05 at 19 53 26" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/727d2e66-1a38-4dd4-bf07-71a9161a9b14"> <img width="275" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/7736269a-21cc-48b9-ac3e-612262488437" />
+### Other pages
+<img width="1500" alt="screenshot" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/ac24c589-a5b6-49f8-90ea-682f2ff0dc98" />
+
 
 
 
