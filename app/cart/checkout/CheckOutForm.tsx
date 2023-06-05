@@ -39,7 +39,7 @@ export default function CheckOutForm({ product }: CheckOutPageProps) {
             className={styles.name}
             value={firstName}
             onChange={(event) => setFirstName(event.currentTarget.value)}
-            // required
+            required
           />
         </label>
         <label>
@@ -122,6 +122,7 @@ export default function CheckOutForm({ product }: CheckOutPageProps) {
           <div>
             <label>
               <input
+                name="month"
                 type="number"
                 placeholder="MM"
                 value={month}
@@ -134,6 +135,7 @@ export default function CheckOutForm({ product }: CheckOutPageProps) {
             <span>/</span>
             <label>
               <input
+                name="year"
                 type="number"
                 placeholder="YY"
                 value={year}
@@ -163,7 +165,19 @@ export default function CheckOutForm({ product }: CheckOutPageProps) {
           router.refresh();
           await clearCookies(product);
         }}
-        // disabled={!form}
+        disabled={
+          firstName.length === 0 &&
+          lastName.length === 0 &&
+          email.length === 0 &&
+          address.length === 0 &&
+          city.length === 0 &&
+          postCode.length === 0 &&
+          country.length === 0 &&
+          creditCard.length === 0 &&
+          month.length === 0 &&
+          year.length === 0 &&
+          digit.length === 0
+        }
       >
         Confirm Order
       </button>
