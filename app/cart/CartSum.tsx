@@ -19,7 +19,7 @@ export default async function CartSum() {
   const productsInCart = productWithQuantities.filter((item) => item.quantity);
 
   const totalPrice = productsInCart.reduce(
-    (accumulator, item) => accumulator + item.price * item.quantity,
+    (accumulator, item) => accumulator + (item.price / 100) * item.quantity,
     0,
   );
   return (
