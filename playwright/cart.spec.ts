@@ -32,9 +32,6 @@ test('cart test', async ({ page }) => {
   await expect(
     page.locator('[data-test-id^="cart-product-remove-"]'),
   ).toHaveCount(6);
-  // await expect(
-  //   page.getByRole('button', { name: 'remove-button' }),
-  // ).toBeVisible();
 
   // remove one item from cart
   await page
@@ -42,9 +39,5 @@ test('cart test', async ({ page }) => {
     .locator('div')
     .filter({ hasText: 'Lucy€ 40.9-1+€40.9' })
     .locator('button[name="remove-button"]');
-  // await page.getByRole('button', { name: 'remove-button' }).click();
   await expect(page.getByTestId('cart-quantity')).toContainText('5');
-  // await expect(
-  //   page.locator('[data-test-id^="cart-product-remove-"]'),
-  // ).toHaveCount(1);
 });
