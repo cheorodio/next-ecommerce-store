@@ -133,7 +133,8 @@
 // FEATURED PRODUCTS SECTION ////////////////
 
 .featuredProductsSection {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
   gap: 24px;
   padding: 96px 120px;
 
@@ -192,44 +193,25 @@
     }
   }
 
-  .featuredProduct {
-    height: 250px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .productCard {
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     overflow: hidden;
-    border: 0.5px solid var(--secondary-color);
-    padding-bottom: 8px;
-    cursor: pointer;
 
-    .featuredProductImage {
-      width: 100%;
-      height: 85%;
-      margin-bottom: 8px;
-    }
-
-    h6 {
-      text-transform: uppercase;
-      font-size: 0.5rem;
-      color: var(--primary-color);
-      padding-left: 8px;
-    }
-    div {
-      display: flex;
-      justify-content: space-between;
+    .productInfo {
       padding: 0px 8px;
 
-      p {
-        font-size: 0.9rem;
+      .categoryTitle {
+        color: var(--primary-color);
+        font-size: 0.6rem;
+        text-transform: uppercase;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
       }
     }
-  }
-
-  .featuredProductImage {
-    height: 250px;
-    width: 200px;
   }
 
   @media screen and (max-width: $mobile) {

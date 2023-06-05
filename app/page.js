@@ -2,13 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { getProducts } from '../database/products';
 import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
 import shipping from '../public/images/freeshipping.png';
 import handmade from '../public/images/handmade.png';
-import featuredProduct1 from '../public/images/product1.jpg';
-import featuredProduct3 from '../public/images/product10.jpg';
-import featuredProduct2 from '../public/images/product2.jpg';
 import payment from '../public/images/securepayment.png';
 import tracking from '../public/images/tracking.png';
 import HeroSwiper from './components/HeroSwiper';
@@ -19,7 +17,8 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts();
   return (
     <main>
       <section className={styles.heroSection}>
@@ -34,44 +33,38 @@ export default function Home() {
             View All
           </Link>
         </div>
-        <Link href="/products" className={styles.featuredProduct}>
-          <Image
-            className={styles.featuredProductImage}
-            src={featuredProduct1}
-            alt="earrings on a woman"
-          />
-          <h6>Earrings</h6>
-          <div>
-            <h5>Lily</h5>
-            <p>€35</p>
-          </div>
-        </Link>
 
-        <Link href="/products" className={styles.featuredProduct}>
-          <Image
-            className={styles.featuredProductImage}
-            src={featuredProduct2}
-            alt="necklace on a woman"
-          />
-          <h6>Necklace</h6>
-          <div>
-            <h5>Rose</h5>
-            <p>€45</p>
-          </div>
-        </Link>
-
-        <Link href="/products" className={styles.featuredProduct}>
-          <Image
-            className={styles.featuredProductImage}
-            src={featuredProduct3}
-            alt="earrings on a woman"
-          />
-          <h6>earrings</h6>
-          <div>
-            <h5>Violet</h5>
-            <p>€39</p>
-          </div>
-        </Link>
+        {products.slice(8, 12).map((product) => {
+          return (
+            <div
+              key={`product-div-${product.id}`}
+              className={styles.productCard}
+            >
+              <Link href={`/products/${product.id}`}>
+                <Image
+                  src={`/images/${product.name}.jpg`}
+                  width={200}
+                  height={200}
+                  alt={product.name}
+                />
+              </Link>
+              <div className={styles.productInfo}>
+                <Link
+                  href={`/products/${product.id}`}
+                  className={styles.categoryTitle}
+                >
+                  {product.category}
+                </Link>
+                <div>
+                  <Link href={`/products/${product.id}`}>{product.name}</Link>
+                  <Link href={`/products/${product.id}`}>
+                    € {product.price / 100}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </section>
       {/* ========================= THE COLLECTION SECTION ========================= */}
       <section className={styles.collectionSection}>
