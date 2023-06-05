@@ -14,12 +14,18 @@ export default function RemoveItems(props: Props) {
   return (
     <div className={styles.removeButton}>
       <button
+        data-test-id="cart-product-remove-<product id>"
+        name="remove-button"
         formAction={async () => {
           router.refresh();
           await removeItem(props.product);
         }}
       >
-        <TfiTrash className={styles.removeIcon} />
+        <TfiTrash
+          className={styles.removeIcon}
+          name="remove-button"
+          data-test-id="cart-product-remove-<product id>"
+        />
       </button>
     </div>
   );
