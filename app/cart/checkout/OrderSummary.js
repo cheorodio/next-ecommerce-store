@@ -29,7 +29,7 @@ export default async function OrderSummary() {
 
   let subTotal = 0;
   const totalPrice = productsInCart.reduce(
-    (accumulator, item) => accumulator + item.price * item.quantity,
+    (accumulator, item) => accumulator + (item.price / 100) * item.quantity,
     0,
   );
 
@@ -55,11 +55,11 @@ export default async function OrderSummary() {
                 </p>
                 <div>
                   <p>Quantity: {product.quantity}</p>
-                  <p>€ {product.price}</p>
+                  <p>€ {product.price / 100}</p>
                 </div>
               </div>
             </div>
-            <div className={styles.subTotal}>€{subTotal}</div>
+            <div className={styles.subTotal}>€{subTotal / 100}</div>
           </div>
         );
       })}
@@ -71,9 +71,9 @@ export default async function OrderSummary() {
         </div>
 
         <div>
-          <p>€{totalPrice}</p>
+          <p>€{totalPrice / 100}</p>
           <p>free</p>
-          <h3>€{totalPrice}</h3>
+          <h3>€{totalPrice / 100}</h3>
         </div>
       </div>
     </div>

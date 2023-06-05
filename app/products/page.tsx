@@ -69,7 +69,7 @@ export default async function ProductsPage() {
                       href={`/products/${product.id}`}
                       className={styles.productPrice}
                     >
-                      € {product.price}
+                      € {product.price /100}
                     </Link>
                   </div>
                 </div>

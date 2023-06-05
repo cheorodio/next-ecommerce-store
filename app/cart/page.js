@@ -51,7 +51,7 @@ export default async function CartPage() {
             >
               {productsInCart.map((product) => {
                 let subTotal = 0;
-                subTotal = product.quantity * product.price;
+                subTotal = (product.quantity * product.price) / 100;
                 return (
                   <div
                     key={`product-div-${product.id}`}
@@ -69,7 +69,7 @@ export default async function CartPage() {
 
                     <Link href={`/products/${product.id}`}>{product.name}</Link>
                     <Link href={`/products/${product.id}`}>
-                      <p>€ {product.price}</p>
+                      <p>€ {product.price / 100}</p>
                     </Link>
 
                     <form data-test-id="cart-product-quantity-<product id>">
@@ -77,8 +77,11 @@ export default async function CartPage() {
                     </form>
 
                     <div>€{subTotal}</div>
-                    <form data-test-id="cart-product-remove-<product id>">
-                      <RemoveItems product={product} />
+                    <form
+                      data-test-id="cart-product-remove-<product id>"
+                      name="remove-button"
+                    >
+                      <RemoveItems product={product} name="remove-button" />
                     </form>
                   </div>
                 );
