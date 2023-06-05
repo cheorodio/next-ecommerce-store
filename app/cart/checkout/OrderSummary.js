@@ -71,9 +71,9 @@ export default async function OrderSummary() {
         </div>
 
         <div>
-          <p>€{totalPrice / 100}</p>
+          <p>€{totalPrice}</p>
           <p>free</p>
-          <h3>€{totalPrice / 100}</h3>
+          <h3>€{totalPrice}</h3>
         </div>
       </div>
     </div>
