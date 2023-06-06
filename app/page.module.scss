@@ -434,7 +434,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 120px 94px;
+  padding: 0px 120px;
 
   @media screen and (max-width: $desktop) {
     padding: 20px 80px;
@@ -458,6 +458,7 @@
       top: 50%;
       width: 508px;
       height: 2px;
+      background-color: var(--primary-color);
 
       @media screen and (max-width: $laptop) {
         width: 400px;

@@ -33,6 +33,15 @@ export default function Footer() {
           <AiFillInstagram />
           <BsPinterest />
         </div>
+        <h6>
+          Created by{' '}
+          <Link
+            href="https://github.com/cheorodio"
+            className={styles.creditLink}
+          >
+            Michelle Orodio
+          </Link>
+        </h6>
       </div>
 
       <form className={styles.mailingList}>

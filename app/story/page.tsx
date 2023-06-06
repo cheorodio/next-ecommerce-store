@@ -17,7 +17,7 @@ export default function OurStoryPage() {
       </div>
 
       <div className={styles.aboutSection}>
-        <Image src={aboutIcon} alt="" />
+        <Image src={aboutIcon} alt="" priority={true} />
         <p>
           Welcome to our world of exquisite handmade jewellery! We are a
           passionate team of skilled artisans dedicated to creating unique,
@@ -61,7 +61,7 @@ export default function OurStoryPage() {
         <h2>Why Choose Us</h2>
         <div>
           <div>
-            <Image src={iconHandmade} alt="" className={styles.icon} />
+            <Image src={iconHandmade} alt="" className={styles.icon}          priority={true} />
             <h3>Quality Craftsmanship</h3>
             <p>
               We are committed to upholding the highest standards of
@@ -74,7 +74,7 @@ export default function OurStoryPage() {
           </div>
 
           <div>
-            <Image src={iconGiveBack} alt="" className={styles.icon} />
+            <Image src={iconGiveBack} alt="" className={styles.icon}          priority={true} />
             <h3>Giving Back</h3>
             <p>
               We are committed to making a positive impact in the communities we
@@ -86,7 +86,7 @@ export default function OurStoryPage() {
           </div>
 
           <div>
-            <Image src={iconSustainable} alt="" className={styles.icon} />
+            <Image src={iconSustainable} alt="" className={styles.icon}          priority={true}/>
             <h3>Sustainability and Ethics</h3>
             <p>
               We are dedicated to promoting sustainable practices. By sourcing

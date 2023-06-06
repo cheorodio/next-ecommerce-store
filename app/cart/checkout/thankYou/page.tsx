@@ -4,15 +4,15 @@ import styles from './thankYou.module.scss';
 
 export default function thankYouPage() {
   return (
-    <section className={styles.thankyouContainer}>
+    <main className={styles.thankyouContainer}>
       <h1>Thank you for your order</h1>
       <div>
-        <Image src={mail} alt="mail icon" />
+        <Image src={mail} alt="mail icon" priority={true} />
         <p>
           Your oder has been recieved and an email receipt has been sent to the
           email address provided.
         </p>
       </div>
-    </section>
+    </main>
   );
 }

@@ -41,6 +41,7 @@ export default async function SingleProductPage(props: Props) {
             height={500}
             className={styles.productImage}
             alt={singleProduct.name}
+            priority={true}
           />
         </div>
         <div className={styles.productInfoContainer}>
@@ -72,7 +73,8 @@ export default async function SingleProductPage(props: Props) {
                     src={`/images/${product.name}.jpg`}
                     width={200}
                     height={200}
-                    alt=""
+                    alt={product.name}
+                    priority={true}
                   />
                 </Link>
                 <div>

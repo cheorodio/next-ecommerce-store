@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 type LayoutProps = {
-  children: string,
+  children: string;
 };
 
 export default function RootLayout({ children }: LayoutProps) {

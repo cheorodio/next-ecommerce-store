@@ -48,6 +48,7 @@ export default async function ProductsPage() {
                     width={200}
                     height={200}
                     alt=""
+                    priority={true}
                   />
                 </Link>
                 <div>
@@ -69,7 +70,7 @@ export default async function ProductsPage() {
                       href={`/products/${product.id}`}
                       className={styles.productPrice}
                     >
-                      € {product.price /100}
+                      € {product.price / 100}
                     </Link>
                   </div>
                 </div>

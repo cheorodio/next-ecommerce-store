@@ -46,6 +46,7 @@ export default async function Home() {
                   width={200}
                   height={200}
                   alt={product.name}
+                  priority={true}
                 />
               </Link>
               <div className={styles.productInfo}>
@@ -73,11 +74,13 @@ export default async function Home() {
             className={styles.collectionImage1}
             src={collectionImage1}
             alt="necklace set on a woman"
+            priority={true}
           />
           <Image
             className={styles.collectionImage2}
             src={collectionImage2}
             alt="ring set"
+            priority={true}
           />
         </div>
 
@@ -103,6 +106,7 @@ export default async function Home() {
             src={handmade}
             alt="handmade icon"
             className={styles.highlightIcon}
+            priority={true}
           />
           <h6>Handmade</h6>
           <p>
@@ -115,6 +119,7 @@ export default async function Home() {
             src={payment}
             alt="handmade icon"
             className={styles.highlightIcon}
+            priority={true}
           />
           <h6>Secure payment</h6>
           <p>
@@ -127,6 +132,7 @@ export default async function Home() {
             src={shipping}
             alt="handmade icon"
             className={styles.highlightIcon}
+            priority={true}
           />
           <h6>Free Shipping</h6>
           <p>
@@ -139,6 +145,7 @@ export default async function Home() {
             src={tracking}
             alt="handmade icon"
             className={styles.highlightIcon}
+            priority={true}
           />
           <h6>Order Tracking</h6>
           <p>

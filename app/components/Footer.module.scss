@@ -8,7 +8,7 @@ $desktop: 1280px;
   background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
-  // width: 100%;
+
   @media screen and (max-width: $laptop) {
     padding: 30px 60px;
   }
@@ -41,6 +41,14 @@ $desktop: 1280px;
     display: flex;
     gap: 20px;
     color: var(--primary-color);
+  }
+
+  h6 {
+    font-size: 0.7rem;
+
+    .creditLink {
+      color: var(--primary-color);
+    }
   }
 }
 
