@@ -4,9 +4,9 @@ import { getProducts } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import styles from './cart.module.scss';
-import CartSum from './CartSum';
-import ChangeItemQuantity from './ChangeItemQuantity';
-import RemoveItems from './RemoveItems';
+import ChangeQuantity from './ChangeQuantity';
+import getCartTotal from './getCartTotal';
+import RemoveButton from './RemoveButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -51,7 +51,7 @@ export default async function CartPage() {
             >
               {productsInCart.map((product) => {
                 let subTotal = 0;
-                subTotal = (product.quantity * product.price) / 100;
+                subTotal = product.quantity * product.price;
                 return (
                   <div
                     key={`product-div-${product.id}`}
@@ -69,11 +69,11 @@ export default async function CartPage() {
 
                     <Link href={`/products/${product.id}`}>{product.name}</Link>
                     <Link href={`/products/${product.id}`}>
-                      <p>€ {product.price / 100}</p>
+                      <p>€ {product.price}</p>
                     </Link>
 
                     <form data-test-id="cart-product-quantity-<product id>">
-                      <ChangeItemQuantity product={product} />
+                      <ChangeQuantity product={product} />
                     </form>
 
                     <div>€{subTotal}</div>
@@ -81,14 +81,39 @@ export default async function CartPage() {
                       data-test-id="cart-product-remove-<product id>"
                       name="remove-button"
                     >
-                      <RemoveItems product={product} name="remove-button" />
+                      <RemoveButton product={product} name="remove-button" />
                     </form>
                   </div>
                 );
               })}
             </div>
           </div>
-          <CartSum />
+          <div className={styles.cartTotalContainer}>
+            <div className={styles.cartTotalCard}>
+              <h3>Cart Total</h3>
+              <div
+                data-test-id="cart-total"
+                className={styles.grandTotalAmount}
+              >
+                €{getCartTotal(productsInCart)}
+              </div>
+              <div>
+                <Link
+                  className={`${styles.continueShoppingButton} ${styles.cartButton}`}
+                  href="/products"
+                >
+                  Continue Shopping
+                </Link>
+                <Link
+                  className={`${styles.checkoutButton} ${styles.cartButton}`}
+                  href="/cart/checkout/"
+                  data-test-id="cart-checkout"
+                >
+                  Checkout
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </main>

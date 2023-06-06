@@ -4,11 +4,11 @@ import { addQuantity, subtractQuantity } from './actions';
 import styles from './cart.module.scss';
 
 type Props = {
+  quantity: string;
   product: number;
-  quantity: number;
 };
 
-export default function ChangeItemQuantity(props: Props) {
+export default function ChangeQuantity(props: Props) {
   const router = useRouter();
   return (
     <div className={styles.changeCounter}>

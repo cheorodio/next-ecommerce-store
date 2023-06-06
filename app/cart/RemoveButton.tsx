@@ -8,7 +8,7 @@ type Props = {
   product: number;
 };
 
-export default function RemoveItems(props: Props) {
+export default function RemoveButton(props: Props) {
   const router = useRouter();
 
   return (

@@ -59,7 +59,7 @@ export default async function Home() {
                 <div>
                   <Link href={`/products/${product.id}`}>{product.name}</Link>
                   <Link href={`/products/${product.id}`}>
-                    € {product.price / 100}
+                    € {product.price}
                   </Link>
                 </div>
               </div>

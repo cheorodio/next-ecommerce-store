@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import Link from 'next /link';
 import { getProducts } from '../../../database/products';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
@@ -29,7 +28,7 @@ export default async function OrderSummary() {
 
   let subTotal = 0;
   const totalPrice = productsInCart.reduce(
-    (accumulator, item) => accumulator + (item.price / 100) * item.quantity,
+    (accumulator, item) => accumulator + item.price * item.quantity,
     0,
   );
 
@@ -46,7 +45,7 @@ export default async function OrderSummary() {
                   src={`/images/${product.name}.jpg`}
                   width={60}
                   height={60}
-                  alt=""
+                  alt={product.name}
                 />
               </div>
               <div className={styles.infoContainer}>
@@ -55,11 +54,11 @@ export default async function OrderSummary() {
                 </p>
                 <div>
                   <p>Quantity: {product.quantity}</p>
-                  <p>€ {product.price / 100}</p>
+                  <p>€ {product.price}</p>
                 </div>
               </div>
             </div>
-            <div className={styles.subTotal}>€{subTotal / 100}</div>
+            <div className={styles.subTotal}>€{subTotal}</div>
           </div>
         );
       })}

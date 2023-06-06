@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
-import { addToCart } from './actions';
+import addToCart from './actions';
 import styles from './AddToCart.module.scss';
 
 type Props = {
