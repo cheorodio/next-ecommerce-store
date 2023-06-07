@@ -12,6 +12,8 @@ import tracking from '../public/images/tracking.png';
 import HeroSwiper from './components/HeroSwiper';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: { default: 'Vida | Handmade Jewellery' },
   description: 'Dedicated for best quality handmade jewellery',
