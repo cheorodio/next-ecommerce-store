@@ -3,12 +3,12 @@ import { useRouter } from 'next/navigation';
 import { addQuantity, subtractQuantity } from './actions';
 import styles from './cart.module.scss';
 
-type Props = {
-  quantity: number;
-  product: number;
-};
+// type Props = {
+//   quantity: number;
+//   product: number;
+// };
 
-export default function ChangeQuantity(props: Props) {
+export default function ChangeQuantity(props) {
   const router = useRouter();
   return (
     <div className={styles.changeCounter}>

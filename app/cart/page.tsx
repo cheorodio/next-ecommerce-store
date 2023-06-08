@@ -77,7 +77,7 @@ export default async function CartPage() {
                       data-test-id="cart-product-remove-<product id>"
                       name="remove-button"
                     >
-                      <RemoveButton product={product} name="remove-button" />
+                      <RemoveButton product={product} />
                     </form>
                   </div>
                 );
