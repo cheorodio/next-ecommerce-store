@@ -12,7 +12,7 @@ import tracking from '../public/images/tracking.png';
 import HeroSwiper from './components/HeroSwiper';
 import styles from './page.module.scss';
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: { default: 'Vida | Handmade Jewellery' },
@@ -159,7 +159,7 @@ export default function Home() {
       {/* ========================= CATEGORY SECTION ========================= */}
       <section className={styles.categorySection}>
         <h2>Shop by Category</h2>
-        <Link className={styles.viewallLink} href="/ProductsOverview">
+        <Link className={styles.viewallLink} href="/products">
           View all
         </Link>
         <div className={styles.categoryCards}>
