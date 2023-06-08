@@ -16,16 +16,30 @@ This is an [upleveled](https://github.com/upleveled) project where I'm challenge
 
 ## Screenshots 📷
 
+#### Final look
+
 <img width="1500" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/795e28db-5002-4636-98ee-10350a381cf6" alt="screenshots" />
 
-test
+#### Wireframe and prototype on Figma
 
-<!--
-### Single product page
-<img width="400" alt="Screenshot 2023-06-05 at 19 54 02" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/4dd1784e-b569-4fab-a127-23baeb8f99ea">
+<img width="455" alt="Screenshot 2023-06-08 at 17 47 08" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/3b9e0cb1-38cd-4450-80d9-668217422f90"> <img width="500" alt="Screenshot 2023-06-08 at 17 48 21" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/37287e82-c6dd-4b38-8781-fd57b9c7731b">
 
-### Cart page
-<img width="400" alt="Screenshot 2023-06-05 at 19 21 35" src="https://github.com/cheorodio/react-guest-list/assets/121162907/79c833de-8988-4738-8e71-c9e975cccf84">
+## Setup 💻
 
-### Checkout page
-<img width="400" alt="Screenshot 2023-06-05 at 19 21 58" src="https://github.com/cheorodio/react-guest-list/assets/121162907/6dd79dc3-c774-460b-98bb-2a388da37e54"> -->
+1. Clone the repository
+   ```
+   git clone https://github.com/cheorodio/next-ecommerce-store.git
+   cd next-ecommerce-store
+   ```
+2. Install dependencies using `pnpm i`
+3. Setup postgres database
+4. Create a file called .env in the project root directory and paste the following, changing to your own username, password and database:
+   ```
+   PGHOST=localhost
+   PGUSERNAME=<your username>
+   PGPASSWORD=<your password>
+   PGDATABASE=<your database>
+   ```
+5. Connect to postgres database and run either:
+   - `psql -U <user name> <database name>` on windows and macOS
+   - `sudo -u <user name> psql -U <user name> <database name>` on Linux
