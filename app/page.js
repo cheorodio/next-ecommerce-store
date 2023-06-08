@@ -28,7 +28,7 @@ export default async function Home() {
       </section>
 
       {/* ========================= FEATURED SECTION ========================= */}
-      <section className={styles.featuredProductsSection}>
+      {/* <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
           <h4>Featured Products</h4>
           <Link className={styles.viewAllButton} href="/products">
@@ -68,7 +68,7 @@ export default async function Home() {
             </div>
           );
         })}
-      </section>
+      </section> */}
       {/* ========================= THE COLLECTION SECTION ========================= */}
       <section className={styles.collectionSection}>
         <div className={styles.collectionImageBox}>
