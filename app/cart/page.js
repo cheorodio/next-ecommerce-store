@@ -6,6 +6,7 @@ import { parseJson } from '../../util/json';
 import styles from './cart.module.scss';
 import ChangeQuantity from './ChangeQuantity';
 import getCartTotal from './getCartTotal';
+import { productData } from './productData';
 import RemoveButton from './RemoveButton';
 
 export const dynamic = 'force-dynamic';
@@ -21,13 +22,8 @@ export default async function CartPage() {
   const productQuantities = !productQuantityCookie
     ? []
     : parseJson(productQuantityCookie);
-  const productWithQuantities = products.map((product) => {
-    const matchingValueFromCookie = productQuantities.find(
-      (productObject) => product.id === productObject.id,
-    );
-    return { ...product, quantity: matchingValueFromCookie?.quantity };
-  });
-  const productsInCart = productWithQuantities.filter((item) => item.quantity);
+
+  const productsInCart = productData(products, productQuantities);
 
   return (
     <main>
