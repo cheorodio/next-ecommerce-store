@@ -1,6 +1,6 @@
 import { parseJson } from '../../../util/json';
 
-export type itemsInCart = {
+export type ItemsInCart = {
   id: number;
   quantity: number;
 };

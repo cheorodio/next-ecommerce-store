@@ -4,7 +4,7 @@ import { addQuantity, subtractQuantity } from './actions';
 import styles from './cart.module.scss';
 
 type Props = {
-  quantity: string;
+  quantity: number;
   product: number;
 };
 
