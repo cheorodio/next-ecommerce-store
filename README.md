@@ -22,7 +22,7 @@ This is an [upleveled](https://github.com/upleveled) project where I'm challenge
 
 #### Wireframe and prototype on Figma
 
-<img width="355" alt="Screenshot 2023-06-08 at 17 47 08" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/3b9e0cb1-38cd-4450-80d9-668217422f90"> <img width="400" alt="Screenshot 2023-06-08 at 17 48 21" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/37287e82-c6dd-4b38-8781-fd57b9c7731b">
+<img width="405" alt="Screenshot 2023-06-08 at 17 47 08" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/3b9e0cb1-38cd-4450-80d9-668217422f90"> <img width="450" alt="Screenshot 2023-06-08 at 17 48 21" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/37287e82-c6dd-4b38-8781-fd57b9c7731b">
 
 ## Setup 💻
 
@@ -43,3 +43,5 @@ This is an [upleveled](https://github.com/upleveled) project where I'm challenge
 5. Connect to postgres database and run either:
    - `psql -U <user name> <database name>` on windows and macOS
    - `sudo -u <user name> psql -U <user name> <database name>` on Linux
+
+## Deployment 🚀
