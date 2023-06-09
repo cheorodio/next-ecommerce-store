@@ -40,21 +40,22 @@ export default async function ProductsPage() {
               <div
                 key={`product-div-${product.id}`}
                 className={styles.productCard}
-                data-test-id={`product-${product.id}`}
               >
-                <Link href={`/products/${product.id}`}>
+                <Link
+                  href={`/products/${product.id}`}
+                  data-test-id={`product-${product.id}`}
+                >
                   <Image
                     src={`/images/${product.name}.jpg`}
                     width={200}
                     height={200}
-                    alt=""
+                    alt={product.name}
                     priority={true}
                     data-test-id="product-image"
                   />
                 </Link>
                 <div>
                   <Link
-                    data-test-id="product-<product id>"
                     href={`/products/${product.id}`}
                     className={styles.categoryTitle}
                   >
