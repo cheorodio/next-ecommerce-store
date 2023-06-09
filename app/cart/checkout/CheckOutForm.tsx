@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { clearCookies } from './actions';
 // import { removeCookie } from '../actions';
 import styles from './checkout.module.scss';
