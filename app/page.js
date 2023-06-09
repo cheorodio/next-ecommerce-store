@@ -1,3 +1,4 @@
+import { Caveat } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
@@ -18,6 +19,8 @@ export const metadata = {
   title: { default: 'Vida | Handmade Jewellery' },
   description: 'Dedicated for best quality handmade jewellery',
 };
+
+const caveat = Caveat({ subsets: ['latin'], weight: '400' });
 
 export default async function Home() {
   const products = await getProducts();
@@ -87,7 +90,7 @@ export default async function Home() {
         </div>
 
         <div className={styles.collectionTextBox}>
-          <h2>The Collection</h2>
+          <h2 className={caveat.className}>The Collection</h2>
           <hr />
           <p>
             Each piece in our collection tells a unique story, making it not
