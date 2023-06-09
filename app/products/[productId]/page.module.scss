@@ -82,12 +82,19 @@
     overflow: scroll;
     display: flex;
     gap: 24px;
+    padding: 8px;
 
     .productCard {
       border: 1px solid var(--primary-color);
       border-radius: 5px;
       display: flex;
       flex-direction: column;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
 
       div {
         .categoryTitle {

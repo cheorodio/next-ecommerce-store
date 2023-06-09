@@ -70,6 +70,12 @@
       overflow: hidden;
       border: 0.5px solid var(--primary-color);
 
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
       div {
         display: flex;
         flex-direction: column;
