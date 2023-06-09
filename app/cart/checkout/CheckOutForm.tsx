@@ -2,13 +2,14 @@
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
 import { clearCookies } from './actions';
+// import { removeCookie } from '../actions';
 import styles from './checkout.module.scss';
 
-type CheckOutPageProps = {
-  product: string;
-};
+// type CheckOutPageProps = {
+//   product: string;
+// };
 
-export default function CheckOutForm({ product }: CheckOutPageProps) {
+export default function CheckOutForm() {
   const router = useRouter();
 
   const [firstName, setFirstName] = useState('');
@@ -23,13 +24,14 @@ export default function CheckOutForm({ product }: CheckOutPageProps) {
   const [year, setYear] = useState('');
   const [digit, setDigit] = useState('');
 
-  const handleClick = (event: ChangeEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    router.push('/cart/checkout/thankYou');
-  };
+  // const handleClick = (event: ChangeEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   router.push('/cart/checkout/thankYou');
+  //   // await clearCookies;
+  // };
 
   return (
-    <form onSubmit={handleClick} className={styles.form}>
+    <form className={styles.form}>
       <p>Contact Information</p>
       <div className={styles.nameContainer}>
         <label>
@@ -162,20 +164,21 @@ export default function CheckOutForm({ product }: CheckOutPageProps) {
       <button
         data-test-id="checkout-confirm-order"
         formAction={async () => {
+          router.push('/cart/checkout/thankYou');
+          await clearCookies();
           router.refresh();
-          await clearCookies(product);
         }}
         disabled={
-          firstName.length === 0 &&
-          lastName.length === 0 &&
-          email.length === 0 &&
-          address.length === 0 &&
-          city.length === 0 &&
-          postCode.length === 0 &&
-          country.length === 0 &&
-          creditCard.length === 0 &&
-          month.length === 0 &&
-          year.length === 0 &&
+          firstName.length === 0 ||
+          lastName.length === 0 ||
+          email.length === 0 ||
+          address.length === 0 ||
+          city.length === 0 ||
+          postCode.length === 0 ||
+          country.length === 0 ||
+          creditCard.length === 0 ||
+          month.length === 0 ||
+          year.length === 0 ||
           digit.length === 0
         }
       >

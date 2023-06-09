@@ -65,7 +65,7 @@ export default async function SingleProductPage(props: Props) {
                 className={styles.productCard}
               >
                 <Link
-                  data-test-id="product-<product id>"
+                  data-test-id={`product-${product.id}`}
                   href={`/products/${product.id}`}
                   className={styles.categoryTitle}
                 >
@@ -79,7 +79,6 @@ export default async function SingleProductPage(props: Props) {
                 </Link>
                 <div>
                   <Link
-                    data-test-id="product-<product id>"
                     href={`/products/${product.id}`}
                     className={styles.categoryTitle}
                   >

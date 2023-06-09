@@ -44,3 +44,8 @@ export async function subtractQuantity(item) {
   decrease.quantity > 1 ? (decrease.quantity -= 1) : (decrease.quantity = 1);
   await cookies().set('cart', JSON.stringify(productQuantities));
 }
+
+// clear the cookie after submitting the form
+// export async function removeCookie() {
+//   await cookies().set('cart', JSON.stringify([]));
+// }
