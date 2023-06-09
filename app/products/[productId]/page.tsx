@@ -47,7 +47,7 @@ export default async function SingleProductPage(props: Props) {
         <div className={styles.productInfoContainer}>
           <h1>{singleProduct.name}</h1>
           <h5>{singleProduct.description}</h5>
-          <h6 data-test-id="product-price">€ {singleProduct.price}</h6>
+          <h6 data-test-id="product-price">{singleProduct.price} EUR</h6>
           <p className={styles.quantityTitle}>Quantity</p>
           <div>
             <AddToCart productId={singleProduct.id} />
