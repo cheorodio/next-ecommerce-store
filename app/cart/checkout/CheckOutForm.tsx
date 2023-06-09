@@ -164,9 +164,9 @@ export default function CheckOutForm() {
       <button
         data-test-id="checkout-confirm-order"
         formAction={async () => {
-          router.push('/cart/checkout/thankYou');
           await clearCookies();
           router.refresh();
+          router.push('/cart/checkout/thankYou');
         }}
         disabled={
           firstName.length === 0 ||
