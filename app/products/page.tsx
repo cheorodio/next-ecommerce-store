@@ -49,6 +49,7 @@ export default async function ProductsPage() {
                     height={200}
                     alt=""
                     priority={true}
+                    data-test-id="product-image"
                   />
                 </Link>
                 <div>
