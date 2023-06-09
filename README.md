@@ -18,7 +18,7 @@ This is an [upleveled](https://github.com/upleveled) project where I'm challenge
 
 <img width="1500" src="https://github.com/cheorodio/next-ecommerce-store/assets/121162907/795e28db-5002-4636-98ee-10350a381cf6" alt="screenshots" />
 
-test
+test test
 
 <!--
 ### Single product page
