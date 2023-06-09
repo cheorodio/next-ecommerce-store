@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-// import { getProducts } from '../database/products';
+import { getProducts } from '../database/products';
 import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
 import shipping from '../public/images/freeshipping.png';
@@ -19,8 +19,8 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-export default function Home() {
-  // const products = await getProducts();
+export default async function Home() {
+  const products = await getProducts();
   return (
     <main>
       <section className={styles.heroSection}>
@@ -28,7 +28,7 @@ export default function Home() {
       </section>
 
       {/* ========================= FEATURED SECTION ========================= */}
-      {/* <section className={styles.featuredProductsSection}>
+      <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
           <h4>Featured Products</h4>
           <Link className={styles.viewAllButton} href="/products">
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           );
         })}
-      </section> */}
+      </section>
       {/* ========================= THE COLLECTION SECTION ========================= */}
       <section className={styles.collectionSection}>
         <div className={styles.collectionImageBox}>

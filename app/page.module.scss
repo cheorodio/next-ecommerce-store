@@ -224,8 +224,8 @@
 .collectionSection {
   display: flex;
   gap: 40px;
-  // padding: 0px 120px 94px;
-  padding: 94px 120px;
+  padding: 0px 120px 94px;
+  // padding: 94px 120px;
 
   @media screen and (max-width: $desktop) {
     padding: 20px 80px;
