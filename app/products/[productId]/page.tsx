@@ -12,6 +12,11 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
+export type CookieQuantityItem = {
+  id: number;
+  quantity: number;
+};
+
 type Props = {
   params: { productId: string }; // this is a string because the productId is in the url
 };
