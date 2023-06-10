@@ -33,18 +33,18 @@ export default async function SingleProductPage(props: Props) {
   return (
     <main>
       <section className={styles.productContainer}>
-        <div>
-          <Image
-            data-test-id="product-image"
-            src={`/images/${singleProduct.name}.jpg`}
-            width={500}
-            height={500}
-            className={styles.productImage}
-            alt={singleProduct.name}
-            priority
-            unoptimized
-          />
-        </div>
+        {/* <div> */}
+        <Image
+          data-test-id="product-image"
+          src={`/images/${singleProduct.name}.jpg`}
+          width={500}
+          height={500}
+          className={styles.productImage}
+          alt={singleProduct.name}
+          priority
+          unoptimized
+        />
+        {/* </div> */}
         <div className={styles.productInfoContainer}>
           <h1>{singleProduct.name}</h1>
           <h5>{singleProduct.description}</h5>

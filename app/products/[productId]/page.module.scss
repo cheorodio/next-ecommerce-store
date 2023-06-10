@@ -12,18 +12,18 @@
     padding: 90px 0px 50px;
   }
 
-  div {
-    width: 40%;
+  // div {
 
-    .productImage {
-      border-radius: 5px;
+  .productImage {
+    // width: 40%;
+    border-radius: 5px;
 
-      @media screen and (max-width: $laptop) {
-        height: 350px;
-        width: 350px;
-      }
+    @media screen and (max-width: $laptop) {
+      height: 350px;
+      width: 350px;
     }
   }
+  // }
 
   .productInfoContainer {
     width: 60%;
