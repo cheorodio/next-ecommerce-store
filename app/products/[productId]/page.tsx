@@ -75,7 +75,8 @@ export default async function SingleProductPage(props: Props) {
                     width={200}
                     height={200}
                     alt={product.name}
-                    priority={true}
+                    priority
+                    unoptimized
                   />
                 </Link>
                 <div>
