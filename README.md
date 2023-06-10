@@ -45,3 +45,11 @@ This is an [upleveled](https://github.com/upleveled) project where I'm challenge
    - `sudo -u <user name> psql -U <user name> <database name>` on Linux
 
 ## Deployment 🚀
+
+This project is deployed using vercel, in order to do so:
+
+1. Create an account on [vercel](https://vercel.com/dashboard)
+2. Create a postgres storage in vercel and select frankfurt
+3. Create a project in vercel and import your version of this repository
+4. Overwrite the install command (found in project general setting) with `pnpm install && pnpm migrate up`
+5. Connect storage with project in Project > Storage > Connect
