@@ -11,7 +11,7 @@ export function productData(products, productsInCookie) {
       ...productWithQuantities,
     });
 
-    return { ...products, quantity: productWithQuantities?.quantity };
+    return { ...products, quantity: productWithQuantities.quantity };
   });
 
   return newItemsInCart;
