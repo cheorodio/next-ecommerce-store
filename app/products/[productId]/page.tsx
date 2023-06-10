@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProductById, getProducts } from '../../../database/products';
+import { getProductById } from '../../../database/products';
 import AddToCart from './AddToCart';
 import styles from './page.module.scss';
 
@@ -23,7 +23,7 @@ type Props = {
 
 export default async function SingleProductPage(props: Props) {
   const singleProduct = await getProductById(Number(props.params.productId));
-  const products = await getProducts();
+  // const products = await getProducts();
   console.log({ singleProduct });
 
   if (!singleProduct) {
@@ -41,13 +41,14 @@ export default async function SingleProductPage(props: Props) {
             height={500}
             className={styles.productImage}
             alt={singleProduct.name}
-            priority={true}
+            priority
+            unoptimized
           />
         </div>
         <div className={styles.productInfoContainer}>
           <h1>{singleProduct.name}</h1>
           <h5>{singleProduct.description}</h5>
-          <h6 data-test-id="product-price">€ {singleProduct.price}</h6>
+          <h6 data-test-id="product-price"> {singleProduct.price} EUR</h6>
           <p className={styles.quantityTitle}>Quantity</p>
           <div>
             <AddToCart productId={singleProduct.id} />
@@ -55,7 +56,7 @@ export default async function SingleProductPage(props: Props) {
         </div>
       </section>
 
-      <section className={styles.youMayAlsoLikeContainer}>
+      {/* <section className={styles.youMayAlsoLikeContainer}>
         <h2>You may also like</h2>
         <div className={styles.productCardsContainer}>
           {products.map((product) => {
@@ -65,7 +66,7 @@ export default async function SingleProductPage(props: Props) {
                 className={styles.productCard}
               >
                 <Link
-                  data-test-id="product-<product id>"
+                  data-test-id={`product-${product.id}`}
                   href={`/products/${product.id}`}
                   className={styles.categoryTitle}
                 >
@@ -74,12 +75,12 @@ export default async function SingleProductPage(props: Props) {
                     width={200}
                     height={200}
                     alt={product.name}
-                    priority={true}
+                    priority
+                    unoptimized
                   />
                 </Link>
                 <div>
                   <Link
-                    data-test-id="product-<product id>"
                     href={`/products/${product.id}`}
                     className={styles.categoryTitle}
                   >
@@ -96,7 +97,7 @@ export default async function SingleProductPage(props: Props) {
             );
           })}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
