@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProductById, getProducts } from '../../../database/products';
+import { getProductById } from '../../../database/products';
 import AddToCart from './AddToCart';
 import styles from './page.module.scss';
 
@@ -23,7 +23,7 @@ type Props = {
 
 export default async function SingleProductPage(props: Props) {
   const singleProduct = await getProductById(Number(props.params.productId));
-  const products = await getProducts();
+  // const products = await getProducts();
   console.log({ singleProduct });
 
   if (!singleProduct) {
@@ -56,7 +56,7 @@ export default async function SingleProductPage(props: Props) {
         </div>
       </section>
 
-      <section className={styles.youMayAlsoLikeContainer}>
+      {/* <section className={styles.youMayAlsoLikeContainer}>
         <h2>You may also like</h2>
         <div className={styles.productCardsContainer}>
           {products.map((product) => {
@@ -97,7 +97,7 @@ export default async function SingleProductPage(props: Props) {
             );
           })}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
