@@ -1,9 +1,9 @@
 import './globals.scss';
-// import { Caveat, Poppins } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 
-// const poppins = Poppins({ subsets: ['latin'], weight: '400' });
+const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 // const caveat = Caveat({ subsets: ['latin'], weight: '400' });
 
 export const metadata = {
@@ -18,7 +18,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body>
+      <body className={poppins.className}>
         <NavBar />
         {children}
         <Footer />
