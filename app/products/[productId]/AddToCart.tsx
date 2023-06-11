@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function AddToCart(props: Props) {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState('1');
   const router = useRouter();
 
   return (
@@ -20,14 +20,14 @@ export default function AddToCart(props: Props) {
         min="1"
         value={quantity}
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          setQuantity(Number(event.currentTarget.value))
+          setQuantity(event.currentTarget.value)
         }
       />
       <button
         data-test-id="product-add-to-cart"
         formAction={async () => {
           router.refresh();
-          await addToCart(props.productId, quantity);
+          await addToCart(props.productId, Number(quantity));
         }}
       >
         Add to cart
