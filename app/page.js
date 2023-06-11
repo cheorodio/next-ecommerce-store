@@ -6,10 +6,10 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import { getProducts } from '../database/products';
 import collectionImage1 from '../public/images/collection1.jpg';
 import collectionImage2 from '../public/images/collection2.jpg';
-import shipping from '../public/images/freeshipping.png';
-import handmade from '../public/images/handmade.png';
-import payment from '../public/images/securepayment.png';
-import tracking from '../public/images/tracking.png';
+import shipping from '../public/images/icons/freeshipping.png';
+import handmade from '../public/images/icons/handmade.png';
+import payment from '../public/images/icons/securepayment.png';
+import tracking from '../public/images/icons/tracking.png';
 import HeroSwiper from './components/HeroSwiper';
 import styles from './page.module.scss';
 
@@ -47,7 +47,7 @@ export default async function Home() {
             >
               <Link href={`/products/${product.id}`}>
                 <Image
-                  src={`/images/${product.name}.jpg`}
+                  src={`/images/products/${product.name}.avif`}
                   width={200}
                   height={200}
                   alt={product.name}

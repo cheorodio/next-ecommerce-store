@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import mail from '../../../../public/images/received.png';
+import mail from '../../../../public/images/icons/received.png';
 import styles from './thankYou.module.scss';
 
 export default function thankYouPage() {

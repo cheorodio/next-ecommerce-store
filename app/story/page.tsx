@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import aboutIcon from '../../public/images/aboutIcon.png';
-import iconGiveBack from '../../public/images/iconGiveBack.png';
-import iconHandmade from '../../public/images/iconHand.png';
-import iconSustainable from '../../public/images/iconSustainable.png';
+import aboutIcon from '../../public/images/icons/aboutIcon.png';
+import iconGiveBack from '../../public/images/icons/iconGiveBack.png';
+import iconHandmade from '../../public/images/icons/iconHand.png';
+import iconSustainable from '../../public/images/icons/iconSustainable.png';
 import styles from './story.module.scss';
 
 export const metadata = {
@@ -61,7 +61,12 @@ export default function OurStoryPage() {
         <h2>Why Choose Us</h2>
         <div>
           <div>
-            <Image src={iconHandmade} alt="" className={styles.icon}          priority={true} />
+            <Image
+              src={iconHandmade}
+              alt=""
+              className={styles.icon}
+              priority={true}
+            />
             <h3>Quality Craftsmanship</h3>
             <p>
               We are committed to upholding the highest standards of
@@ -74,7 +79,12 @@ export default function OurStoryPage() {
           </div>
 
           <div>
-            <Image src={iconGiveBack} alt="" className={styles.icon}          priority={true} />
+            <Image
+              src={iconGiveBack}
+              alt=""
+              className={styles.icon}
+              priority={true}
+            />
             <h3>Giving Back</h3>
             <p>
               We are committed to making a positive impact in the communities we
@@ -86,7 +96,12 @@ export default function OurStoryPage() {
           </div>
 
           <div>
-            <Image src={iconSustainable} alt="" className={styles.icon}          priority={true}/>
+            <Image
+              src={iconSustainable}
+              alt=""
+              className={styles.icon}
+              priority={true}
+            />
             <h3>Sustainability and Ethics</h3>
             <p>
               We are dedicated to promoting sustainable practices. By sourcing

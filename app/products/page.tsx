@@ -46,7 +46,7 @@ export default async function ProductsPage() {
                   data-test-id={`product-${product.id}`}
                 >
                   <Image
-                    src={`/images/${product.name}.jpg`}
+                    src={`/images/products/${product.name}.avif`}
                     width={200}
                     height={200}
                     alt={product.name}

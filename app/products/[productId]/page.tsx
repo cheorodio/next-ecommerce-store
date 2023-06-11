@@ -36,7 +36,7 @@ export default async function SingleProductPage(props: Props) {
         {/* <div> */}
         <Image
           data-test-id="product-image"
-          src={`/images/${singleProduct.name}.jpg`}
+          src={`/images/products/${singleProduct.name}.avif`}
           width={500}
           height={500}
           className={styles.productImage}
