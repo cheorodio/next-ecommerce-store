@@ -85,8 +85,8 @@
     justify-content: center;
 
     .logo {
-      font-family: 'Caveat', sans-serif;
-      font-size: 4rem;
+      height: 40px;
+      width: 70px;
 
       @media screen and (max-width: $mobile) {
         height: 30px;

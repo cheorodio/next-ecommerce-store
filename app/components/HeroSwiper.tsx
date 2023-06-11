@@ -8,11 +8,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import hero1 from '../../public/images/hero/hero1.jpg';
-import hero2 from '../../public/images/hero/hero3.jpg';
-import hero3 from '../../public/images/hero/hero4.jpg';
-import hero4 from '../../public/images/hero/hero5.jpg';
-import hero5 from '../../public/images/hero/hero7.jpg';
+import hero1 from '../../public/images/hero/hero1.avif';
+import hero2 from '../../public/images/hero/hero2.avif';
+import hero3 from '../../public/images/hero/hero3.avif';
 import styles from '../page.module.scss';
 
 type Props = {
@@ -23,8 +21,6 @@ const sliderImages = [
   { id: 1, image: hero1 },
   { id: 2, image: hero2 },
   { id: 3, image: hero3 },
-  { id: 4, image: hero4 },
-  { id: 5, image: hero5 },
 ];
 
 export default function HeroSwiper(props: Props) {

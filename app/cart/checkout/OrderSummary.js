@@ -42,7 +42,7 @@ export default async function OrderSummary() {
             <div className={styles.leftSide}>
               <div>
                 <Image
-                  src={`/images/${product.name}.jpg`}
+                  src={`/images/products/${product.name}.avif`}
                   width={60}
                   height={60}
                   alt={product.name}
