@@ -51,6 +51,7 @@ export default async function ProductsPage() {
                     height={200}
                     alt={product.name}
                     priority={true}
+                    unoptimized={true}
                     data-test-id="product-image"
                   />
                 </Link>
