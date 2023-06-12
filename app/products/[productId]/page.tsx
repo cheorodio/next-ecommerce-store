@@ -37,8 +37,8 @@ export default async function SingleProductPage(props: Props) {
         <Image
           data-test-id="product-image"
           src={`/images/products/${singleProduct.name}.avif`}
-          width={800}
-          height={600}
+          width={500}
+          height={500}
           className={styles.productImage}
           alt={singleProduct.name}
           priority={true}
