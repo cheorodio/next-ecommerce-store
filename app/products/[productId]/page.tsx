@@ -41,8 +41,8 @@ export default async function SingleProductPage(props: Props) {
           height={600}
           className={styles.productImage}
           alt={singleProduct.name}
-          priority
-          unoptimized
+          // priority
+          unoptimized={true}
         />
         {/* </div> */}
         <div className={styles.productInfoContainer}>
