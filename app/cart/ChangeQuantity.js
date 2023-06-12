@@ -6,7 +6,10 @@ import styles from './cart.module.scss';
 export default function ChangeQuantity(props) {
   const router = useRouter();
   return (
-    <div className={styles.changeCounter}>
+    <form
+      className={styles.changeCounter}
+      data-test-id={`cart-product-quantity-${props.product.id}`}
+    >
       <button
         name="subtract-quantity"
         formAction={async () => {
@@ -25,6 +28,6 @@ export default function ChangeQuantity(props) {
       >
         +
       </button>
-    </div>
+    </form>
   );
 }

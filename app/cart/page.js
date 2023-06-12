@@ -68,13 +68,13 @@ export default async function CartPage() {
                       <p>€ {product.price}</p>
                     </Link>
 
-                    <form data-test-id={`cart-product-quantity-${products.id}`}>
-                      <ChangeQuantity product={product} />
-                    </form>
+                    {/* <form> */}
+                    <ChangeQuantity product={product} />
+                    {/* </form> */}
 
                     <div>€{subTotal}</div>
                     <form
-                      data-test-id={`cart-product-remove-${products.id}`}
+                      data-test-id={`cart-product-remove-${product.id}`}
                       name="remove-button"
                     >
                       <RemoveButton product={product} />
