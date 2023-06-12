@@ -43,7 +43,7 @@ export default async function CartPage() {
 
             <div
               className={styles.itemsInCart}
-              data-test-id="cart-product-<product id>"
+              data-test-id={`cart-product-${products.id}`}
             >
               {productsInCart.map((product) => {
                 let subTotal = 0;
@@ -68,13 +68,13 @@ export default async function CartPage() {
                       <p>€ {product.price}</p>
                     </Link>
 
-                    <form data-test-id="cart-product-quantity-<product id>">
+                    <form data-test-id={`cart-product-quantity-${products.id}`}>
                       <ChangeQuantity product={product} />
                     </form>
 
                     <div>€{subTotal}</div>
                     <form
-                      data-test-id="cart-product-remove-<product id>"
+                      data-test-id={`cart-product-remove-${products.id}`}
                       name="remove-button"
                     >
                       <RemoveButton product={product} />
