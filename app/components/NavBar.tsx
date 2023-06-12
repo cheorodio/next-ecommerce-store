@@ -34,7 +34,7 @@ export default function NavBar() {
           <Link href="/cart" data-test-id="cart-link">
             <BsHandbag className={styles.cartIcon} />
             <div className={styles.badge}>
-              <CartBadge data-test-id="cart-count" />
+              <CartBadge />
             </div>
           </Link>
         </div>

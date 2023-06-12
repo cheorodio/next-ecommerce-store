@@ -10,8 +10,10 @@ export default function CartBadge() {
   const quantity = productQuantities?.map((item) => item.quantity);
   // console.log(quantity);
   const total = quantity?.reduce(
-    (accumulator, currentNumber) => accumulator + currentNumber,
+    (accumulator: number, currentNumber: number) => {
+      return accumulator + currentNumber;
+    },
     0,
   );
-  return <h5 data-test-id="cart-quantity">{total}</h5>;
+  return <h5 data-test-id="cart-count" >{total}</h5>;
 }

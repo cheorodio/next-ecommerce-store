@@ -5,13 +5,13 @@ test('cart test', async ({ page }) => {
   await page.goto('http://localhost:3000/products/5');
 
   await page.getByTestId('product-add-to-cart').click();
-  await expect(page.getByTestId('cart-quantity').getByText('1')).toBeVisible();
+  await expect(page.getByTestId('cart-count').getByText('1')).toBeVisible();
 
   // change quantity in single product page test
   await page.getByTestId('product-quantity').click();
   await page.getByTestId('product-quantity').fill('3');
   await page.getByTestId('product-add-to-cart').click();
-  await expect(page.getByTestId('cart-quantity').getByText('4')).toBeVisible();
+  await expect(page.getByTestId('cart-count').getByText('4')).toBeVisible();
 
   // go to products page
   await page.getByTestId('products-link').click();
@@ -22,7 +22,7 @@ test('cart test', async ({ page }) => {
   await expect(page).toHaveURL('http://localhost:3000/products/1');
 
   await page.getByTestId('product-add-to-cart').click();
-  await expect(page.getByTestId('cart-quantity').getByText('5')).toBeVisible();
+  await expect(page.getByTestId('cart-count').getByText('5')).toBeVisible();
 
   // go to cart page
   await page.getByTestId('cart-link').click();
@@ -39,5 +39,5 @@ test('cart test', async ({ page }) => {
     .locator('div')
     .filter({ hasText: 'Lucy€ 40.9-1+€40.9' })
     .locator('button[name="remove-button"]');
-  await expect(page.getByTestId('cart-quantity')).toContainText('5');
+  await expect(page.getByTestId('cart-count')).toContainText('5');
 });
