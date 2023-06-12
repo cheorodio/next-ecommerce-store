@@ -19,7 +19,7 @@ test('cart test', async ({ page }) => {
 
   // go to another singleProduct page and add this to cart
   await page.getByTestId('product-1').click();
-  await expect(page).toHaveURL('http://localhost:3000/products/2');
+  await expect(page).toHaveURL('http://localhost:3000/products/1');
 
   await page.getByTestId('product-add-to-cart').click();
   await expect(page.getByTestId('cart-count').getByText('5')).toBeVisible();
