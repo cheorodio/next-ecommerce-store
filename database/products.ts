@@ -1,5 +1,5 @@
 import { cache } from 'react';
-import { Product } from '../migrations/1685266106-insertProductsToTable';
+import { Product } from '../migrations/1685200803-createTableProducts';
 import { sql } from './connect';
 
 // type alias with an object
