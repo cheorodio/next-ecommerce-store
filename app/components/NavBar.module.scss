@@ -117,7 +117,7 @@
       top: 20%;
       right: -5%;
       transform: translate(-50%, -50%);
-      font-size: 1rem;
+      font-size: 0.9rem;
 
       @media screen and (max-width: $mobile) {
         height: 17px;
@@ -125,6 +125,9 @@
         font-size: 0.8rem;
         right: -13%;
       }
+    }
+    .empty {
+      display: none;
     }
   }
 }

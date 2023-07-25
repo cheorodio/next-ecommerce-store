@@ -42,7 +42,7 @@ export default function NavBar() {
         <div className={styles.cartContainer}>
           <Link href="/cart" data-test-id="cart-link">
             <BsHandbag className={styles.cartIcon} />
-            <div className={styles.badge}>
+            <div>
               <CartBadge />
             </div>
           </Link>

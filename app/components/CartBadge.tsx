@@ -1,5 +1,6 @@
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
+import styles from './NavBar.module.scss';
 
 export default function CartBadge() {
   const productQuantityCookie = getCookie('cart');
@@ -15,5 +16,12 @@ export default function CartBadge() {
     },
     0,
   );
-  return <h5 data-test-id="cart-count" >{total}</h5>;
+  return (
+    <h5
+      data-test-id="cart-count"
+      className={`${styles.badge} ${total === 0 ? styles.empty : ''}`}
+    >
+      {total}
+    </h5>
+  );
 }
