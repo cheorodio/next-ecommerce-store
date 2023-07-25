@@ -1,4 +1,4 @@
-import { Caveat } from 'next/font/google';
+import { Caveat, Playfair_Display } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiFillStar } from 'react-icons/ai';
@@ -20,7 +20,8 @@ export const metadata = {
   description: 'Dedicated for best quality handmade jewellery',
 };
 
-const caveat = Caveat({ subsets: ['latin'], weight: '400' });
+const caveat = Caveat({ subsets: ['latin'] });
+const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
 export default async function Home() {
   const products = await getProducts();
@@ -33,7 +34,7 @@ export default async function Home() {
       {/* ========================= FEATURED SECTION ========================= */}
       <section className={styles.featuredProductsSection}>
         <div className={styles.featuredProductsTitle}>
-          <h4>Featured Products</h4>
+          <h4 className={playfairDisplay.className}>Featured Products</h4>
           <Link className={styles.viewAllButton} href="/products">
             View All
           </Link>
@@ -161,7 +162,7 @@ export default async function Home() {
       </section>
       {/* ========================= CATEGORY SECTION ========================= */}
       <section className={styles.categorySection}>
-        <h2>Shop by Category</h2>
+        <h2 className={playfairDisplay.className}>Shop by Category</h2>
         <Link className={styles.viewallLink} href="/ProductsOverview">
           View all
         </Link>
