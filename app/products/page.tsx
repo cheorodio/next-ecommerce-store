@@ -4,9 +4,8 @@ import FilterProducts from './FilteredProducts';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: { default: 'Golokal | Discover local vendors' },
-  description:
-    'At golokal, we are passionate about supporting artisans, craftsmen, and local businesses, and our platform serves as a virtual marketplace to showcase their unique creations.',
+  title: { default: 'Vida | Handmade Jewellery' },
+  description: 'Dedicated for best quality handmade jewellery',
 };
 
 export default async function ProductsPage() {
