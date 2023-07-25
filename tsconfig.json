@@ -6,7 +6,9 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "moduleResolution": "node",
+    "jsx": "preserve"
   },
   "include": [
     "**/.eslintrc.cjs",
