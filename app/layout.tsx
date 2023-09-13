@@ -1,5 +1,11 @@
 import './globals.scss';
 import { Poppins } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsHandbag } from 'react-icons/bs';
+import styles from '../app/components/NavBar.module.scss';
+import logo from '../public/images/logo.png';
+import CartBadge from './components/CartBadge';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 
@@ -19,7 +25,29 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <NavBar />
+        <div className={styles.topBanner}>Free worldwide shipping</div>
+        <div className={styles.navigationBar}>
+          <NavBar />
+
+          <div className={styles.logoContainer}>
+            <Link href="/#">
+              <Image
+                className={styles.logo}
+                src={logo}
+                alt="vida company logo"
+              />
+            </Link>
+          </div>
+
+          <div className={styles.cartContainer}>
+            <Link href="/cart" data-test-id="cart-link">
+              <BsHandbag className={styles.cartIcon} />
+              <div>
+                <CartBadge />
+              </div>
+            </Link>
+          </div>
+        </div>
         {children}
         <Footer />
       </body>
