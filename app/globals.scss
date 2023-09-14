@@ -32,6 +32,10 @@ a {
   cursor: pointer;
 }
 
+li {
+  list-style: none;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--primary-color);
