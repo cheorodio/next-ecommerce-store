@@ -40,38 +40,41 @@ export default async function Home() {
           </Link>
         </div>
 
-        {products.slice(8, 12).map((product) => {
-          return (
-            <div
-              key={`product-div-${product.id}`}
-              className={styles.productCard}
-            >
-              <Link href={`/products/${product.id}`}>
-                <Image
-                  src={`/images/products/${product.name}.avif`}
-                  width={200}
-                  height={200}
-                  alt={product.name}
-                  priority={true}
-                />
-              </Link>
-              <div className={styles.productInfo}>
-                <Link
-                  href={`/products/${product.id}`}
-                  className={styles.categoryTitle}
-                >
-                  {product.category}
+        <div className={styles.featuredProductsCards}>
+          {products.slice(8, 12).map((product) => {
+            return (
+              <div
+                key={`product-div-${product.id}`}
+                className={styles.productCard}
+              >
+                <Link href={`/products/${product.id}`}>
+                  <Image
+                    src={`/images/products/${product.name}.avif`}
+                    width={200}
+                    height={200}
+                    alt={product.name}
+                    priority={true}
+                    className={styles.productImage}
+                  />
                 </Link>
-                <div>
-                  <Link href={`/products/${product.id}`}>{product.name}</Link>
-                  <Link href={`/products/${product.id}`}>
-                    € {product.price}
+                <div className={styles.productInfo}>
+                  <Link
+                    href={`/products/${product.id}`}
+                    className={styles.categoryTitle}
+                  >
+                    {product.category}
                   </Link>
+                  <div>
+                    <Link href={`/products/${product.id}`}>{product.name}</Link>
+                    <Link href={`/products/${product.id}`}>
+                      € {product.price}
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </section>
       {/* ========================= THE COLLECTION SECTION ========================= */}
       <section className={styles.collectionSection}>

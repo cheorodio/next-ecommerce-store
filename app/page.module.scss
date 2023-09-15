@@ -75,28 +75,14 @@
 // FEATURED PRODUCTS SECTION ////////////////
 
 .featuredProductsSection {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  display: flex;
   gap: 24px;
   padding: 96px 120px;
 
-  @media screen and (max-width: $desktop) {
-    padding: 40px 80px;
-  }
-
-  @media screen and (max-width: $laptop) {
-    padding: 16px 60px;
-  }
-
-  @media screen and (max-width: $tablet) {
-    padding: 40px;
-  }
-
   @media screen and (max-width: $mobile) {
+    display: flex;
     flex-direction: column;
-    margin: 0px 20px;
-    padding: 32px;
-    align-items: center;
+    padding: 24px;
   }
 
   .featuredProductsTitle {
@@ -135,35 +121,50 @@
     }
   }
 
-  .productCard {
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    overflow: hidden;
+  .featuredProductsCards {
+    flex: 1;
+    display: flex;
+    gap: 18px;
 
-    .productInfo {
-      padding: 0px 8px;
+    @media screen and (max-width: $mobile) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-      .categoryTitle {
-        color: var(--primary-color);
-        font-size: 0.6rem;
-        text-transform: uppercase;
+    .productCard {
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      overflow: hidden;
+
+      .productImage {
+        object-fit: cover;
       }
 
-      div {
-        display: flex;
-        justify-content: space-between;
+      .productInfo {
+        padding: 0px 8px;
+
+        .categoryTitle {
+          color: var(--primary-color);
+          font-size: 0.6rem;
+          text-transform: uppercase;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
     }
 
-    &:hover {
-      transform: scale(1.05);
-      transition: transform 0.5s ease-in-out;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @media screen and (max-width: $mobile) {
+      width: auto;
     }
-  }
-
-  @media screen and (max-width: $mobile) {
-    width: auto;
   }
 }
 
