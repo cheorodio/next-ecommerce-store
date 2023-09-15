@@ -7,46 +7,15 @@
   position: relative;
   width: 100%;
 
-  @media screen and (max-width: $desktop) {
-    height: 720px;
-  }
-
-  @media screen and (max-width: $laptop) {
-    height: 495px;
-  }
-
-  @media screen and (max-width: $tablet) {
-    height: 495px;
+  @media screen and (max-width: $mobile) {
+    height: 350px;
   }
 
   .mySlider {
     z-index: 1;
 
-    @media screen and (max-width: $desktop) {
-      height: 720px;
-    }
-
-    @media screen and (max-width: $laptop) {
-      height: 495px;
-    }
-
-    @media screen and (max-width: $tablet) {
-      height: 495px;
-    }
-
     .slider {
       position: relative;
-      @media screen and (max-width: $desktop) {
-        height: 720px;
-      }
-
-      @media screen and (max-width: $laptop) {
-        height: 495px;
-      }
-
-      @media screen and (max-width: $tablet) {
-        height: 495px;
-      }
 
       .sliderImage {
         width: 100%;
@@ -60,40 +29,19 @@
         transform: translate(-50%, -50%);
         width: 600px;
 
-        @media screen and (max-width: $desktop) {
-          top: 55%;
-          left: 25%;
-          width: 500px;
-          transform: translate(-50%, -50%);
-        }
-
-        @media screen and (max-width: $laptop) {
-          top: 55%;
-          left: 25%;
-          transform: translate(-50%, -50%);
-          width: 400px;
-        }
-
-        @media screen and (max-width: $tablet) {
-          top: 55%;
-          left: 25%;
-          transform: translate(-50%, -50%);
-          width: 350px;
-        }
-
         @media screen and (max-width: $mobile) {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 150px;
+          width: 300px;
         }
 
         h1 {
           font-size: 4rem;
           margin-bottom: 24px;
 
-          @media screen and (max-width: $laptop) {
-            font-size: 2.5rem;
+          @media screen and (max-width: $mobile) {
+            font-size: 2rem;
           }
         }
 
@@ -101,9 +49,6 @@
           line-height: 1.5;
           margin-bottom: 32px;
 
-          @media screen and (max-width: $laptop) {
-            font-size: 1rem;
-          }
           @media screen and (max-width: $mobile) {
             display: none;
           }
@@ -114,14 +59,12 @@
           padding: 4px 8px;
           border: 1px solid var(--primary-color);
           border-radius: 5px;
+          background-color: var(--primary-color);
+          color: var(--main-bg-color);
 
           &:hover {
-            background-color: var(--primary-color);
-            color: var(--main-bg-color);
-          }
-
-          @media screen and (max-width: $mobile) {
-            display: none;
+            background-color: transparent;
+            color: black;
           }
         }
       }
@@ -149,12 +92,12 @@
     padding: 40px;
   }
 
-  // @media screen and (max-width: $mobile) {
-  //   flex-direction: column;
-  //   margin: 0px 20px;
-  //   padding: 32px;
-  //   align-items: center;
-  // }
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 32px;
+    align-items: center;
+  }
 
   .featuredProductsTitle {
     flex: 1;
@@ -312,12 +255,16 @@
   gap: 64px;
   padding: 0px 120px 94px;
 
-  @media screen and (max-width: $desktop) {
-    padding: 80px;
-  }
+  // @media screen and (max-width: $desktop) {
+  //   padding: 80px;
+  // }
 
-  @media screen and (max-width: $laptop) {
-    padding: 60px;
+  // @media screen and (max-width: $laptop) {
+  //   padding: 60px;
+  // }
+
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .highlight {
@@ -355,13 +302,13 @@
   justify-content: center;
   padding: 0px 120px 94px;
 
-  @media screen and (max-width: $desktop) {
-    padding: 20px 80px;
-  }
+  // @media screen and (max-width: $desktop) {
+  //   padding: 20px 80px;
+  // }
 
-  @media screen and (max-width: $laptop) {
-    padding: 16px 60px;
-  }
+  // @media screen and (max-width: $laptop) {
+  //   padding: 16px 60px;
+  // }
 
   h2 {
     font-size: 2rem;
@@ -381,6 +328,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+
+    @media screen and (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     div {
       height: 400px;
@@ -468,6 +419,9 @@
 
       @media screen and (max-width: $laptop) {
         width: 400px;
+      }
+      @media screen and (max-width: $mobile) {
+        width: 100px;
       }
     }
 
