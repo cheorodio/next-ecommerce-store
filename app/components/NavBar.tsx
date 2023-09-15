@@ -37,7 +37,11 @@ export default function NavBar() {
       </ul>
 
       <button onClick={toggleMenu} className={styles.hamburgerIcon}>
-        {!menuOpen ? <RxHamburgerMenu /> : <CgClose />}
+        {!menuOpen ? (
+          <RxHamburgerMenu />
+        ) : (
+          <CgClose className={styles.closeButton} />
+        )}
       </button>
     </nav>
   );
