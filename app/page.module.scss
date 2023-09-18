@@ -375,12 +375,8 @@
   align-items: center;
   padding: 0px 120px;
 
-  @media screen and (max-width: $desktop) {
-    padding: 20px 80px;
-  }
-
-  @media screen and (max-width: $laptop) {
-    padding: 60px;
+  @media screen and (max-width: $mobile) {
+    padding: 24px;
   }
 
   h4 {
@@ -399,11 +395,8 @@
       height: 2px;
       background-color: var(--primary-color);
 
-      @media screen and (max-width: $laptop) {
-        width: 400px;
-      }
       @media screen and (max-width: $mobile) {
-        width: 100px;
+        width: 80px;
       }
     }
 
@@ -418,16 +411,14 @@
 
   .testimonials {
     padding: 64px 0px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 32px;
     text-align: center;
 
-    @media screen and (max-width: $laptop) {
-      padding: 0px;
-      gap: 20px;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
     }
 
     .testimonialCard {
@@ -435,25 +426,15 @@
       flex-direction: column;
       padding: 0px 32px;
 
-      @media screen and (max-width: $laptop) {
+      @media screen and (max-width: $mobile) {
         font-size: 0.8rem;
-        padding: 0px;
       }
 
       h6 {
         margin-top: 16px;
         margin-bottom: 8px;
-
-        @media screen and (max-width: $laptop) {
-          padding: 0px;
-          gap: 20px;
-        }
       }
     }
-  }
-
-  @media screen and (max-width: $mobile) {
-    width: auto;
   }
 }
 
