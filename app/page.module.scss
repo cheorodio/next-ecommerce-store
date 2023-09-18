@@ -255,16 +255,10 @@
   gap: 64px;
   padding: 0px 120px 94px;
 
-  // @media screen and (max-width: $desktop) {
-  //   padding: 80px;
-  // }
-
-  // @media screen and (max-width: $laptop) {
-  //   padding: 60px;
-  // }
-
   @media screen and (max-width: $mobile) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+    gap: 24px;
   }
 
   .highlight {
@@ -288,9 +282,6 @@
       font-size: 0.8rem;
     }
   }
-  @media screen and (max-width: $mobile) {
-    width: auto;
-  }
 }
 
 // CATEGORY SECTION ////////////////
@@ -302,13 +293,9 @@
   justify-content: center;
   padding: 0px 120px 94px;
 
-  // @media screen and (max-width: $desktop) {
-  //   padding: 20px 80px;
-  // }
-
-  // @media screen and (max-width: $laptop) {
-  //   padding: 16px 60px;
-  // }
+  @media screen and (max-width: $mobile) {
+    padding: 24px;
+  }
 
   h2 {
     font-size: 2rem;
@@ -328,6 +315,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    width: 100%;
 
     @media screen and (max-width: $mobile) {
       grid-template-columns: repeat(2, 1fr);
@@ -335,7 +323,7 @@
 
     div {
       height: 400px;
-      width: 280px;
+      width: 100%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -343,14 +331,8 @@
       align-items: center;
       justify-content: center;
 
-      @media screen and (max-width: $desktop) {
-        height: 360px;
-        width: 250px;
-      }
-
-      @media screen and (max-width: $desktop) {
-        height: 320px;
-        width: 210px;
+      @media screen and (max-width: $mobile) {
+        height: 230px;
       }
 
       p {
