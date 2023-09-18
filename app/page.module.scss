@@ -174,14 +174,10 @@
   display: flex;
   gap: 40px;
   padding: 0px 120px 94px;
-  // padding: 94px 120px;
 
-  @media screen and (max-width: $desktop) {
-    padding: 20px 80px;
-  }
-
-  @media screen and (max-width: $laptop) {
-    padding: 16px 60px;
+  @media screen and (max-width: $mobile) {
+    padding: 24px;
+    flex-direction: column-reverse;
   }
 
   .collectionImageBox {
@@ -194,8 +190,9 @@
       border: 10px solid #fff;
       border-radius: 5px;
 
-      @media screen and (max-width: $laptop) {
+      @media screen and (max-width: $mobile) {
         height: 250px;
+        margin-bottom: 50px;
       }
     }
 
@@ -207,6 +204,12 @@
       height: 200px;
       border: 7px solid #fff;
       border-radius: 5px;
+
+      @media screen and (max-width: $mobile) {
+        left: 50%;
+        width: 180px;
+        height: 180px;
+      }
     }
   }
 
@@ -242,10 +245,6 @@
         text-decoration: underline;
       }
     }
-  }
-
-  @media screen and (max-width: $mobile) {
-    width: auto;
   }
 }
 
