@@ -2,22 +2,20 @@
 
 .quantityForm {
   display: flex;
+  width: 100%;
   gap: 8px;
 
   input {
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
     border: 0.5px solid var(--primary-color);
-    width: 150px;
     height: 50px;
     padding: 0px 8px;
     font-size: 1.25rem;
     padding-right: 8px;
-
-    @media screen and (max-width: $laptop) {
-      width: 120px;
-    }
 
     &:focus {
       outline: none;
@@ -25,8 +23,8 @@
   }
 
   button {
+    width: 80%;
     height: 50px;
-    width: 490px;
     border: none;
     background-color: var(--primary-color);
     color: #fff;
@@ -34,10 +32,6 @@
     text-transform: uppercase;
     letter-spacing: 1.25px;
     cursor: pointer;
-
-    @media screen and (max-width: $laptop) {
-      width: 400px;
-    }
 
     &:hover {
       background-color: var(--main-bg-color);
