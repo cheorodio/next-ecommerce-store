@@ -53,32 +53,39 @@ export default async function CartPage() {
                     key={`product-div-${product.id}`}
                     className={styles.productCard}
                   >
-                    <div>
-                      <Image
-                        src={`/images/products/${product.name}.avif`}
-                        width={80}
-                        height={80}
-                        className={styles.productImage}
-                        alt={product.name}
-                      />
+                    <div className={styles.imageContainer}>
+                      <Link href={`/products/${product.id}`}>
+                        <Image
+                          src={`/images/products/${product.name}.avif`}
+                          width={80}
+                          height={80}
+                          className={styles.productImage}
+                          alt={product.name}
+                        />
+                      </Link>
                     </div>
 
-                    <Link href={`/products/${product.id}`}>{product.name}</Link>
-                    <Link href={`/products/${product.id}`}>
-                      <p>€ {product.price}</p>
-                    </Link>
+                    <div className={styles.infoContainer}>
+                      <div className={styles.productInfo}>
+                        <p className={styles.productName}>{product.name}</p>
+                        <p className={styles.productPrice}>€ {product.price}</p>
+                      </div>
 
-                    {/* <form> */}
-                    <ChangeQuantity product={product} />
-                    {/* </form> */}
+                      <div className={styles.productQuantity}>
+                        <ChangeQuantity product={product} />
 
-                    <div>€{subTotal}</div>
-                    <form
-                      data-test-id={`cart-product-remove-${product.id}`}
-                      name="remove-button"
-                    >
-                      <RemoveButton product={product} />
-                    </form>
+                        <div className={styles.productSubtotal}>
+                          €{subTotal}
+                        </div>
+                      </div>
+                      <form
+                        data-test-id={`cart-product-remove-${product.id}`}
+                        name="remove-button"
+                        className={styles.actionButton}
+                      >
+                        <RemoveButton product={product} />
+                      </form>
+                    </div>
                   </div>
                 );
               })}

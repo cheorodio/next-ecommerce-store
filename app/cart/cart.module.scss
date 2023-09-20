@@ -6,18 +6,29 @@
   gap: 32px;
   min-height: 72vh;
 
-  @media screen and (max-width: $laptop) {
-    padding: 125px 60px 50px;
+  @media screen and (max-width: $mobile) {
+    margin-top: 80px;
+    padding: 24px;
+    flex-direction: column;
   }
 
   .cartOverviewContainer {
     width: 70%;
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+    }
+
     .cartTableHead {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      display: flex;
+      justify-content: space-around;
       padding-bottom: 16px;
       border-bottom: 2px solid var(--primary-color);
       text-align: center;
+
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
     }
 
     .itemsInCart {
@@ -26,24 +37,97 @@
 
       .productCard {
         border-bottom: 0.5px solid var(--primary-color);
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         padding: 12px 0px;
+        gap: 70px;
 
-        form {
-          padding: 0px 24px;
+        @media screen and (max-width: $mobile) {
+          gap: 16px;
         }
 
-        div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .imageContainer {
+          width: 15%;
+
+          @media screen and (max-width: $mobile) {
+            width: 50%;
+          }
 
           .productImage {
             border-radius: 5px;
+
+            @media screen and (max-width: $mobile) {
+              width: 100%;
+              height: 160px;
+            }
+          }
+        }
+
+        .infoContainer {
+          width: 85%;
+          display: flex;
+          text-align: center;
+
+          @media screen and (max-width: $mobile) {
+            width: 100%;
+            gap: 24px;
+          }
+
+          .productInfo {
+            display: flex;
+            text-align: start;
+            flex: 2;
+
+            @media screen and (max-width: $mobile) {
+              align-items: center;
+              justify-content: space-between;
+            }
+
+            .productName {
+              flex: 1;
+
+              @media screen and (max-width: $mobile) {
+                font-size: 1.5rem;
+              }
+            }
+
+            .productPrice {
+              flex: 1;
+
+              @media screen and (max-width: $mobile) {
+                text-align: end;
+              }
+            }
+          }
+
+          .productQuantity {
+            display: flex;
+            flex: 2;
+            gap: 24px;
+
+            .productSubtotal {
+              flex: 2;
+
+              @media screen and (max-width: $mobile) {
+                text-align: end;
+              }
+            }
+          }
+
+          .actionButton {
+            flex: 1;
+
+            @media screen and (max-width: $mobile) {
+              text-align: end;
+            }
+          }
+
+          @media screen and (max-width: $mobile) {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
           }
         }
       }
@@ -66,9 +150,8 @@
       color: var(--main-bg-color);
       border-radius: 10px;
 
-      @media screen and (max-width: $laptop) {
-        width: 280px;
-        height: 280px;
+      @media screen and (max-width: $mobile) {
+        width: 100%;
       }
 
       h3 {
@@ -143,6 +226,11 @@
   justify-content: space-between;
   gap: 20px;
   border: 1px solid var(--secondary-color);
+  flex: 1;
+
+  @media screen and (max-width: $mobile) {
+    flex: 4;
+  }
 
   button {
     background-color: transparent;

@@ -7,11 +7,6 @@
   justify-content: center;
   gap: 100px;
 
-  @media screen and (max-width: $laptop) {
-    padding: 100px 60px 50px;
-    gap: 50px;
-  }
-
   // left side-- form /////////////////
   .form {
     display: flex;
