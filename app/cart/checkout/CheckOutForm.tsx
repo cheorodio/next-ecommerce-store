@@ -109,7 +109,7 @@ export default function CheckOutForm() {
           />
         </label>
       </div>
-      <div>
+      <div className={styles.paymentInfoContainer}>
         <p>Payment Information</p>
         <label>
           <input
@@ -120,8 +120,9 @@ export default function CheckOutForm() {
             // required
           />
         </label>
+
         <div className={styles.paymentInfo}>
-          <div>
+          <div className={styles.expiryDateContainer}>
             <label>
               <input
                 name="month"
@@ -148,6 +149,7 @@ export default function CheckOutForm() {
               />
             </label>
           </div>
+
           <label>
             <input
               type="number"
