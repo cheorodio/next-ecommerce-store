@@ -2,12 +2,13 @@ import './globals.scss';
 import { Poppins } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsHandbag } from 'react-icons/bs';
+import { BsHandbag, BsSearch } from 'react-icons/bs';
 import styles from '../app/components/NavBar.module.scss';
 import logo from '../public/images/logo.png';
 import CartBadge from './components/CartBadge';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import SearchBar from './components/SearchBar';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 // const caveat = Caveat({ subsets: ['latin'], weight: '400' });
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps) {
           </div>
 
           <div className={styles.cartContainer}>
+            <SearchBar />
             <Link href="/cart" data-test-id="cart-link">
               <BsHandbag className={styles.cartIcon} />
               <div>
