@@ -17,7 +17,12 @@ export default function OurStoryPage() {
       </div>
 
       <div className={styles.aboutSection}>
-        <Image src={aboutIcon} alt="" priority={true} />
+        <Image
+          className={styles.diamondIcon}
+          src={aboutIcon}
+          alt=""
+          priority={true}
+        />
         <p>
           Welcome to our world of exquisite handmade jewellery! We are a
           passionate team of skilled artisans dedicated to creating unique,
@@ -59,7 +64,7 @@ export default function OurStoryPage() {
 
       <div className={styles.iconsSection}>
         <h2>Why Choose Us</h2>
-        <div>
+        <div className={styles.reasons}>
           <div>
             <Image
               src={iconHandmade}

@@ -21,8 +21,8 @@
 
     position: relative;
 
-    @media screen and (max-width: $laptop) {
-      height: 400px;
+    @media screen and (max-width: $mobile) {
+      height: 200px;
     }
 
     h1 {
@@ -34,6 +34,10 @@
       font-family: var(--title-font);
       color: #fff;
       letter-spacing: 2.5px;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -46,15 +50,22 @@
     gap: 16px;
     padding: 0px 120px 60px;
 
-    @media screen and (max-width: $laptop) {
-      padding: 0px 60px;
+    @media screen and (max-width: $mobile) {
+      padding: 24px;
+    }
+
+    .diamondIcon {
+      @media screen and (max-width: $mobile) {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     p {
       font-size: 1.25rem;
       line-height: 1.7;
 
-      @media screen and (max-width: $laptop) {
+      @media screen and (max-width: $mobile) {
         font-size: 1rem;
       }
     }
@@ -67,9 +78,10 @@
     padding: 0px 120px 60px;
     gap: 48px;
 
-    @media screen and (max-width: $laptop) {
-      padding: 0px 60px 30px;
-      height: 450px;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      padding: 24px;
+      height: auto;
     }
 
     .imageContainer {
@@ -79,6 +91,11 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+        height: 400px;
+      }
     }
 
     .textContainer {
@@ -88,6 +105,10 @@
       text-align: center;
       justify-content: center;
       gap: 32px;
+
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+      }
 
       h4 {
         font-family: var(--title-font);
@@ -117,29 +138,33 @@
     text-align: center;
     gap: 32px;
 
-    @media screen and (max-width: $laptop) {
-      padding: 0px 60px 30px;
+    @media screen and (max-width: $mobile) {
+      padding: 0px 24px 100px;
     }
 
     h2 {
       font-size: 2rem;
       font-family: var(--title-font);
 
-      @media screen and (max-width: $laptop) {
+      @media screen and (max-width: $mobile) {
         font-size: 1.5rem;
       }
     }
 
-    div {
+    .reasons {
       display: flex;
       gap: 30px;
       text-align: center;
+
+      @media screen and (max-width: $mobile) {
+        flex-direction: column;
+      }
 
       .icon {
         height: 80px;
         width: 80px;
 
-        @media screen and (max-width: $laptop) {
+        @media screen and (max-width: $mobile) {
           height: 50px;
           width: 50px;
         }
@@ -156,7 +181,7 @@
           font-family: var(--title-font);
           letter-spacing: 2px;
 
-          @media screen and (max-width: $laptop) {
+          @media screen and (max-width: $mobile) {
             letter-spacing: 1.5px;
           }
         }
