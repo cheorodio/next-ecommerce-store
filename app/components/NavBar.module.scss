@@ -135,7 +135,13 @@
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     position: relative;
+    gap: 16px;
+
+    @media screen and (max-width: $mobile) {
+      position: relative;
+    }
 
     .cartIcon {
       cursor: pointer;
